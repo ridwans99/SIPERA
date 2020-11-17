@@ -1,4 +1,6 @@
 # SIPERA
 Sistem Informasi Peminjaman Peralatan dan Ruangan
 
-![img](logo.png)
+<p align="center"> 
+    <img src="logo.png" align="center" width="150"></img>
+</p>
