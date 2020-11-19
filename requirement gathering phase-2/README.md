@@ -6,7 +6,7 @@ Cara kami memvalidasi ide kami dengan mempresentasikan langsung menggunakan mock
 
 Pada saat penyampaian mockup dan alurnya, Pak Rizqa memberikan komentar baik mengenai hasil mockup kami. Menurut Pak Rizqa mockup kami sudah cukup baik, tetapi untuk peminjaman barang akan sulit terealisasikan ketika menggunakan web karena untuk peminjaman barang lebih mudah dilakukan secara langsung dan untuk meminjam sebuah barang diperlukan KTM mahasiswa agar jika barang hilang KTM mahasiswa tersebut pun akan ditahan sampai barang yang hilang ketemu atau diganti.Dan untuk di fitur admin di transaksi ruangan agar ditambahkan nama dosen dan mata kuliah.
 
-Untuk melihat keseluruhan pertanyaan yang diajukan di kuesioner serta jawabannya, dapat dilihat [disini](Customer Feedback - Google Forms.pdf)
+Untuk melihat keseluruhan pertanyaan yang diajukan di kuesioner serta jawabannya, dapat dilihat [disini](CustomerFeedback-GoogleForms.pdf)
 
 ### Kesimpulan
 Mockup dan juga prototipe yang kami tunjukkan kepada Pak Rizqa mendapatkan tanggapan positif. Menurut Pak Rizqa hal ini sudah sesuai dengan ekspetasi dan kriteria.
