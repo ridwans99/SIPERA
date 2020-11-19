@@ -42,3 +42,6 @@ Tujuan dibuatnya SIPERA adalah untuk memudahkan penanggung jawab kelas dalam men
 ## Admin
 ![Admin](docs/Diagram/design-control-admin.png)
 
+# Mockup Design
+[Design](docs/Mock-Up)
+

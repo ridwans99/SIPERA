@@ -11,7 +11,7 @@ Mahasiswa yang akan meminjam ruangan dan peralatan harus ke bagian staff adminis
 Berdasarkan kendala-kendala tersebut, kami mengusulkan adanya sistem yang dapat mempermudah, mempercepat dan memberikan solusi dari permasalahan yang ada. sistem tersebut berisi program peminjaman peralatan dan ruangan, serta membuat laporan untuk keperluan pengelolaan peminjaman sarana dan prasarana.
 Berdasarkan latar belakang masalah diatas, maka kami menyimpulkan untuk membuat Sistem Informasi Peminjaman Peralatan dan Ruangan (SIPERA) Berbasis Web di Universitas Negeri Jakarta.
 
-### Rangkuman Hasil Wawancara dengan Pak Risko
+### Rangkuman Hasil Wawancara dengan Pak Rizqa
 - User dapat melihat ruangan
 - User dapat memesan ruangan apabila ruangan tersebut kosong
 - Admin dapat menyetujui pemesanan ruangan user
