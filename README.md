@@ -22,17 +22,22 @@ Tujuan dibuatnya SIPERA adalah untuk memudahkan penanggung jawab kelas dalam men
 # Fitur
 
 ### User
-- User dapat mengedit profilnya masing - masing, meliputi perubahan nama panjang dan password.
-- Mengecek ruangan yang kosong.
-- Meminjam Ruangan.
-- Meminjam Peralatan.
+- Login
+Pada fitur ini apabila user lupa akan password yang diberikan, maka user dapat merequest kembali password yang telah ada kepada admin. Hanya memasukkan NRM dan email, password terbaru akan dikirim ke email yang terdaftar.
+- Peminjaman Ruangan
+Pada fitur ini user dapat melihat seluruh ruangan yang ada pada lantai 5 dan lantai 6 GDS serta dapat memesan ruangan apabila ruangan tersebut kosong, tidak terdapat kegiatan belajar-mengajar sebelumnya.
+- Peminjaman Barang
+Pada fitur ini user dapat melihat barang apa saja yang dapat dipinjam dan barang apa saja yang saat ini tersedia. User juga dapat memesan untuk meminjam barang tersebut apabila tersedia.
 
 ### Admin
-- Admin dapat melihat ruangan, menambahkan ruangan, mengedit ruangan, dan menghapus ruangan.
-- Admin dapat melihat barang, menambahkan barang, mengedit barang, dan menghapus barang.
-- Admin dapat melihat mahasiswa, menambahkan mahasiswa, mengedit mahasiswa, dan menghapus mahasiswa.
-- Admin dapat melihat transaksi peminjaman ruangan, mengedit peminjaman ruangan, dan menghapus peminjaman ruangan.
-- Admin dapat melihat transaksi peminjaman barang, mengedit peminjaman barang, dan menghapus peminjaman barang.
+- CRUD Barang
+Pada fitur ini admin diberikan akses untuk menambahkan barang yang dapat dipinjam dan tersedia, melihat barang yang tersedia, memperbarui stok barang yang tersedia, dan menghapus barang yang dapat dipinjam.
+- CRUD Ruangan
+Pada fitur ini admin diberikan akses untuk menambahkan ruangan yang dapat dipinjam dan tersedia, melihat ruangan yang tersedia, memperbarui waktu digunakannya ruangan, dam menghapus ruangan yang terdaftar pada sistem.
+- CRUD User
+Pada fitur ini admin dapat menambahkan jumlah user/mahasiwa, melihat informasi user/mahasiswa, memperbarui data user/mahasiswa, dan menghapus user/mahasiswa.
+- CRUD Transaksi Ruangan dan Barang
+Pada fitur ini admin diberikan akses untuk menambahkan sendiri pemesanan ruangan/barang, melihat informasi pemesanan ruangan termasuk dosen dan mata kuliah yang dijalankan, menyetujui atau menolak untuk meminjamkan ruangan/barang, dan menghapus transaki pesanan yang terdapat pada sistem.
 
 # Use Case
 
