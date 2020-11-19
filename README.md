@@ -35,6 +35,13 @@ Tujuan dibuatnya SIPERA adalah untuk memudahkan penanggung jawab kelas dalam men
 # Use Case
 
 ![Use Case Diagram](docs/Diagram/sipera.png)
+
+# Home Page
+## User
+![User](docs/Mockup/User/homepage.png)
+## Admin
+![User](docs/Mockup/Admin/dashboard.png)
+
 # Design Control
 ## User
 ![User](docs/Diagram/design-control-user.png)
