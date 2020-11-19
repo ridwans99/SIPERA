@@ -38,7 +38,7 @@ Tujuan dibuatnya SIPERA adalah untuk memudahkan penanggung jawab kelas dalam men
 
 # Home Page
 ## User
-![User](docs/Mock-Up/User/homepage.png)
+![User](docs/Mock-Up/User/Homepage.jpg)
 ## Admin
 ![User](docs/Mock-Up/Admin/dashboard.png)
 
