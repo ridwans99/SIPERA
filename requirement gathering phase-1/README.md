@@ -12,6 +12,7 @@ Berdasarkan kendala-kendala tersebut, kami mengusulkan adanya sistem yang dapat 
 Berdasarkan latar belakang masalah diatas, maka kami menyimpulkan untuk membuat Sistem Informasi Peminjaman Peralatan dan Ruangan (SIPERA) Berbasis Web di Universitas Negeri Jakarta.
 
 ### Rangkuman Hasil Wawancara dengan Pak Rizqa
+Setelah melakukan wawancara dengan pak rizqa berikut permintaan fitur-fitur yg dibutuhkan untuk aplikasi :
 - User dapat melihat ruangan
 - User dapat memesan ruangan apabila ruangan tersebut kosong
 - Admin dapat menyetujui pemesanan ruangan user
