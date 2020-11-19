@@ -29,7 +29,7 @@ Tujuan dibuatnya SIPERA adalah untuk memudahkan penanggung jawab kelas dalam men
 
 # Use Case
 
-<img src="sipera.png" width="150"></img>
+<img src="Diagram/sipera.png" width="150"></img>
 # Design Control
 
 [Design Control](Diagram)
