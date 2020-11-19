@@ -14,5 +14,5 @@ Mockup dan juga prototipe yang kami tunjukkan kepada Pak Risko mendapatkan tangg
 ### Presentasi
 Pada hari Senin, 16 November 2020 Kami melakukan presentasi menggunakan via zoom.
 
-### Link Wawancara
+### Link Video Presentasi
 https://www.youtube.com/watch?v=bCIK1Zc40cQ&feature=youtu.be
