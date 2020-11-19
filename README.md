@@ -5,8 +5,8 @@
 2. Muhammad Asyraf Amanullah    (1313618010)
 3. Ridwan Syah                  (1313618016)
 
-# SIPERA
-Sistem Informasi Peminjaman Peralatan dan Ruangan
+<h1 align="center">SIPERA</h1>
+<p align="center">Sistem Informasi Peminjaman Peralatan dan Ruangan</p>
 
 <p align="center"> 
     <img src="logo.png" align="center" width="150"></img>

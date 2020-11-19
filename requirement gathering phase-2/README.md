@@ -12,7 +12,7 @@ Untuk melihat keseluruhan pertanyaan yang diajukan di kuesioner serta jawabannya
 Mockup dan juga prototipe yang kami tunjukkan kepada Pak Risko mendapatkan tanggapan positif. Menurut Pak Risko hal ini sudah sesuai dengan ekspetasi dan kriteria.
 
 ### Presentasi
-Pada hari, . Kami melakukan presentasi menggunakan via zoom.
+Pada hari Senin, 16 November 2020 Kami melakukan presentasi menggunakan via zoom.
 
 ### Link Wawancara
 https://www.youtube.com/watch?v=bCIK1Zc40cQ&feature=youtu.be
