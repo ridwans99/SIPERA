@@ -23,20 +23,27 @@ Tujuan dibuatnya SIPERA adalah untuk memudahkan penanggung jawab kelas dalam men
 
 ### User
 - Login
+
 Pada fitur ini apabila user lupa akan password yang diberikan, maka user dapat merequest kembali password yang telah ada kepada admin. Hanya memasukkan NRM dan email, password terbaru akan dikirim ke email yang terdaftar.
 - Peminjaman Ruangan
+
 Pada fitur ini user dapat melihat seluruh ruangan yang ada pada lantai 5 dan lantai 6 GDS serta dapat memesan ruangan apabila ruangan tersebut kosong, tidak terdapat kegiatan belajar-mengajar sebelumnya.
 - Peminjaman Barang
+
 Pada fitur ini user dapat melihat barang apa saja yang dapat dipinjam dan barang apa saja yang saat ini tersedia. User juga dapat memesan untuk meminjam barang tersebut apabila tersedia.
 
 ### Admin
 - CRUD Barang
+
 Pada fitur ini admin diberikan akses untuk menambahkan barang yang dapat dipinjam dan tersedia, melihat barang yang tersedia, memperbarui stok barang yang tersedia, dan menghapus barang yang dapat dipinjam.
 - CRUD Ruangan
+
 Pada fitur ini admin diberikan akses untuk menambahkan ruangan yang dapat dipinjam dan tersedia, melihat ruangan yang tersedia, memperbarui waktu digunakannya ruangan, dam menghapus ruangan yang terdaftar pada sistem.
 - CRUD User
+
 Pada fitur ini admin dapat menambahkan jumlah user/mahasiwa, melihat informasi user/mahasiswa, memperbarui data user/mahasiswa, dan menghapus user/mahasiswa.
 - CRUD Transaksi Ruangan dan Barang
+
 Pada fitur ini admin diberikan akses untuk menambahkan sendiri pemesanan ruangan/barang, melihat informasi pemesanan ruangan termasuk dosen dan mata kuliah yang dijalankan, menyetujui atau menolak untuk meminjamkan ruangan/barang, dan menghapus transaki pesanan yang terdapat pada sistem.
 
 # Use Case
