@@ -1,3 +1,10 @@
+# Assignment 3 - Interaksi Manusia dan Komputer
+
+## Team E
+1. Muhammad Ardani              (1313618014)
+2. Muhammad Asyraf Amanullah    (1313618010)
+3. Ridwan Syah                  (1313618016)
+
 # SIPERA
 Sistem Informasi Peminjaman Peralatan dan Ruangan
 
@@ -32,9 +39,7 @@ Tujuan dibuatnya SIPERA adalah untuk memudahkan penanggung jawab kelas dalam men
 <img src="Diagram/sipera.png" width="150"></img>
 # Design Control
 
-[Design Control](Diagram)
+![User](Diagram/design-control-user.png)
 
-
-<img src="Diagram/design-control-admin.png" width="150"></img>
-<img src="Diagram/design-control-user.png" width="150"></img>
+![Admin](Diagram/design-control-admin.png)
 
