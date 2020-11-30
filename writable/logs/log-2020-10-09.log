@@ -1,0 +1,12 @@
+CRITICAL - 2020-10-09 21:46:08 --> Unable to connect to the database.
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Model.php(506): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Models\UserModel.php(22): CodeIgniter\Model->first()
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\User.php(89): App\Models\UserModel->getUserByEmail('muhammadardani1...')
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->login()
+#6 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#10 {main}

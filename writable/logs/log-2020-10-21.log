@@ -1,0 +1,56 @@
+CRITICAL - 2020-10-21 03:53:07 --> Trying to access array offset on value of type null
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\User.php(168): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\Muhamm...', 168, Array)
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->storeOrders()
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#6 {main}
+CRITICAL - 2020-10-21 03:54:27 --> Trying to access array offset on value of type null
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\User.php(168): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\Muhamm...', 168, Array)
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->storeOrders()
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#6 {main}
+CRITICAL - 2020-10-21 03:56:49 --> Trying to access array offset on value of type null
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\User.php(168): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\Muhamm...', 168, Array)
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->storeOrders()
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#6 {main}
+CRITICAL - 2020-10-21 04:57:02 --> Trying to access array offset on value of type null
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\User.php(168): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\Muhamm...', 168, Array)
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->storeOrders()
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#6 {main}
+CRITICAL - 2020-10-21 05:00:43 --> Trying to access array offset on value of type null
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\User.php(168): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\Muhamm...', 168, Array)
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->storeOrders()
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#6 {main}
+CRITICAL - 2020-10-21 05:02:16 --> Trying to access array offset on value of type null
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\User.php(168): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\Muhamm...', 168, Array)
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->storeOrders()
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#6 {main}
+CRITICAL - 2020-10-21 05:02:28 --> Trying to access array offset on value of type null
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\User.php(168): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\Muhamm...', 168, Array)
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->storeOrders()
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#6 {main}

@@ -1,0 +1,4 @@
+.scroll-card {
+    max-height: 700px;
+    overflow-y: auto;
+}

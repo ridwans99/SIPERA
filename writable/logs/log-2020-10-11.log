@@ -1,0 +1,41 @@
+CRITICAL - 2020-10-11 08:52:40 --> Illegal string offset 'attachment_path'
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Views\user\index.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\Users\\Muhamm...', 70, Array)
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\Users\\Muhamm...')
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/index', Array, true)
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\User.php(56): view('user/index', Array)
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#9 {main}
+CRITICAL - 2020-10-11 08:53:20 --> Illegal string offset 'attachment_path'
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Views\user\index.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\Users\\Muhamm...', 70, Array)
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\Users\\Muhamm...')
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/index', Array, true)
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\User.php(56): view('user/index', Array)
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#9 {main}
+CRITICAL - 2020-10-11 08:55:10 --> Illegal string offset 'attachment_path'
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Views\user\index.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\Users\\Muhamm...', 70, Array)
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\Users\\Muhamm...')
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/index', Array, true)
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\User.php(56): view('user/index', Array)
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#9 {main}
+CRITICAL - 2020-10-11 09:00:36 --> Undefined index: price
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\User.php(126): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Muhamm...', 126, Array)
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->storeOrders()
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#6 {main}

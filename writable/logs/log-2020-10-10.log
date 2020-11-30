@@ -1,0 +1,16 @@
+CRITICAL - 2020-10-10 01:41:56 --> Undefined index: name
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\Admin.php(473): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Muhamm...', 473, Array)
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin->showOrders()
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#6 {main}
+CRITICAL - 2020-10-10 01:42:18 --> Undefined index: name
+#0 C:\Users\Muhammad Ardani\jasasosmedid-ci4\app\Controllers\Admin.php(473): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Muhamm...', 473, Array)
+#1 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin->showOrders()
+#2 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Muhammad Ardani\jasasosmedid-ci4\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Muhammad Ardani\jasasosmedid-ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#6 {main}
