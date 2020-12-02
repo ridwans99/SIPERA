@@ -2,13 +2,13 @@
 <footer class="footer" style="margin-top:-3%">
     <!-- <div class="footer-top"> -->
         <div class="container text-center">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="footer-logo">
                         <img src="<?php echo base_url('assets/images/logo/logo3.png'); ?>" alt="Siena Logo" width="20%">
                     </div>
                 </div>
-            </div><!-- .row end -->
+            </div>.row end -->
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="footer-info">
