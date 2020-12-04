@@ -218,6 +218,9 @@ nav ul li a:hover {
 
     /* ukuran media */
     @media (max-width: 575.98px){
+        .tabelruangan tr th {
+            
+        }
         .back {
             margin-top: 20%;
             margin-right: 10px;
