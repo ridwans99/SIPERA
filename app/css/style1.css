@@ -1,0 +1,279 @@
+ * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background-image: url(../gambar/background/image2.png);
+
+}
+
+/* navbar */
+nav {
+    display: flex;
+    background-color: rgb(0, 138, 0);
+    justify-content: space-around;
+    height: 40px;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    font-size: 0.8em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: rgb(2, 2, 2);
+}
+
+
+/* hamburger menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 29px;
+    left: -6px;
+    top: -4px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 300ms;
+}
+
+/* hamburger menu animasi */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* responsive breakpoint */
+
+/* ukuran tablet */
+@media (max-width: 767.98px) {
+    nav ul {
+        width: 50% ;
+    }
+}
+
+/* ukuran mobile */
+@media (max-width: 575.98px){
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color:  rgb(0, 138, 0);
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 800ms;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Homepage */
+.konten {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(54, 250, 136);
+    width: 200px;
+    height: 220px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 45%;;
+    opacity: 75%;
+    z-index: 5;
+}
+
+/* Peminjaman Ruangan */
+.save {
+     background-color: #ffffff;
+    color: #00F0FF;
+    text-align: center;
+    padding: 8px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 60px;
+    margin-left: 74%;
+    border-color: rgb(112, 112, 112);
+    border-radius: 5px;
+    float: right;
+    float: left;
+    list-style: none;
+}
+.save:hover {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer; 
+}
+
+
+.tabelruangan {
+    padding: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 70px;
+    border-radius: 30px;
+    background-color: #17F1FF;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+    border-collapse: collapse;
+    width: 79%;
+    height: 65%;
+    border: 1px solid;
+    margin-top: 50px;
+    margin-left: 8%;
+    opacity: 80%; 
+}
+
+.tabelruangan tr th {
+    font-family: 'Montserrat', sans-serif;
+    padding: 8px;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 15px;
+
+
+}
+
+.tabelruangan tr td {
+    margin-top: 100px;
+    padding: 1px;
+    text-align: center;
+    border-radius: 1px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 217, 255);
+    font-size: 12px;
+}
+
+.hari {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-bottom: 20px;
+    text-decoration: underline;
+}
+
+    /* ukuran media */
+    @media (max-width: 575.98px){
+        .back {
+            margin-top: 20%;
+            margin-right: 10px;
+        }
+
+        .booking {
+            margin-top: 20%;
+            /* margin-bottom: 70%; */
+            float: none;
+        }
+
+        .tabelruangan {
+            padding: 20px;
+            padding-top: 50px;
+            padding-bottom: 100px;
+            margin-left: 8px;
+            width: 430px;
+            height: 950px;
+        }
+
+        .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color:  rgb(0, 138, 0);
+        z-index: 2;
+        transform: translateX(100%);
+        transition: all 800ms;
+        opacity: 0;
+    }
+
+    .menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 300ms;
+    z-index: 2;
+    }
+
+    .menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 29px;
+    left: -6px;
+    top: -4px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+    }
