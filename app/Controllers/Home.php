@@ -38,7 +38,7 @@ class Home extends BaseController
 		}
 
 		$data = [
-			'title' => 'Jasa Sosmed ID - Layanan Sosial Media Terbaik & Terpercaya',
+			'title' => 'SIPERA - Sistem Informasi Peminjaman Peralatan dan Ruangan',
 			'product' => $array_product,
 		];
 

@@ -74,217 +74,217 @@ class User extends BaseController
 		}
 	}
 
-	public function daftarLayanan()
-	{
-		$products = $this->product->getProduct();
-		$user = $this->user->getUser(session('user_id'));
-		$array_product = [];
-		if (isset($products)) {
-			foreach ($products as $key => $product) {
-				$category = $this->category->getProductCategory($product['product_category_id']);
-				$name = $category['name'];
-				$product['product_category_id'] = $name;
-				array_push($array_product, $product);
-			}
-		}
+	// public function daftarLayanan()
+	// {
+	// 	$products = $this->product->getProduct();
+	// 	$user = $this->user->getUser(session('user_id'));
+	// 	$array_product = [];
+	// 	if (isset($products)) {
+	// 		foreach ($products as $key => $product) {
+	// 			$category = $this->category->getProductCategory($product['product_category_id']);
+	// 			$name = $category['name'];
+	// 			$product['product_category_id'] = $name;
+	// 			array_push($array_product, $product);
+	// 		}
+	// 	}
 
-		$data = [
-			'title' => 'Jasa Sosmed ID - User',
-			'product' => $array_product,
-			'user' => $user
-		];
-		if($this->checkLoggedIn()){
-			echo view('user/header', $data);
-			echo view('user/menu', $data);
-			echo view('user/daftarlayanan', $data);
-			echo view('user/footer');
-		}
-	}
+	// 	$data = [
+	// 		'title' => 'Jasa Sosmed ID - User',
+	// 		'product' => $array_product,
+	// 		'user' => $user
+	// 	];
+	// 	if($this->checkLoggedIn()){
+	// 		echo view('user/header', $data);
+	// 		echo view('user/menu', $data);
+	// 		echo view('user/daftarlayanan', $data);
+	// 		echo view('user/footer');
+	// 	}
+	// }
 
-	public function pengumuman()
-	{
-		$announcement = $this->announcement->getAnnouncement();
-		$user = $this->user->getUser(session('user_id'));
-		$data = [
-			'title' => 'Jasa Sosmed ID - User',
-			'announcement' => $announcement,
-			'user' => $user
-		];
-		if($this->checkLoggedIn()){
-			echo view('user/header', $data);
-			echo view('user/menu', $data);
-			echo view('user/pengumuman', $data);
-			echo view('user/footer');
-		}
-	}
+	// public function pengumuman()
+	// {
+	// 	$announcement = $this->announcement->getAnnouncement();
+	// 	$user = $this->user->getUser(session('user_id'));
+	// 	$data = [
+	// 		'title' => 'Jasa Sosmed ID - User',
+	// 		'announcement' => $announcement,
+	// 		'user' => $user
+	// 	];
+	// 	if($this->checkLoggedIn()){
+	// 		echo view('user/header', $data);
+	// 		echo view('user/menu', $data);
+	// 		echo view('user/pengumuman', $data);
+	// 		echo view('user/footer');
+	// 	}
+	// }
 
-	public function pesanan()
-	{
-		$product = $this->product->getProduct();
-		$user = $this->user->getUser(session('user_id'));
-		$orders = $this->order->GetOrder();
-		$array_order = [];
-		if (isset($orders)) {
-			foreach ($orders as $key => $order) {
-				if ($order['user_id'] == session('user_id')) {
-					$user = $this->user->getUser($order['user_id']);
-					$productuser = $this->product->getProduct($order['product_id']);
-					$status = $this->status->getOrderStatus($order['orderstatus_id']);
-					$payment = $this->payment->getPayment($order['payment_id']);
-					$order['user_id'] = $user['full_name'];
-					$order['product_id'] = $productuser['name'];
-					$order['orderstatus_id'] = $status['name'];
-					array_push($array_order, $order);
-				}
-			} 
-		}
-		$lastorder = array(end($array_order));
-		$data = [
-			'title' => 'Jasa Sosmed ID - User',
-			'product' => $product,
-			'user' => $user,
-			'lastorder' => $lastorder
-		];
-		if($this->checkLoggedIn()){
-			echo view('user/header', $data);
-			echo view('user/menu', $data);
-			echo view('user/pesanan', $data);
-			echo view('user/footer');
-		}
-	}
+	// public function pesanan()
+	// {
+	// 	$product = $this->product->getProduct();
+	// 	$user = $this->user->getUser(session('user_id'));
+	// 	$orders = $this->order->GetOrder();
+	// 	$array_order = [];
+	// 	if (isset($orders)) {
+	// 		foreach ($orders as $key => $order) {
+	// 			if ($order['user_id'] == session('user_id')) {
+	// 				$user = $this->user->getUser($order['user_id']);
+	// 				$productuser = $this->product->getProduct($order['product_id']);
+	// 				$status = $this->status->getOrderStatus($order['orderstatus_id']);
+	// 				$payment = $this->payment->getPayment($order['payment_id']);
+	// 				$order['user_id'] = $user['full_name'];
+	// 				$order['product_id'] = $productuser['name'];
+	// 				$order['orderstatus_id'] = $status['name'];
+	// 				array_push($array_order, $order);
+	// 			}
+	// 		} 
+	// 	}
+	// 	$lastorder = array(end($array_order));
+	// 	$data = [
+	// 		'title' => 'Jasa Sosmed ID - User',
+	// 		'product' => $product,
+	// 		'user' => $user,
+	// 		'lastorder' => $lastorder
+	// 	];
+	// 	if($this->checkLoggedIn()){
+	// 		echo view('user/header', $data);
+	// 		echo view('user/menu', $data);
+	// 		echo view('user/pesanan', $data);
+	// 		echo view('user/footer');
+	// 	}
+	// }
 
-	public function storeOrders()
-	{
-		if($this->checkLoggedIn()){
-			$userid = session('user_id');
-			$product = $this->request->getPost('produk');
-			$productquery = $this->product->getProduct($product);
-			$orderstatus = 1;
-			$startcount = '';
-			$quantity = $this->request->getPost('quantity');
-			$message = $this->request->getPost('message');
-			$target = $this->request->getPost('target');
-			$method = $this->request->getPost('method');
-			$harga = $productquery['price'] * $quantity / 1000;
+	// public function storeOrders()
+	// {
+	// 	if($this->checkLoggedIn()){
+	// 		$userid = session('user_id');
+	// 		$product = $this->request->getPost('produk');
+	// 		$productquery = $this->product->getProduct($product);
+	// 		$orderstatus = 1;
+	// 		$startcount = '';
+	// 		$quantity = $this->request->getPost('quantity');
+	// 		$message = $this->request->getPost('message');
+	// 		$target = $this->request->getPost('target');
+	// 		$method = $this->request->getPost('method');
+	// 		$harga = $productquery['price'] * $quantity / 1000;
 
-			$datapayment = [
-				'user_id' => $userid,
-				'amounts' => $harga,
-				'payment_method' => $method,
-				'customer_confirmed' => 0,
-				'admin_confirmed' => 0,
-				'attachment_path' => '',
-				'created_at' => date("Y-m-d H:i:s"),
-				'updated_at' => date("Y-m-d H:i:s")
+	// 		$datapayment = [
+	// 			'user_id' => $userid,
+	// 			'amounts' => $harga,
+	// 			'payment_method' => $method,
+	// 			'customer_confirmed' => 0,
+	// 			'admin_confirmed' => 0,
+	// 			'attachment_path' => '',
+	// 			'created_at' => date("Y-m-d H:i:s"),
+	// 			'updated_at' => date("Y-m-d H:i:s")
 
-			];
-			$simpanpayment = $this->payment->insertPayment($datapayment);
-			$payment = $this->payment->getPayment();
-			$lastpayment = end($payment);
-			$payment_id = $lastpayment['payment_id'];
-			$data = [
-				'user_id' => $userid,
-				'product_id' => $product,
-				'orderstatus_id' => $orderstatus,
-				'payment_id' => $payment_id,
-				'start_count' => $startcount,
-				'quantity' => $quantity,
-				'total_price' => $harga,
-				'target_link' => $target,
-				'additional_message' => $message,
-				'created_at' => date("Y-m-d H:i:s"),
-				'updated_at' => date("Y-m-d H:i:s")
+	// 		];
+	// 		$simpanpayment = $this->payment->insertPayment($datapayment);
+	// 		$payment = $this->payment->getPayment();
+	// 		$lastpayment = end($payment);
+	// 		$payment_id = $lastpayment['payment_id'];
+	// 		$data = [
+	// 			'user_id' => $userid,
+	// 			'product_id' => $product,
+	// 			'orderstatus_id' => $orderstatus,
+	// 			'payment_id' => $payment_id,
+	// 			'start_count' => $startcount,
+	// 			'quantity' => $quantity,
+	// 			'total_price' => $harga,
+	// 			'target_link' => $target,
+	// 			'additional_message' => $message,
+	// 			'created_at' => date("Y-m-d H:i:s"),
+	// 			'updated_at' => date("Y-m-d H:i:s")
 
-			];
-			$simpan = $this->order->insertOrder($data);
-			if($simpan) {
-				return redirect()->to(base_url('/user/riwayatpemesanan')); 
-			}
-		}
-	}
+	// 		];
+	// 		$simpan = $this->order->insertOrder($data);
+	// 		if($simpan) {
+	// 			return redirect()->to(base_url('/user/riwayatpemesanan')); 
+	// 		}
+	// 	}
+	// }
 
-	public function riwayatPemesanan()
-	{
-		$orders = $this->order->GetOrder();
-		$user = $this->user->getUser(session('user_id'));
-		$array_order = [];
-		if (isset($orders)) {
-			foreach ($orders as $key => $order) {
-				if ($order['user_id'] == session('user_id')) {
-					$user = $this->user->getUser($order['user_id']);
-					$product = $this->product->getProduct($order['product_id']);
-					$status = $this->status->getOrderStatus($order['orderstatus_id']);
-					$payment = $this->payment->getPayment($order['payment_id']);
-					$order['user_id'] = $user['full_name'];
-					$order['product_id'] = $product['name'];
-					$order['orderstatus_id'] = $status['name'];
-					array_push($array_order, $order);
-				}
-			} 
-		}
-		$data = [
-			'title' => 'Jasa Sosmed ID - User',
-			'order' => $array_order,
-			'user' => $user
-		];
-		if($this->checkLoggedIn()){
-			echo view('user/header', $data);
-			echo view('user/menu', $data);
-			echo view('user/riwayatpemesanan', $data);
-			echo view('user/footer');
-		}
-	}
+	// public function riwayatPemesanan()
+	// {
+	// 	$orders = $this->order->GetOrder();
+	// 	$user = $this->user->getUser(session('user_id'));
+	// 	$array_order = [];
+	// 	if (isset($orders)) {
+	// 		foreach ($orders as $key => $order) {
+	// 			if ($order['user_id'] == session('user_id')) {
+	// 				$user = $this->user->getUser($order['user_id']);
+	// 				$product = $this->product->getProduct($order['product_id']);
+	// 				$status = $this->status->getOrderStatus($order['orderstatus_id']);
+	// 				$payment = $this->payment->getPayment($order['payment_id']);
+	// 				$order['user_id'] = $user['full_name'];
+	// 				$order['product_id'] = $product['name'];
+	// 				$order['orderstatus_id'] = $status['name'];
+	// 				array_push($array_order, $order);
+	// 			}
+	// 		} 
+	// 	}
+	// 	$data = [
+	// 		'title' => 'Jasa Sosmed ID - User',
+	// 		'order' => $array_order,
+	// 		'user' => $user
+	// 	];
+	// 	if($this->checkLoggedIn()){
+	// 		echo view('user/header', $data);
+	// 		echo view('user/menu', $data);
+	// 		echo view('user/riwayatpemesanan', $data);
+	// 		echo view('user/footer');
+	// 	}
+	// }
 
-	public function konfirmasiPembayaran($id)
-	{
-		$user = $this->user->getUser(session('user_id'));
-		$order = $this->order->GetOrder($id);
-		$hargauser = $order['total_price']-rand(1,999);
-		$payment = $this->payment->getPayment($order['payment_id']);
-		$data = [
-			'title' => 'Jasa Sosmed ID - User',
-			'order' => $order,
-			'user' => $user,
-			'payment' => $payment,
-			'hargauser' => $hargauser
+	// public function konfirmasiPembayaran($id)
+	// {
+	// 	$user = $this->user->getUser(session('user_id'));
+	// 	$order = $this->order->GetOrder($id);
+	// 	$hargauser = $order['total_price']-rand(1,999);
+	// 	$payment = $this->payment->getPayment($order['payment_id']);
+	// 	$data = [
+	// 		'title' => 'Jasa Sosmed ID - User',
+	// 		'order' => $order,
+	// 		'user' => $user,
+	// 		'payment' => $payment,
+	// 		'hargauser' => $hargauser
 
-		];
-		if($this->checkLoggedIn()){
-			echo view('user/header', $data);
-			echo view('user/menu', $data);
-			echo view('user/konfirmasipembayaran', $data);
-			echo view('user/footer');
-		}
-	}
+	// 	];
+	// 	if($this->checkLoggedIn()){
+	// 		echo view('user/header', $data);
+	// 		echo view('user/menu', $data);
+	// 		echo view('user/konfirmasipembayaran', $data);
+	// 		echo view('user/footer');
+	// 	}
+	// }
 
-	public function updatePembayaran()
-	{
-		if($this->checkLoggedIn()){
-			$id = $this->request->getPost('order_id');
-			$paymentid = $this->request->getPost('payment_id');
-			$image = $this->request->getFile('file_upload');
-			$hargauser = $this->request->getPost('hargauser');
-			$image->move('uploads/buktibayar');
-			$imgname = $image->getName();
+	// public function updatePembayaran()
+	// {
+	// 	if($this->checkLoggedIn()){
+	// 		$id = $this->request->getPost('order_id');
+	// 		$paymentid = $this->request->getPost('payment_id');
+	// 		$image = $this->request->getFile('file_upload');
+	// 		$hargauser = $this->request->getPost('hargauser');
+	// 		$image->move('uploads/buktibayar');
+	// 		$imgname = $image->getName();
 			
-			$dataorder = [
-				'total_price' => $hargauser,
-				'orderstatus_id' => 4,
-				'updated_at' => date("Y-m-d H:i:s")
-			];
-			$datapayment = [
-				'customer_confirmed' => 1,
-				'amounts' => $hargauser,
-				'attachment_path' => $imgname,
-				'updated_at' => date("Y-m-d H:i:s")
-			];
-			$simpan = $this->order->updateOrder($dataorder, $id);
-			$simpanpayment = $this->payment->updatePayment($datapayment, $paymentid);
-			if($simpan && $simpanpayment) {
-				return redirect()->to(base_url('/user/riwayatpemesanan')); 
-			}
-		}
-	}
+	// 		$dataorder = [
+	// 			'total_price' => $hargauser,
+	// 			'orderstatus_id' => 4,
+	// 			'updated_at' => date("Y-m-d H:i:s")
+	// 		];
+	// 		$datapayment = [
+	// 			'customer_confirmed' => 1,
+	// 			'amounts' => $hargauser,
+	// 			'attachment_path' => $imgname,
+	// 			'updated_at' => date("Y-m-d H:i:s")
+	// 		];
+	// 		$simpan = $this->order->updateOrder($dataorder, $id);
+	// 		$simpanpayment = $this->payment->updatePayment($datapayment, $paymentid);
+	// 		if($simpan && $simpanpayment) {
+	// 			return redirect()->to(base_url('/user/riwayatpemesanan')); 
+	// 		}
+	// 	}
+	// }
 
 	public function login(){
 		$googletoken = $this->request->getPost('google-token');
