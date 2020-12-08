@@ -79,7 +79,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="<?php echo base_url().'admin/buku'; ?>">
+            <a href="<?php echo base_url().'admin/ruangan'; ?>">
               <i class="fas fa-home"></i>
               <p>Daftar Ruangan</p>
             </a>
