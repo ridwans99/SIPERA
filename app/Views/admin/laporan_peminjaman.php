@@ -34,7 +34,7 @@
     <footer class="footer">
       <div class="container-fluid">
         <div class="copyright ml-left">
-          Copyright © 2019, made with <i class="fa fa-heart heart text-danger"></i> by <a href="#">Fiqisulaiman</a>
+          Copyright © 2019, made with by SIPERA
         </div>        
       </div>
     </footer>
