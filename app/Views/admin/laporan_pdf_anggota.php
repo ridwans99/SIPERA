@@ -15,17 +15,16 @@
 			font-size: 10pt;
 		}
 	</style>
-	<h3>Laporan Data Anggota Perpustakaan</h3>
+	<h3>Laporan Data Anggota</h3>
 	<br>
 	<table class="table-data">
 	<thead>
 		<tr>
           <th>No</th>
-          <th>Nama Anggota</th>
-          <th>Gender</th>
-          <th>No.Telpon</th>
-          <th>Alamat</th>
-          <th>Email</th>
+          <th>NIM</th>
+          <th>Nama Mahasiswa</th>
+          <th>Jenis Kelamin</th>
+          <th>Prodi</th>
         </tr>
       </thead>
       <tbody>
@@ -35,11 +34,10 @@
         ?>
         <tr>
           <td><?php echo $no++; ?></td>
-          <td><?php echo $a->nama_anggota ?></td>
-          <td><?php echo $a->gender ?></td>
-          <td><?php echo $a->no_telp ?></td>
-          <td><?php echo $a->alamat ?></td>
-          <td><?php echo $a->email ?></td>
+          <td><?php echo $a->nim ?></td>
+          <td><?php echo $a->nama_mhs ?></td>
+          <td><?php echo $a->jenis_kelamin ?></td>
+          <td><?php echo $a->prodi ?></td>
         </tr>
       <?php } ?>
 	</tbody>
