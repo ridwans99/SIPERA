@@ -8,29 +8,29 @@
               <i class="fas fa-home text-dark"></i> Edit Ruangan
             </div>
           </div>
-          <?php foreach ($buku as $b){ ?>
+          <?php foreach ($ruangan as $r){ ?>
           <div class="row">
             <div class="col-md-6">
-            <form action="<?php echo base_url().'admin/update_buku' ?>" method="post" enctype="multipart/form-data">
+            <form action="<?php echo base_url().'admin/update_ruangan' ?>" method="post" enctype="multipart/form-data">
 
               <div class="form-group">
                 <label><i class="fas fa-home text-dark"></i> Ruangan</label>
-                <input type="hidden" name="id" value="<?php echo $b->id_buku; ?>">
-                <input type="text" name="judul_buku" class="form-control" value="<?php echo $b->judul_buku; ?>">
-                <?php echo form_error('judul_buku'); ?>
+                <input type="hidden" name="id" value="<?php echo $r->id_ruangan; ?>">
+                <input type="text" name="ruangan" class="form-control" value="<?php echo $r->ruangan; ?>">
+                <?php echo form_error('ruangan'); ?>
               </div>
 
               <div class="form-group">
                 <label><i class="fas fa-book-open text-dark"></i> Deskripsi</label>
-                <input type="text" name="pengarang" class="form-control" value="<?php echo $b->pengarang; ?>">
-                <?php echo form_error('pengarang'); ?>
+                <input type="text" name="deskripsi" class="form-control" value="<?php echo $r->deskripsi; ?>">
+                <?php echo form_error('deskripsi'); ?>
               </div>
 
               <div class="form-group">
-                <label><i class="fas fa-info-circle text-dark"></i> Status Buku</label>
+                <label><i class="fas fa-info-circle text-dark"></i> Status Ruangan</label>
                 <select name="status" class="form-control">
-                  <option <?php if($b->status_buku == "1"){echo "selected='selected'";} echo $b->status_buku; ?> value="1">Tersedia</option>
-                  <option <?php if($b->status_buku == "0"){echo "selected='selected'";} echo $b->status_buku; ?> value="0">Sedang dipinjam</option>
+                  <option <?php if($r->status_ruangan == "1"){echo "selected='selected'";} echo $r->status_ruangan; ?> value="1">Tersedia</option>
+                  <option <?php if($r->status_ruangan == "0"){echo "selected='selected'";} echo $r->status_ruangan; ?> value="0">Sedang dipinjam</option>
                 </select>
                 <?php echo form_error('status'); ?>
               </div>
