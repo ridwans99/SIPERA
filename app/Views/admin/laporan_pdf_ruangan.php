@@ -15,35 +15,27 @@
 			font-size: 10pt;
 		}
 	</style>
-	<h3>Laporan Data Buku Perpustakaan</h3>
+	<h3>Laporan Data</h3>
 	<br>
 	<table class="table-data">
 		<thead>
 		<tr>
 			<th>No</th>
-			<th>Judul Buku</th>
-			<th>Pengarang</th>
-			<th>Tahun Terbit</th>
-			<th>Penerbit</th>
-			<th>ISBN</th>
-			<th>Jumlah Buku</th>
-			<th>Lokasi</th>
+			<th>Ruangan</th>
+			<th>Deskripsi</th>
+			<th>Status</th>
 		</tr>
 		</thead>
 		<tbody>
 			<?php
 			$no = 1;
-			foreach ($buku as $b) {
+			foreach ($ruangan as $r) {
 			?>
 			<tr>
 				<td><?php echo $no++; ?></td>
-				<td><?php echo $b->judul_buku; ?></td>
-				<td><?php echo $b->pengarang; ?></td>
-				<td><?php echo $b->thn_terbit; ?></td>
-				<td><?php echo $b->penerbit; ?></td>
-				<td><?php echo $b->isbn; ?></td>
-				<td><?php echo $b->jumlah_buku; ?></td>
-				<td><?php echo $b->lokasi; ?></td>
+				<td><?php echo $r->ruangan; ?></td>
+				<td><?php echo $r->deskripsi; ?></td>
+				<td><?php echo $r->status; ?></td>
 			</tr>
 			<?php } ?>
 		</tbody>
