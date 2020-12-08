@@ -30,11 +30,11 @@
                   ?>
                   <tr>
                     <td><?php echo $no++; ?></td>
-                    <td><?php echo $a->nama_anggota ?></td>
-                    <td><?php echo $a->gender ?></td>
-                    <td><?php echo $a->no_telp ?></td>
-                    <td><?php echo $a->alamat ?></td>
-                    <td><?php echo $a->email ?></td>
+                    <td><?php echo $a->nim ?></td>
+                    <td><?php echo $a->password ?></td>
+                    <td><?php echo $a->nama_mhs ?></td>
+                    <td><?php echo $a->jenis_kelamin ?></td>
+                    <td><?php echo $a->prodi ?></td>
                     <td nowrap="nowrap">
                       <a class="btn btn-success btn-xs" href="#modalEditAnggota<?php echo base_url().'admin/anggota/'.$a->id_anggota; ?>" data-toggle="modal"><i class="fas fa-edit"></i> Edit</a>
                       <a onclick="hapus()" class="btn btn-danger btn-xs" href="<?php echo base_url().'admin/hapus_anggota/'.$a->id_anggota; ?>"><i class="fas fa-trash-alt"></i> Hapus</a>
@@ -62,7 +62,7 @@
         <form action="<?php echo base_url().'admin/tambah_anggota_act' ?>" method="post" enctype="multipart/form-data">
           <div class="form-group">
             <label><i class="fas fa-user text-dark"></i> NIM</label>
-            <input type="text" name="nama_anggota" class="form-control" id="nama_anggota">
+            <input type="text" name="nim" class="form-control" id="nim">
           </div>
 
           <div class="form-group">
@@ -72,12 +72,12 @@
 
           <div class="form-group">
             <label><i class="fas fa-phone-square text-dark"></i> Nama Mahasiswa</label>
-            <input type="text" name="no_telp" class="form-control" id="no_telp">
+            <input type="text" name="nama_mhs" class="form-control" id="nama_mhs">
           </div>
 
           <div class="form-group">
             <label><i class="fas fa-transgender text-dark"></i> Jenis Kelamin</label>
-            <select name="gender" class="form-control" id="gender">
+            <select name="jenis_kelamin" class="form-control" id="jenis_kelamin">
               <option value="">--PILIH--</option>
               <option value="Laki-Laki">Laki-Laki</option>
               <option value="Perempuan">Perempuan</option>
@@ -86,7 +86,7 @@
 
           <div class="form-group">
             <label><i class="fas fa-sign text-dark"></i> Prodi</label>
-            <input type="text" name="alamat" class="form-control" id="alamat">
+            <input type="text" name="prodi" class="form-control" id="prodi">
           </div>
 
           <div class="form-group" align="right">
@@ -116,8 +116,8 @@
           <div class="form-group">
             <label><i class="fas fa-user text-dark"></i> NIM</label>
             <input type="hidden" name="id" value="<?php echo $a->id_anggota; ?>">
-            <input type="text" name="nama_anggota" class="form-control" value="<?php echo $a->nama_anggota; ?>">
-            <?php echo form_error('nama_anggota'); ?>
+            <input type="text" name="nim" class="form-control" value="<?php echo $a->nim; ?>">
+            <?php echo form_error('nim'); ?>
           </div>
 
           <div class="form-group">
@@ -128,23 +128,23 @@
 
           <div class="form-group">
             <label><i class="fas fa-sign text-dark"></i> Nama Mahasiswa</label>
-            <input type="text" name="alamat" class="form-control" value="<?php echo $a->alamat; ?>">
-            <?php echo form_error('alamat'); ?>
+            <input type="text" name="nama_mhs" class="form-control" value="<?php echo $a->nama_mhs; ?>">
+            <?php echo form_error('nama_mhs'); ?>
           </div>
 
           <div class="form-group">
-            <label><i class="fas fa-transgender text-dark"></i> Gender</label>
+            <label><i class="fas fa-transgender text-dark"></i> Jenis Kelamin</label>
             <select name="gender" class="form-control">
-              <option <?php if($a->gender == "Laki-Laki"){echo "selected='selected'";} echo $a->gender; ?> value="Laki-Laki">Laki-Laki</option>
-              <option <?php if($a->gender == "Perempuan"){echo "selected='selected'";} echo $a->gender; ?> value="Perempuan">Perempuan</option>
+              <option <?php if($a->jenis_kelamin == "Laki-Laki"){echo "selected='selected'";} echo $a->jenis_kelamin; ?> value="Laki-Laki">Laki-Laki</option>
+              <option <?php if($a->jenis_kelamin == "Perempuan"){echo "selected='selected'";} echo $a->jenis_kelamin; ?> value="Perempuan">Perempuan</option>
             </select>
-            <?php echo form_error('gender'); ?>
+            <?php echo form_error('jenis_kelamin'); ?>
           </div>
 
           <div class="form-group">
             <label><i class="fas fa-envelope text-dark"></i> Prodi</label>
-            <input type="text" name="email" class="form-control" value="<?php echo $a->email; ?>">
-            <?php echo form_error('email'); ?>
+            <input type="text" name="prodi" class="form-control" value="<?php echo $a->prodi; ?>">
+            <?php echo form_error('prodi'); ?>
           </div>
 
           <div class="form-group" align="right">
@@ -165,7 +165,7 @@
     <footer class="footer">
       <div class="container-fluid">
         <div class="copyright ml-left">
-          Copyright © 2019, made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.instagram.com/buday.05/">BUDAy</a>
+          Copyright © 2020, made with by SIPERA
         </div>        
       </div>
     </footer>
