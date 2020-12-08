@@ -38,8 +38,8 @@
                   <div class="col-7 col-stats">
                     <div class="numbers">
                       <p class="card-category">Jumlah Ruangan Yang Terdaftar</p>
-                      <h4 class="card-title"><?php echo $this->M_perpus->get_data('buku')->num_rows(); ?></h4>
-                      <a style="color: #fff; text-decoration: none;" href="<?php echo base_url().'admin/buku' ?>"> Details <i style="margin-left: 10px;" class="fas fa-long-arrow-alt-right"></i></a>
+                      <h4 class="card-title"><?php echo $this->M_sipera->get_data('ruangan')->num_rows(); ?></h4>
+                      <a style="color: #fff; text-decoration: none;" href="<?php echo base_url().'admin/ruangan' ?>"> Details <i style="margin-left: 10px;" class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -121,11 +121,11 @@
             </div>
             <div class="card-body">
               <div class="list-group">
-                <?php foreach($buku as $b){ ?>
+                <?php foreach($ruangan as $r){ ?>
                   <a href="#" class="list-group-item text-dark">
-                    <?php echo $b->judul_buku; ?>
+                    <?php echo $b->ruangan; ?>
                     <span class="badge badge-dark">
-                      <?php if($b->status_buku == 1){echo "Tersedia";}else{echo "Dipinjam";}?>
+                      <?php if($b->status_ruangan == 1){echo "Tersedia";}else{echo "Dipinjam";}?>
                     </span>    
                   </a>
                 <?php } ?>
@@ -199,8 +199,8 @@
   </div>
     <footer class="footer">
       <div class="container-fluid">
-        <div class="copyright ml-left">
-          Copyright © 2020, made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.instagram.com/buday.05/">ruanganku</a>
+        <div class="copyright ml-center">
+          Copyright © 2020, made with by SIPERA
         </div>        
       </div>
     </footer>
