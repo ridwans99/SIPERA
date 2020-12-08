@@ -37,12 +37,10 @@
 							<th>No</th>
 							<th>Tanggal</th>
 							<th>Nama Anggota</th>
-							<th>Judul Buku</th>
+							<th>Ruangan</th>
 							<th>Tgl. Pinjam</th>
 							<th>Tgl. Kembali</th>
-							<th>Denda / Hari</th>
 							<th>Tgl. Dikembalikan</th>
-							<th>Total Denda</th>
 							<th>Status</th>
 						</tr>
 					</thead>
@@ -54,11 +52,10 @@
 						<tr>
 							<td><?php echo $no++; ?></td>
 							<td><?php echo date('d/m/y', strtotime($l->tgl_pencatatan)); ?></td>
-							<td><?php echo $l->nama_anggota; ?></td>
-							<td><?php echo $l->judul_buku; ?></td>
+							<td><?php echo $l->nama_mhs; ?></td>
+							<td><?php echo $l->ruangan; ?></td>
 							<td><?php echo date('d/m/y', strtotime($l->tgl_pinjam)); ?></td>
 							<td><?php echo date('d/m/y', strtotime($l->tgl_kembali)); ?></td>
-							<td><?php echo "Rp. ".number_format($l->denda); ?></td>
 							<td>
 								<?php 
 								if($l->tgl_pengembalian == "00-00-000"){
@@ -68,7 +65,6 @@
 								}
 								?>
 							</td>
-							<td><?php echo $l->total_denda; ?></td>
 							<td>
 								<?php 
 								if($l->status_peminjaman == "1"){
@@ -92,7 +88,7 @@
     <footer class="footer">
       <div class="container-fluid">
         <div class="copyright ml-left">
-          Copyright © 2019, made with <i class="fa fa-heart heart text-danger"></i> by <a href="#">Fiqisulaiman</a>
+          Copyright © 2019, made with by SIPERA
         </div>        
       </div>
     </footer>
