@@ -1,13 +1,13 @@
 <?php namespace App\Controllers;
 
 
+use App\Models\AdminModel;
 use App\Models\UserModel;
-use App\Models\AnnouncementModel;
-use App\Models\ProductModel;
-use App\Models\ProductCategoryModel;
-use App\Models\OrderModel;
-use App\Models\OrderStatusModel;
-use App\Models\PaymentModel;
+use App\Models\BarangModel;
+use App\Models\RuanganModel;
+use App\Models\OrderBarangModel;
+use App\Models\OrderRuanganModel;
+
 
 class User extends BaseController
 {
@@ -20,12 +20,10 @@ class User extends BaseController
 		$this->session = session();
 		$this->request = \Config\Services::request();
 		$this->user = new UserModel();
-		$this->announcement = new AnnouncementModel();
-		$this->product = new ProductModel();
-		$this->category = new ProductCategoryModel();
-		$this->order = new OrderModel();
-		$this->status = new OrderStatusModel();
-		$this->payment = new PaymentModel();
+		$this->barang = new BarangModel();
+		$this->ruangan = new RuanganModel();
+		$this->orderbarang = new OrderBarangModel();
+		$this->orderruangan = new OrderRuanganModel();
 	}
 
 	public function checkLoggedIn() {

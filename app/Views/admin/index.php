@@ -38,7 +38,7 @@
                   <div class="col-7 col-stats">
                     <div class="numbers">
                       <p class="card-category">Jumlah Ruangan Yang Terdaftar</p>
-                      <h4 class="card-title"><?php echo $this->M_sipera->get_data('ruangan')->num_rows(); ?></h4>
+                      <h4 class="card-title">15</h4>
                       <a style="color: #fff; text-decoration: none;" href="<?php echo base_url().'admin/ruangan' ?>"> Details <i style="margin-left: 10px;" class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                   </div>
@@ -58,7 +58,7 @@
                   <div class="col-7 col-stats">
                     <div class="numbers">
                       <p class="card-category">Jumlah Anggota Yang Terdaftar</p>
-                      <h4 class="card-title"><?php echo $this->M_perpus->get_data('anggota')->num_rows(); ?></h4>
+                      <h4 class="card-title">124</h4>
                       <a style="color: #fff; text-decoration: none;" href="<?php echo base_url().'admin/anggota' ?>"> Details <i style="margin-left: 10px;" class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                   </div>
@@ -78,7 +78,7 @@
                   <div class="col-7 col-stats">
                     <div class="numbers">
                       <p class="card-category">Peminjaman Belum Selesai</p>
-                      <h4 class="card-title"><?php echo $this->M_perpus->edit_data(array('status_peminjaman'=>0),'orderan')->num_rows(); ?></h4>
+                      <h4 class="card-title">12</h4>
                       <a style="color: #fff; text-decoration: none;" href="c"> Details <i style="margin-left: 10px;" class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                   </div>
@@ -98,7 +98,7 @@
                   <div class="col-7 col-stats">
                     <div class="numbers">
                       <p class="card-category">Peminjaman Sudah Selesai</p>
-                      <h4 class="card-title"><?php echo $this->M_perpus->edit_data(array('status_peminjaman'=>1),'orderan')->num_rows(); ?></h4>
+                      <h4 class="card-title">12</h4>
                       <a style="color: #fff; text-decoration: none;" href="<?php echo base_url().'admin/peminjaman' ?>"> Details <i style="margin-left: 10px;" class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                   </div>
@@ -121,14 +121,6 @@
             </div>
             <div class="card-body">
               <div class="list-group">
-                <?php foreach($ruangan as $r){ ?>
-                  <a href="#" class="list-group-item text-dark">
-                    <?php echo $b->ruangan; ?>
-                    <span class="badge badge-dark">
-                      <?php if($b->status_ruangan == 1){echo "Tersedia";}else{echo "Dipinjam";}?>
-                    </span>    
-                  </a>
-                <?php } ?>
               </div>
             </div>
           </div>
@@ -143,12 +135,6 @@
             </div>
                 <div class="card-body">
                   <div class="list-group">
-                    <?php foreach($anggota as $a){ ?>
-                      <a href="#" class="list-group-item text-dark">
-                        <?php echo $a->nama_anggota; ?>
-                        <span class="badge badge-dark"><?php echo $a->gender; ?></span>    
-                      </a>
-                    <?php } ?>
                   </div>
                 </div>
               </div>
@@ -173,16 +159,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                          <?php
-                          foreach($orderan as $t){
-                          ?>
-                             <tr>
-                                <td><?php echo date('d/m/Y',strtotime($t->tgl_pencatatan)); ?></td>
-                                <td><?php echo date('d/m/Y',strtotime($t->tgl_pinjam)); ?></td>
-                                <td><?php echo date('d/m/Y',strtotime($t->tgl_kembali)); ?></td>
-                                <!--td><?php echo "Rp.".number_format($t->total_denda)." ,-"; ?></td-->
-                             </tr>
-                          <?php } ?>
                         </tbody>
                       </table>
                     </div>

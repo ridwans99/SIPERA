@@ -40,7 +40,7 @@
     <div class="container-fluid">
       <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
         <li class="nav-item dropdown hidden-caret">
-          <a style="margin-top: 3px; color: #fff; text-decoration: none;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" ariaexpanded="false"><?php echo "Halo, <b>".$this->session->userdata('nama');?></b> <span class="caret"></span></a>
+          <a style="margin-top: 3px; color: #fff; text-decoration: none;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" ariaexpanded="false"><?php echo "Halo, <b>";?></b> <span class="caret"></span></a>
           <ul class="dropdown-menu dropdown-user animated fadeIn fast">
             <div class="dropdown-user-scroll scrollbar-outer">
               <li>

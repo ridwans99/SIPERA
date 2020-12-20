@@ -33,7 +33,7 @@ $routes->setAutoRoute(true);
 
 // Portal Routes
 $routes->get('/', 'Home::index');
-$routes->get('/daftar-layanan', 'Home::daftarLayanan');
+// $routes->get('/daftar-layanan', 'Home::daftarLayanan');
 
 // Admin Routes
 $routes->get('/admin', 'Admin::index');

@@ -3,12 +3,10 @@
 
 use App\Models\AdminModel;
 use App\Models\UserModel;
-use App\Models\AnnouncementModel;
-use App\Models\ProductModel;
-use App\Models\ProductCategoryModel;
-use App\Models\OrderModel;
-use App\Models\OrderStatusModel;
-use App\Models\PaymentModel;
+use App\Models\BarangModel;
+use App\Models\RuanganModel;
+use App\Models\OrderBarangModel;
+use App\Models\OrderRuanganModel;
 
 
 class Admin extends BaseController
@@ -23,12 +21,10 @@ class Admin extends BaseController
 		$this->request = \Config\Services::request();
 		$this->admin = new AdminModel();
 		$this->user = new UserModel();
-		$this->announcement = new AnnouncementModel();
-		$this->product = new ProductModel();
-		$this->category = new ProductCategoryModel();
-		$this->order = new OrderModel();
-		$this->status = new OrderStatusModel();
-		$this->payment = new PaymentModel();
+		$this->barang = new BarangModel();
+		$this->ruangan = new RuanganModel();
+		$this->orderbarang = new OrderBarangModel();
+		$this->orderruangan = new OrderRuanganModel();
 	}
 
 	public function checkLoggedIn() {
@@ -41,40 +37,24 @@ class Admin extends BaseController
 
 	public function index()
 	{
+		
 		$admin = $this->admin->getAdmin(session('admin_id'));
 		$user = $this->user->getUser();
-		$products = $this->product->getProduct();
-		$orders = $this->order->GetOrder();
-		$announcement = $this->announcement->getAnnouncement();
-		$totaluser = count($user);
-		$totalproduk = count($products);
-		$totalorder = count($orders);
-		$totalannouncement = count($announcement);
-		$array_pendapatan = [];
-		if (isset($orders)) {
-			foreach ($orders as $key => $order) {
-				array_push($array_pendapatan, $order['total_price']);
-			}
-		}
-		$totalpendapatan = array_sum($array_pendapatan);
+		$barang = $this->barang->getBarang();
+		$ruangan = $this->ruangan->getRuangan();
+		$orderbarang = $this->barang->getOrderBarang();
+		$orderruangan = $this->ruangan->getOrderRuangan();
 
 
 		// return view('welcome_message');
 		$data = [
-			'title' => 'Jasa Sosmed ID - Admin',
-			'admin' => $admin,
-			'totaluser' => $totaluser,
-			'totalproduk' => $totalproduk,
-			'totalorder' => $totalorder,
-			'totalannouncement' => $totalannouncement,
-			'totalpendapatan' => $totalpendapatan
+			'admin' => $admin
 		];
-		if($this->checkLoggedIn()){
 			echo view('admin/header', $data);
 			echo view('admin/menu', $data);
 			echo view('admin/index', $data);
 			echo view('admin/footer');
-		}
+		
 	}
 
 	public function showUsers()

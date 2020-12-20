@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<header id="navbar-spy" class="header header-1 header-transparent header-fixed">
+<!-- <header id="navbar-spy" class="header header-1 header-transparent header-fixed">
     <nav id="primary-menu" class="navbar navbar-expand-lg navbar-navbar-light" style="background-color: #EAE0FC;">
         <div class="container">
             <a class="navbar-brand" href="/">
@@ -25,8 +25,7 @@
                     <script>startApp();</script>
                 </ul>
             </div>
-            <!--/.nav-collapse -->
         </div>
     </nav>
-</header>
+</header> -->
 </html>
