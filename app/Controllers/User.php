@@ -72,6 +72,120 @@ class User extends BaseController
 		}
 	}
 
+	public function homepage()
+	{
+		$announcement = $this->announcement->getAnnouncement();
+		$user = $this->user->getUser(session('user_id'));
+		$orders = $this->order->GetOrder();
+		$lastannounce = array(end($announcement));
+		$products = $this->product->getProduct();
+		$totalproduk = count($products);
+		$array_order = [];
+		$array_harga = [];
+		if (isset($orders)) {
+			foreach ($orders as $key => $order) {
+				if ($order['user_id'] == session('user_id')) {
+					array_push($array_order, $order);
+					array_push($array_harga, $order['total_price']);
+				}
+			}
+		}
+		$totalpesanan = count($array_order);
+		$totalpengeluaran = array_sum($array_harga);
+
+		$data = [
+			'title' => 'Jasa Sosmed ID - User',
+			'user' => $user,
+			'announcement' => $lastannounce,
+			'totalproduk' => $totalproduk,
+			'totalpesanan' => $totalpesanan,
+			'totalpengeluaran' => $totalpengeluaran
+
+		];
+		if($this->checkLoggedIn()){
+			echo view('user/header', $data);
+			echo view('user/menu', $data);
+			echo view('user/index', $data);
+			echo view('user/footer');
+		}
+	}
+
+	public function formpeminjaman()
+	{
+		$announcement = $this->announcement->getAnnouncement();
+		$user = $this->user->getUser(session('user_id'));
+		$orders = $this->order->GetOrder();
+		$lastannounce = array(end($announcement));
+		$products = $this->product->getProduct();
+		$totalproduk = count($products);
+		$array_order = [];
+		$array_harga = [];
+		if (isset($orders)) {
+			foreach ($orders as $key => $order) {
+				if ($order['user_id'] == session('user_id')) {
+					array_push($array_order, $order);
+					array_push($array_harga, $order['total_price']);
+				}
+			}
+		}
+		$totalpesanan = count($array_order);
+		$totalpengeluaran = array_sum($array_harga);
+
+		$data = [
+			'title' => 'Jasa Sosmed ID - User',
+			'user' => $user,
+			'announcement' => $lastannounce,
+			'totalproduk' => $totalproduk,
+			'totalpesanan' => $totalpesanan,
+			'totalpengeluaran' => $totalpengeluaran
+
+		];
+		if($this->checkLoggedIn()){
+			echo view('user/header', $data);
+			echo view('user/menu', $data);
+			echo view('user/index', $data);
+			echo view('user/footer');
+		}
+	}
+
+	public function peminjamanruang()
+	{
+		$announcement = $this->announcement->getAnnouncement();
+		$user = $this->user->getUser(session('user_id'));
+		$orders = $this->order->GetOrder();
+		$lastannounce = array(end($announcement));
+		$products = $this->product->getProduct();
+		$totalproduk = count($products);
+		$array_order = [];
+		$array_harga = [];
+		if (isset($orders)) {
+			foreach ($orders as $key => $order) {
+				if ($order['user_id'] == session('user_id')) {
+					array_push($array_order, $order);
+					array_push($array_harga, $order['total_price']);
+				}
+			}
+		}
+		$totalpesanan = count($array_order);
+		$totalpengeluaran = array_sum($array_harga);
+
+		$data = [
+			'title' => 'Jasa Sosmed ID - User',
+			'user' => $user,
+			'announcement' => $lastannounce,
+			'totalproduk' => $totalproduk,
+			'totalpesanan' => $totalpesanan,
+			'totalpengeluaran' => $totalpengeluaran
+
+		];
+		if($this->checkLoggedIn()){
+			echo view('user/header', $data);
+			echo view('user/menu', $data);
+			echo view('user/index', $data);
+			echo view('user/footer');
+		}
+	}
+
 	// public function daftarLayanan()
 	// {
 	// 	$products = $this->product->getProduct();

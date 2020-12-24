@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link href="<?php echo base_url('assets/img/brand/favicon.png') ?>" rel="icon" type="image/png">
@@ -17,8 +18,8 @@
 
     <!-- Argon CSS -->
     <link type="text/css" href="<?php echo base_url('assets/css/argon.min.css') ?>" rel="stylesheet">
-    <link type="text/css" href="<?php echo base_url('assets/css/pengumuman.user.css') ?>" rel="stylesheet">
+    <link type="text/css" href="<?php echo base_url('assets/css/bootstrap/styleindex.css') ?>" rel="stylesheet">
 
-    <title><?php echo $title ?></title>
+    <title>SIPERA UNJ</title>
 </head>
 <body>

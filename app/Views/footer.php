@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<footer class="footer" style="margin-top:-3%">
+<footer class="footer" style="">
     <!-- <div class="footer-top"> -->
         <div class="container text-center">
             <!-- <div class="row">

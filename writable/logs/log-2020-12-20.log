@@ -1,0 +1,70 @@
+CRITICAL - 2020-12-20 10:47:48 --> Class 'App\Models\ProductModel' not found
+#0 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\stara\Documents\SIPERA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\stara\\...')
+#5 {main}
+CRITICAL - 2020-12-20 10:49:37 --> Class 'App\Models\ProductModel' not found
+#0 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\stara\Documents\SIPERA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\stara\\...')
+#5 {main}
+CRITICAL - 2020-12-20 10:49:39 --> Class 'App\Models\ProductModel' not found
+#0 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\stara\Documents\SIPERA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\stara\\...')
+#5 {main}
+CRITICAL - 2020-12-20 10:49:41 --> Class 'App\Models\ProductModel' not found
+#0 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\stara\Documents\SIPERA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\stara\\...')
+#5 {main}
+CRITICAL - 2020-12-20 10:49:41 --> Class 'App\Models\ProductModel' not found
+#0 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\stara\Documents\SIPERA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\stara\\...')
+#5 {main}
+CRITICAL - 2020-12-20 10:49:41 --> Class 'App\Models\ProductModel' not found
+#0 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\stara\Documents\SIPERA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\stara\\...')
+#5 {main}
+CRITICAL - 2020-12-20 10:49:42 --> Class 'App\Models\ProductModel' not found
+#0 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\stara\Documents\SIPERA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\stara\\...')
+#5 {main}
+CRITICAL - 2020-12-20 10:49:42 --> Class 'App\Models\ProductModel' not found
+#0 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\stara\Documents\SIPERA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\stara\\...')
+#5 {main}
+CRITICAL - 2020-12-20 10:49:43 --> Class 'App\Models\ProductModel' not found
+#0 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\stara\Documents\SIPERA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\stara\\...')
+#5 {main}
+CRITICAL - 2020-12-20 10:49:43 --> Class 'App\Models\ProductModel' not found
+#0 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\stara\Documents\SIPERA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\stara\\...')
+#5 {main}

@@ -1,7 +1,7 @@
 <?php namespace App\Controllers;
 
-use App\Models\ProductModel;
-use App\Models\ProductCategoryModel;
+// use App\Models\ProductModel;
+// use App\Models\ProductCategoryModel;
 
 class Home extends BaseController
 {
@@ -9,8 +9,8 @@ class Home extends BaseController
 	{
 		$this->session = session();
 		$this->request = \Config\Services::request();
-		$this->product = new ProductModel();
-		$this->category = new ProductCategoryModel();
+		// $this->product = new ProductModel();
+		// $this->category = new ProductCategoryModel();
 	}
 	public function index()
 	{
