@@ -1,0 +1,507 @@
+CRITICAL - 2020-12-24 08:38:31 --> Unable to connect to the database.
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Muhammad Ardani\sipera\app\Models\UserModel.php(16): CodeIgniter\Model->findAll()
+#4 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(72): App\Models\UserModel->getUser(NULL)
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#10 {main}
+CRITICAL - 2020-12-24 08:38:31 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\Users\\Muhamm...', 100, Array)
+#1 C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\User), true)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(308): include('C:\\Users\\Muhamm...')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-12-24 08:41:21 --> Unable to connect to the database.
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Muhammad Ardani\sipera\app\Models\UserModel.php(16): CodeIgniter\Model->findAll()
+#4 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(72): App\Models\UserModel->getUser(NULL)
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#10 {main}
+CRITICAL - 2020-12-24 08:41:21 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\Users\\Muhamm...', 100, Array)
+#1 C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\User), true)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(308): include('C:\\Users\\Muhamm...')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-12-24 08:41:35 --> Unable to connect to the database.
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Muhammad Ardani\sipera\app\Models\BarangModel.php(16): CodeIgniter\Model->findAll()
+#4 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(73): App\Models\BarangModel->getBarang()
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#10 {main}
+CRITICAL - 2020-12-24 08:41:35 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\Users\\Muhamm...', 100, Array)
+#1 C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\User), true)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(308): include('C:\\Users\\Muhamm...')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-12-24 08:43:22 --> Unable to connect to the database.
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Muhammad Ardani\sipera\app\Models\AdminModel.php(16): CodeIgniter\Model->findAll()
+#4 C:\Users\Muhammad Ardani\sipera\app\Controllers\Admin.php(41): App\Models\AdminModel->getAdmin(NULL)
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Admin->index()
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#10 {main}
+CRITICAL - 2020-12-24 08:43:22 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\Users\\Muhamm...', 100, Array)
+#1 C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Admin), true)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(308): include('C:\\Users\\Muhamm...')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-12-24 08:47:26 --> Invalid file: admin/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/homepage....')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(83): view('admin/homepage', Array)
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 08:50:00 --> Invalid file: admin/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/homepage....')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(83): view('admin/homepage', Array)
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 08:52:53 --> Unable to connect to the database.
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Muhammad Ardani\sipera\app\Models\UserModel.php(16): CodeIgniter\Model->findAll()
+#4 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(39): App\Models\UserModel->getUser(NULL)
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#10 {main}
+CRITICAL - 2020-12-24 08:52:53 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\Users\\Muhamm...', 100, Array)
+#1 C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\User), true)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(308): include('C:\\Users\\Muhamm...')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-12-24 08:54:11 --> Unable to connect to the database.
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Muhammad Ardani\sipera\app\Models\UserModel.php(16): CodeIgniter\Model->findAll()
+#4 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(39): App\Models\UserModel->getUser(NULL)
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#10 {main}
+CRITICAL - 2020-12-24 08:55:57 --> Call to a member function more_results() on bool
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Muhammad Ardani\sipera\app\Models\UserModel.php(16): CodeIgniter\Model->findAll()
+#5 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(39): App\Models\UserModel->getUser(NULL)
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#11 {main}
+CRITICAL - 2020-12-24 08:56:12 --> Unable to connect to the database.
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Muhammad Ardani\sipera\app\Models\UserModel.php(16): CodeIgniter\Model->findAll()
+#4 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(39): App\Models\UserModel->getUser(NULL)
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#10 {main}
+CRITICAL - 2020-12-24 09:04:41 --> Unable to connect to the database.
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Muhammad Ardani\sipera\app\Models\UserModel.php(16): CodeIgniter\Model->findAll()
+#4 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(39): App\Models\UserModel->getUser(NULL)
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#10 {main}
+CRITICAL - 2020-12-24 09:04:41 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\Users\\Muhamm...', 100, Array)
+#1 C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\User), true)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(308): include('C:\\Users\\Muhamm...')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-12-24 09:05:43 --> Unable to connect to the database.
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Muhammad Ardani\sipera\app\Models\UserModel.php(16): CodeIgniter\Model->findAll()
+#4 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(39): App\Models\UserModel->getUser(NULL)
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#10 {main}
+CRITICAL - 2020-12-24 09:05:43 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\Users\\Muhamm...', 100, Array)
+#1 C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\User), true)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(308): include('C:\\Users\\Muhamm...')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-12-24 09:06:10 --> Unable to connect to the database.
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Muhammad Ardani\sipera\app\Models\UserModel.php(16): CodeIgniter\Model->findAll()
+#4 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(39): App\Models\UserModel->getUser(NULL)
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#10 {main}
+CRITICAL - 2020-12-24 09:06:10 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\Users\\Muhamm...', 100, Array)
+#1 C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\User), true)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(308): include('C:\\Users\\Muhamm...')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-12-24 09:07:08 --> Unable to connect to the database.
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Muhammad Ardani\sipera\app\Models\UserModel.php(16): CodeIgniter\Model->findAll()
+#4 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(39): App\Models\UserModel->getUser(NULL)
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#10 {main}
+CRITICAL - 2020-12-24 09:07:08 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\Users\\Muhamm...', 100, Array)
+#1 C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\User), true)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(308): include('C:\\Users\\Muhamm...')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-12-24 09:07:41 --> Unable to connect to the database.
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Muhammad Ardani\sipera\app\Models\UserModel.php(16): CodeIgniter\Model->findAll()
+#4 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(39): App\Models\UserModel->getUser(NULL)
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#10 {main}
+CRITICAL - 2020-12-24 09:07:41 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\Users\\Muhamm...', 100, Array)
+#1 C:\Users\Muhammad Ardani\sipera\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\User), true)
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(308): include('C:\\Users\\Muhamm...')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-12-24 09:08:18 --> Invalid file: admin/menu.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/menu.php')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/menu', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(49): view('admin/menu')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:09:35 --> Invalid file: admin/menu.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/menu.php')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('admin/menu', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(49): view('admin/menu')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:13:12 --> Undefined variable: title
+#0 C:\Users\Muhammad Ardani\sipera\app\Views\user\header.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Muhamm...', 28, Array)
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\Users\\Muhamm...')
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/header', Array, true)
+#3 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(48): view('user/header')
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#9 {main}
+CRITICAL - 2020-12-24 09:14:07 --> Undefined variable: user
+#0 C:\Users\Muhammad Ardani\sipera\app\Views\user\menu.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Muhamm...', 28, Array)
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\Users\\Muhamm...')
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/menu', Array, true)
+#3 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(49): view('user/menu')
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#9 {main}
+CRITICAL - 2020-12-24 09:26:50 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:27:00 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:27:03 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:27:10 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:27:23 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:27:37 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:27:53 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:27:53 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:28:22 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:28:52 --> Undefined variable: title
+#0 C:\Users\Muhammad Ardani\sipera\app\Views\user\header.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Muhamm...', 29, Array)
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\Users\\Muhamm...')
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/header', Array, true)
+#3 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(42): view('user/header')
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#9 {main}
+CRITICAL - 2020-12-24 09:29:12 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:29:39 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:30:12 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:30:44 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:30:45 --> Invalid file: user/homepage.php
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/homepage.p...')
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/homepage', Array, true)
+#2 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(44): view('user/homepage')
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#8 {main}
+CRITICAL - 2020-12-24 09:32:50 --> Undefined variable: title
+#0 C:\Users\Muhammad Ardani\sipera\app\Views\user\header.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Muhamm...', 28, Array)
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\Users\\Muhamm...')
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/header', Array, true)
+#3 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(42): view('user/header')
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#9 {main}
+CRITICAL - 2020-12-24 09:33:17 --> Undefined variable: title
+#0 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Muhamm...', 42, Array)
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#6 {main}
+CRITICAL - 2020-12-24 09:33:35 --> Array to string conversion
+#0 C:\Users\Muhammad Ardani\sipera\app\Controllers\User.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\Users\\Muhamm...', 42, Array)
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#6 {main}

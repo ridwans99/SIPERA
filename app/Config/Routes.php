@@ -60,10 +60,8 @@ $routes->get('/logout', 'Admin::logout');
 
 // User Routes
 $routes->get('/user', 'User::index');
-$routes->post('/user-login', 'User::login');
-$routes->get('/user/homepage', 'User::index');
-$routes->get('/user/formpeminjaman', 'User::index');
-$routes->get('/user/peminjamanruang', 'User::index');
+$routes->get('/user/formpeminjamanruang', 'User::formpeminjamanruang');
+$routes->get('/user/peminjamanruang', 'User::peminjamanruang');
 // $routes->get('/user/daftarlayanan', 'User::daftarLayanan');
 // $routes->get('/user/pengumuman', 'User::pengumuman');
 // $routes->get('/user/pesanan', 'User::pesanan');

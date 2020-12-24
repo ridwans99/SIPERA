@@ -26,164 +26,47 @@ class User extends BaseController
 		$this->orderruangan = new OrderRuanganModel();
 	}
 
-	public function checkLoggedIn() {
-		if (session('user_logged_in') == true) {
-			return true;
-		}
-		header("Location: /");
-		exit;
-	} 
+	// public function checkLoggedIn() {
+	// 	if (session('user_logged_in') == true) {
+	// 		return true;
+	// 	}
+	// 	header("Location: /");
+	// 	exit;
+	// } 
 
 	public function index()
 	{
-		$announcement = $this->announcement->getAnnouncement();
-		$user = $this->user->getUser(session('user_id'));
-		$orders = $this->order->GetOrder();
-		$lastannounce = array(end($announcement));
-		$products = $this->product->getProduct();
-		$totalproduk = count($products);
-		$array_order = [];
-		$array_harga = [];
-		if (isset($orders)) {
-			foreach ($orders as $key => $order) {
-				if ($order['user_id'] == session('user_id')) {
-					array_push($array_order, $order);
-					array_push($array_harga, $order['total_price']);
-				}
-			}
-		}
-		$totalpesanan = count($array_order);
-		$totalpengeluaran = array_sum($array_harga);
-
 		$data = [
-			'title' => 'Jasa Sosmed ID - User',
-			'user' => $user,
-			'announcement' => $lastannounce,
-			'totalproduk' => $totalproduk,
-			'totalpesanan' => $totalpesanan,
-			'totalpengeluaran' => $totalpengeluaran
-
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
-		if($this->checkLoggedIn()){
 			echo view('user/header', $data);
-			echo view('user/menu', $data);
-			echo view('user/index', $data);
+			// echo view('user/menu');
+			echo view('user/index');
 			echo view('user/footer');
-		}
 	}
 
-	public function homepage()
+	
+
+	public function formpeminjamanruang()
 	{
-		$announcement = $this->announcement->getAnnouncement();
-		$user = $this->user->getUser(session('user_id'));
-		$orders = $this->order->GetOrder();
-		$lastannounce = array(end($announcement));
-		$products = $this->product->getProduct();
-		$totalproduk = count($products);
-		$array_order = [];
-		$array_harga = [];
-		if (isset($orders)) {
-			foreach ($orders as $key => $order) {
-				if ($order['user_id'] == session('user_id')) {
-					array_push($array_order, $order);
-					array_push($array_harga, $order['total_price']);
-				}
-			}
-		}
-		$totalpesanan = count($array_order);
-		$totalpengeluaran = array_sum($array_harga);
-
 		$data = [
-			'title' => 'Jasa Sosmed ID - User',
-			'user' => $user,
-			'announcement' => $lastannounce,
-			'totalproduk' => $totalproduk,
-			'totalpesanan' => $totalpesanan,
-			'totalpengeluaran' => $totalpengeluaran
-
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
-		if($this->checkLoggedIn()){
 			echo view('user/header', $data);
-			echo view('user/menu', $data);
-			echo view('user/index', $data);
+			// echo view('user/menu');
+			echo view('user/formpeminjamanruang');
 			echo view('user/footer');
-		}
-	}
-
-	public function formpeminjaman()
-	{
-		$announcement = $this->announcement->getAnnouncement();
-		$user = $this->user->getUser(session('user_id'));
-		$orders = $this->order->GetOrder();
-		$lastannounce = array(end($announcement));
-		$products = $this->product->getProduct();
-		$totalproduk = count($products);
-		$array_order = [];
-		$array_harga = [];
-		if (isset($orders)) {
-			foreach ($orders as $key => $order) {
-				if ($order['user_id'] == session('user_id')) {
-					array_push($array_order, $order);
-					array_push($array_harga, $order['total_price']);
-				}
-			}
-		}
-		$totalpesanan = count($array_order);
-		$totalpengeluaran = array_sum($array_harga);
-
-		$data = [
-			'title' => 'Jasa Sosmed ID - User',
-			'user' => $user,
-			'announcement' => $lastannounce,
-			'totalproduk' => $totalproduk,
-			'totalpesanan' => $totalpesanan,
-			'totalpengeluaran' => $totalpengeluaran
-
-		];
-		if($this->checkLoggedIn()){
-			echo view('user/header', $data);
-			echo view('user/menu', $data);
-			echo view('user/index', $data);
-			echo view('user/footer');
-		}
 	}
 
 	public function peminjamanruang()
 	{
-		$announcement = $this->announcement->getAnnouncement();
-		$user = $this->user->getUser(session('user_id'));
-		$orders = $this->order->GetOrder();
-		$lastannounce = array(end($announcement));
-		$products = $this->product->getProduct();
-		$totalproduk = count($products);
-		$array_order = [];
-		$array_harga = [];
-		if (isset($orders)) {
-			foreach ($orders as $key => $order) {
-				if ($order['user_id'] == session('user_id')) {
-					array_push($array_order, $order);
-					array_push($array_harga, $order['total_price']);
-				}
-			}
-		}
-		$totalpesanan = count($array_order);
-		$totalpengeluaran = array_sum($array_harga);
-
 		$data = [
-			'title' => 'Jasa Sosmed ID - User',
-			'user' => $user,
-			'announcement' => $lastannounce,
-			'totalproduk' => $totalproduk,
-			'totalpesanan' => $totalpesanan,
-			'totalpengeluaran' => $totalpengeluaran
-
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
-		if($this->checkLoggedIn()){
 			echo view('user/header', $data);
-			echo view('user/menu', $data);
-			echo view('user/index', $data);
+			// echo view('user/menu');
+			echo view('user/peminjamanruang');
 			echo view('user/footer');
-		}
 	}
 
 	// public function daftarLayanan()
@@ -398,46 +281,106 @@ class User extends BaseController
 	// 	}
 	// }
 
-	public function login(){
-		$googletoken = $this->request->getPost('google-token');
+	// public function login(){
+	// 	$googletoken = $this->request->getPost('google-token');
 		
-		$result = file_get_contents('https://oauth2.googleapis.com/tokeninfo?id_token='.$googletoken);
-		$result_json = json_decode($result, true);
+	// 	$result = file_get_contents('https://oauth2.googleapis.com/tokeninfo?id_token='.$googletoken);
+	// 	$result_json = json_decode($result, true);
 
-		if (isset($result_json['email'])){
-			$email = $result_json['email'];
-			$name = $result_json['name'];
-			$picture = $result_json['picture'];
-			$user = $this->user->getUserByEmail($email);
-			if (count((array) $user) > 0) {
-				$data_session = array(
-					'user_id' => $user['user_id'],
-					'full_name' => $user['full_name'],
-					'user_logged_in' => TRUE
-				);
-				$this->session->set($data_session);
+	// 	if (isset($result_json['email'])){
+	// 		$email = $result_json['email'];
+	// 		$name = $result_json['name'];
+	// 		$picture = $result_json['picture'];
+	// 		$user = $this->user->getUserByEmail($email);
+	// 		if (count((array) $user) > 0) {
+	// 			$data_session = array(
+	// 				'user_id' => $user['user_id'],
+	// 				'full_name' => $user['full_name'],
+	// 				'user_logged_in' => TRUE
+	// 			);
+	// 			$this->session->set($data_session);
 
-			} else {
-				$full_name = $name;
-				$email = $email;
+	// 		} else {
+	// 			$full_name = $name;
+	// 			$email = $email;
 
-				$data = [
-					'full_name' => $full_name,
-					'email' => $email,
-					'created_at' => date("Y-m-d H:i:s"),
-					'updated_at' => date("Y-m-d H:i:s")
+	// 			$data = [
+	// 				'full_name' => $full_name,
+	// 				'email' => $email,
+	// 				'created_at' => date("Y-m-d H:i:s"),
+	// 				'updated_at' => date("Y-m-d H:i:s")
 
-				];
-				$simpan = $this->user->insertUser($data);
-				$user = $this->user->getUserByEmail($email);
-				$data_session = array(
-					'user_id' => $user['user_id'],
-					'full_name' => $user['full_name'],
-					'user_logged_in' => TRUE
-				);
-				$this->session->set($data_session);
-			}
-		}
-	}
+	// 			];
+	// 			$simpan = $this->user->insertUser($data);
+	// 			$user = $this->user->getUserByEmail($email);
+	// 			$data_session = array(
+	// 				'user_id' => $user['user_id'],
+	// 				'full_name' => $user['full_name'],
+	// 				'user_logged_in' => TRUE
+	// 			);
+	// 			$this->session->set($data_session);
+	// 		}
+	// 	}
+	// }
+	// public function login()
+	// {
+	// 	$array_items = array('user_id','user_logged_in');
+	// 	$this->session->remove($array_items);
+    //     $data = [
+	// 		'title' => 'Jasa Sosmed ID - Login Admin'
+	// 	];
+
+	// 	echo view('admin/header', $data);
+	// 	echo view('admin/login');
+	// 	echo view('admin/footer');
+	// }
+
+	// public function submitLogin()
+	// {
+	// 	$username = $this->request->getPost('username');
+	// 	$password = $this->request->getPost('password');
+
+	// 	if (isset($_SESSION['user_logged_in'])) {
+	// 		return redirect()->to(base_url('/user'));
+	// 	}
+
+	// 	if (!isset($_SESSION['user_logged_in']) && (empty($username) || empty($password))){
+	// 		// $this->notif->message('Data login tidak lengkap', 'danger');
+	// 		return redirect()->to(base_url('/user/login'));
+	// 	}
+
+	// 	if (!isset($_SESSION['user_logged_in']) && isset($username) && isset($password)) {
+	// 		$data = [
+	// 			'username' => $username,
+	// 			'password' => $password
+	// 		];
+	// 		$admin = $this->admin->getAdminByUsername($data['username']);
+	// 		if (count((array) $admin) > 0) {
+	// 			// d($admin);
+	// 			if ($admin['password'] !== $data['password']) {
+	// 				// $this->notif->message('Password salah', 'danger');
+	// 				return redirect()->to(base_url('/admin/login'));
+	// 			} else {
+	// 				$data_session = array(
+	// 					'admin_id' => $admin['user_id'],
+	// 					'username' => $admin['username'],
+	// 					'user_logged_in' => TRUE
+	// 				);
+	// 				$this->session->set($data_session);
+	// 				return redirect()->to(base_url('/user'));
+	// 			}
+	// 		} else {
+	// 			// $this->notif->message('username atau password anda salah', 'danger');
+	// 			return redirect()->to(base_url('/user/login'));
+	// 		}
+	// 	}
+
+	// }
+
+	// public function logout(){
+	// 	$array_items = array('admin_id','user_logged_in');
+	// 	$this->session->remove($array_items);
+	// 	return redirect()->to(base_url('/admin/login'));
+	// }
 
 }

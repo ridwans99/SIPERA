@@ -23,8 +23,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link type="text/css" href="<?php echo base_url('assets/css/bootstrap/styleindex.css') ?>" rel="stylesheet">
     
-
     <title><?php echo $title ?></title>
 </head>
 <body>

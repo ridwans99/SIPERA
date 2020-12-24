@@ -20,6 +20,6 @@
     <link type="text/css" href="<?php echo base_url('assets/css/argon.min.css') ?>" rel="stylesheet">
     <link type="text/css" href="<?php echo base_url('assets/css/bootstrap/styleindex.css') ?>" rel="stylesheet">
 
-    <title>SIPERA UNJ</title>
+    <title><?php echo $title ?></title>
 </head>
 <body>

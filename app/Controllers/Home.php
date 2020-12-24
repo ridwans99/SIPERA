@@ -16,7 +16,7 @@ class Home extends BaseController
 	{
 		// return view('welcome_message');
 		$data = [
-			'title' => 'Jasa Sosmed ID - Layanan Sosial Media Terbaik & Terpercaya'
+			'title' => 'SIPERA - Sistem '
 		];
 
 		echo view('header', $data);
