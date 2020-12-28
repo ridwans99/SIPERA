@@ -3,7 +3,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col">
                 <form action="">
                     <div class="login">
                         <h2> Login </h2>

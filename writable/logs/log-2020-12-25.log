@@ -1,0 +1,10 @@
+CRITICAL - 2020-12-25 04:06:09 --> Invalid file: user/index.php
+#0 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/index.php')
+#1 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('user/index', Array, true)
+#2 C:\Users\stara\Documents\SIPERA\app\Controllers\User.php(44): view('user/index')
+#3 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\User->index()
+#4 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\stara\Documents\SIPERA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\stara\Documents\SIPERA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\stara\\...')
+#8 {main}

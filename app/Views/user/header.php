@@ -18,12 +18,11 @@
     <!-- Argon CSS -->
     <link type="text/css" href="<?php echo base_url('assets/css/argon.min.css') ?>" rel="stylesheet">
     <link type="text/css" href="<?php echo base_url('assets/css/pengumuman.user.css') ?>" rel="stylesheet">
-    <link rel="stylesheet" href="../../public/assets/css/bootstrep/style.css">
-    <link rel="stylesheet" href="../../public/assets/css/bootstrep/style1.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
     <link type="text/css" href="<?php echo base_url('assets/css/bootstrap/styleindex.css') ?>" rel="stylesheet">
+    <link type="text/css" href="<?php echo base_url('assets/css/bootstrap/style.css') ?>" rel="stylesheet">
     
     <title><?php echo $title ?></title>
 </head>

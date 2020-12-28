@@ -23,14 +23,14 @@
         </div>
     </nav>
 
-    <div class="tabelruangan">
+    <div class="tabelruanganform">
         <h2 class="hari">Senin</h2>
-        <table>
+        <table border="1">
             <tr>
                 <th>Nama Matkul</th>
                 <th>Jam</th>
                 <th>Nama Dosen</th>
-                <th>Hari/Tanggal</th>
+                <th>Hari / Tanggal</th>
                 <th>Prodi</th>
                 <th>Ruang</th>
             </tr>
@@ -164,7 +164,6 @@
 
     <!-- akhir navbar -->
 
-    <script src="js/script.js"></script>
 
 </body>
 

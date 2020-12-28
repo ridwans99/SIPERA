@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="footer-logo">
-                        <img src="<?php echo base_url('assets/images/logo/logo3.png'); ?>" alt="Siena Logo" width="20%">
+                        <img src="<?php echo base_url('assets/images/logo/sipera.png'); ?>" alt="Siena Logo" width="10%">
                     </div>
                 </div>
             </div><!-- .row end -->
@@ -58,5 +58,6 @@
     <script src="<?php echo base_url('assets/js/argon.min.js') ?>"></script>
     <script src="<?php echo base_url('/assets/vendor-assets/chart.js/dist/Chart.min.js') ?>"></script>
     <script src="<?php echo base_url('/assets/vendor-assets/chart.js/dist/Chart.extension.js') ?>"></script>
+    <script src="<?php echo base_url('assets/js/script.js') ?>"></script>
 
 </html>
