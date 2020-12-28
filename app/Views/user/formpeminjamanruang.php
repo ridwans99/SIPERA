@@ -24,7 +24,13 @@
     </nav>
 
     <div class="tabelruanganform">
-        <h2 class="hari">Senin</h2>
+
+        <form action="/action_page.php" class="datepicker">
+            <label for="birthday">Tanggal:</label>
+            <input type="date" id="tanggal" name="birthday">
+        </form>
+
+        <!-- <h2 class="hari">Senin</h2> -->
         <table border="1">
             <tr>
                 <th>Nama Matkul</th>

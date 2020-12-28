@@ -19,11 +19,11 @@ class User extends BaseController
 	{
 		$this->session = session();
 		$this->request = \Config\Services::request();
-		$this->user = new UserModel();
-		$this->barang = new BarangModel();
-		$this->ruangan = new RuanganModel();
-		$this->orderbarang = new OrderBarangModel();
-		$this->orderruangan = new OrderRuanganModel();
+		// $this->user = new UserModel();
+		// $this->barang = new BarangModel();
+		// $this->ruangan = new RuanganModel();
+		// $this->orderbarang = new OrderBarangModel();
+		// $this->orderruangan = new OrderRuanganModel();
 	}
 
 	// public function checkLoggedIn() {

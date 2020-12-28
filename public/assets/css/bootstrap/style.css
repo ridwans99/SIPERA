@@ -151,6 +151,10 @@ nav ul li a:hover {
 }
 
 /* Peminjaman Ruangan */
+.datepicker {
+    text-align: center;
+}
+
 .back {
     /* display: flex; */
     /* flex-direction: column-reverse; */
