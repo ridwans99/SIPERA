@@ -5,8 +5,8 @@ use App\Models\AdminModel;
 use App\Models\UserModel;
 use App\Models\BarangModel;
 use App\Models\RuanganModel;
-use App\Models\OrderBarangModel;
-use App\Models\OrderRuanganModel;
+use App\Models\TransaksiBarangModel;
+use App\Models\TransaksiRuangModel;
 
 
 class User extends BaseController
@@ -22,8 +22,8 @@ class User extends BaseController
 		$this->user = new UserModel();
 		$this->barang = new BarangModel();
 		$this->ruangan = new RuanganModel();
-		$this->orderbarang = new OrderBarangModel();
-		$this->orderruangan = new OrderRuanganModel();
+		$this->transaksibarang = new TransaksiBarangModel();
+		$this->transaksiruangan = new TransaksiRuangModel();
 	}
 
 	// public function checkLoggedIn() {
