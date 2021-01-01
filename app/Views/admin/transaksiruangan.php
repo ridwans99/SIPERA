@@ -38,15 +38,15 @@
                                     ?>
                                         <tr>
                                             <td><?= $nomor; ?></td>
-                                            <td><?= $tr->user_id ?></td>
-                                            <td><?= $tr->ruangan_id ?></td>
-                                            <td><?= $tr->tgl_pinjam ?></td>
-                                            <td><?= $tr->jam_mulai ?></td>
-                                            <td><?= $tr->jam_akhir ?></td>
-                                            <td><?= $tr->nama_dosen ?></td>
-                                            <td><?= $tr->mata_kuliah ?></td>
-                                            <td><?= $tr->prodi ?></td>
-                                            <td><?= $tr->status ?></td>
+                                            <td><?= $tr['user_id'] ?></td>
+                                            <td><?= $tr['ruangan_id'] ?></td>
+                                            <td><?= $tr['tgl_pinjam'] ?></td>
+                                            <td><?= $tr['jam_mulai'] ?></td>
+                                            <td><?= $tr['jam_akhir'] ?></td>
+                                            <td><?= $tr['nama_dosen'] ?></td>
+                                            <td><?= $tr['mata_kuliah'] ?></td>
+                                            <td><?= $tr['prodi'] ?></td>
+                                            <td><?= $tr['status'] ?></td>
                                             <td>
                                                 <div class="btn-group">
                                                     <a href="" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>

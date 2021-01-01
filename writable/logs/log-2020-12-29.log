@@ -1,0 +1,21 @@
+CRITICAL - 2020-12-29 23:28:01 --> Class 'App\Models\OrderBarangModel' not found
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\User->__construct()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#5 {main}
+CRITICAL - 2020-12-29 23:28:01 --> Class 'App\Models\OrderBarangModel' not found
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\User->__construct()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#5 {main}
+CRITICAL - 2020-12-29 23:29:53 --> Class 'App\Models\OrderBarangModel' not found
+#0 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(890): App\Controllers\User->__construct()
+#1 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Muhammad Ardani\sipera\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Muhammad Ardani\sipera\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Muhamm...')
+#5 {main}

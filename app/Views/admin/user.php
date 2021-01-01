@@ -37,18 +37,16 @@
                                     ?>
                                         <tr>
                                             <td><?= $nomor; ?></td>
-                                            <td><?= $u->username ?></td>
-                                            <td><?= $u->password ?></td>
-                                            <td><?= $u->nrm ?></td>
-                                            <td><?= $u->full_name ?></td>
-                                            <td><?= $u->jenis_kelamin ?></td>
-                                            <td><?= $u->prodi ?></td>
-                                            <td><?= $u->angkatan ?></td>
+                                            <td><?= $u['username'] ?></td>
+                                            <td><?= $u['password'] ?></td>
+                                            <td><?= $u['nrm'] ?></td>
+                                            <td><?= $u['full_name'] ?></td>
+                                            <td><?= $u['jenis_kelamin'] ?></td>
+                                            <td><?= $u['prodi'] ?></td>
+                                            <td><?= $u['angkatan'] ?></td>
                                             <td>
-                                                <div class="btn-group">
-                                                    <a href="" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
-                                                    <button type="button" onclick="hapus('<?= $u->nim ?>')">Hapus</button>
-                                                </div>
+                                                <a href="<?php echo base_url('Admin/editUsers/' . $u['user_id']); ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                                                <a href="<?php echo base_url('Admin/deleteUsers/' . $u['user_id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus mahasiswa <?php echo $u['user_id']; ?> ini?')"><i class="fas fa-trash-alt"></i></a>
                                             </td>
                                         </tr>
                                     <?php
@@ -62,13 +60,3 @@
             </div>
     </section>
 </div>
-
-<script>
-    function hapus(nim) {
-        pesan = confirm('Apakah yakin ingin menghapus nrm ini ?');
-
-        if (pesan) {
-            window.location.href("<?= base_url('Admin/deleteUsers') ?>") + nim;
-        } else return false;
-    }
-</script>

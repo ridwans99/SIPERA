@@ -6,18 +6,17 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    // protected $table = 'users';
-    // protected $primaryKey = 'user_id';
-    // protected $useTimestamps = true;
+    protected $table = 'users';
+    protected $primaryKey = 'user_id';
+    protected $useTimestamps = true;
 
-    public function __construct()
+    public function tampildata($id = false)
     {
-        $this->db = db_connect();
-    }
-
-    public function tampildata()
-    {
-        return $this->db->table('users')->get();
+        if ($id) {
+            return $this->where(['user_id' => $id])->first();
+        } else {
+            return $this->findAll();
+        }
     }
 
     public function tambah($data)
@@ -25,51 +24,15 @@ class UserModel extends Model
         return $this->db->table('users')->insert($data);
     }
 
-    public function hapus($nim)
+    public function updateUser($data, $id)
     {
-        return $this->db->table('users')->delete(['nrm' => $nim]);
+        $query = $this->db->table($this->table)->update($data, array('user_id' => $id));
+        return $query;
     }
 
-    // public function getUser($id = false)
-    // {
-    //     if ($id) {
-    //         return $this->where(['user_id' => $id])->first();
-    //     } else {
-    //         return $this->findAll();
-    //     }
-    // }
-
-    // public function getUserByNRM($nrm = false)
-    // {
-    //     if ($nrm) {
-    //         return $this->where(['nrm' => $nrm])->first();
-    //     } else {
-    //         return $this->findAll();
-    //     }
-    // }
-
-    // public function insertUser($data)
-    // {
-    //     $query = $this->db->table($this->table)->insert($data);
-    //     // return $this->db->insert_id();
-    //     return $query;
-    // }
-
-    // public function updateUser($data, $id)
-    // {
-    //     $query = $this->db->table($this->table)->update($data, array('user_id' => $id));
-    //     return $query;
-    // }
-
-    // public function getUserName($id)
-    // {
-    //     $query = $this->db->table($this->table)->select('full_name')->where('user_id', $id);
-    //     return $query->get()->getRowArray();
-    // }
-
-    // public function deleteUser($id)
-    // {
-    //     $query = $this->db->table($this->table)->delete(array('user_id' => $id));
-    //     return $query;
-    // }
+    public function deleteUsers($id)
+    {
+        $query = $this->db->table($this->table)->delete(array('user_id' => $id));
+        return $query;
+    }
 }

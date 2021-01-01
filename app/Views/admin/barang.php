@@ -32,13 +32,13 @@
                                     ?>
                                         <tr>
                                             <td><?= $nomor; ?></td>
-                                            <td><?= $b->nama_barang ?></td>
-                                            <td><?= $b->stock ?></td>
-                                            <td><?= $b->status ?></td>
+                                            <td><?= $b['nama_barang'] ?></td>
+                                            <td><?= $b['stock'] ?></td>
+                                            <td><?= $b['status'] ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
-                                                    <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                                                    <a href="<?php echo base_url('Admin/editBarang/' . $b['barang_id']); ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                                                    <a href="<?php echo base_url('Admin/deleteBarang/' . $b['barang_id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus barang <?php echo $b['barang_id']; ?> ini?')"><i class="fas fa-trash-alt"></i></a>
                                                 </div>
                                             </td>
                                         </tr>

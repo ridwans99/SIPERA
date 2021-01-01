@@ -7,42 +7,51 @@
         <div class="section-body">
             <div class="card">
                 <div class="card-body">
-                    <form action="<?= base_url('Home/edit_mahasiswa') ?>" method="post" class="mahasiswa" enctype="multipart/form-data">
-                        <!-- <input type="text" class="form-control" name="order_id" value="<?= $order['order_id']; ?>" hidden>
-                        <input type="text" class="form-control" name="payment_id" value="<?= $payment['payment_id']; ?>" hidden> -->
+                    <form action="<?= base_url('Admin/updateUsers') ?>" method="post" class="mahasiswa" enctype="multipart/form-data">
+                        <input name="user_id" value="<?= $tampildata['user_id']; ?>" hidden>
                         <div class="form-group">
-                            <label>NIM</label>
+                            <label>Username</label>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="nim">
+                                <input type="text" class="form-control" value="<?= $tampildata['username']; ?>" placeholder="" name="username">
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Password</label>
                             <div class="input-group mb-3">
-                                <input type="password" class="form-control" placeholder="" name="password">
+                                <input type="password" class="form-control" value="<?= $tampildata['password']; ?>" placeholder="" name="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>NIM</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" value="<?= $tampildata['nrm']; ?>" placeholder="" name="nrm">
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Nama</label>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="nama">
+                                <input type="text" class="form-control" value="<?= $tampildata['full_name']; ?>" placeholder="" name="nama">
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Jenis Kelamin</label>
-                            <select name="method" class="custom-select">
-                                <option selected class="box" disabled>-- Pilih Jenis Kelamin --</option>
-                                <option value="Laki-Laki">Laki-Laki</option>
-                                <option value="Perempuan">Perempuan</option>
+                            <select name="jenis_kelamin" class="custom-select">
+                                <option <?php echo $tampildata['jenis_kelamin'] == "Laki-Laki" ? "selected" : "" ?> value="Laki-Laki">Laki-Laki</option>
+                                <option <?php echo $tampildata['jenis_kelamin'] == "Perempuan" ? "selected" : "" ?> value="Perempuan">Perempuan</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Prodi</label>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="prodi">
+                                <input type="text" class="form-control" value="<?= $tampildata['prodi']; ?>" placeholder="" name="prodi">
                             </div>
                         </div>
-                        <input class="btn btn-primary btn-user btn-block" name='submit' type="submit" value='Submit' />
+                        <div class="form-group">
+                            <label>Angkatan</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" value="<?= $tampildata['angkatan']; ?>" placeholder="" name="angkatan">
+                            </div>
+                        </div>
                         <input class="btn btn-primary btn-user btn-block" name='submit' type="submit" value='Submit' />
                     </form>
                 </div>

@@ -6,17 +6,16 @@ use CodeIgniter\Model;
 
 class TransaksiBarangModel extends Model
 {
-    // protected $table = 'users';
-    // protected $primaryKey = 'user_id';
-    // protected $useTimestamps = true;
+    protected $table = 'ordersbarang';
+    protected $primaryKey = 'orderbarang_id';
+    protected $useTimestamps = true;
 
-    public function __construct()
+    public function tampildata($id = false)
     {
-        $this->db = db_connect();
-    }
-
-    public function tampildata()
-    {
-        return $this->db->table('ordersbarang')->get();
+        if ($id) {
+            return $this->where(['orderbarang_id' => $id])->first();
+        } else {
+            return $this->findAll();
+        }
     }
 }

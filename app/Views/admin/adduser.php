@@ -6,7 +6,7 @@
         <div class="section-body">
             <div class="card">
                 <div class="card-body">
-                    <form action="Admin/addUsers" method="post" class="btn btn-primary" enctype="multipart/form-data">
+                    <form action="<?= base_url('Admin/insertUsers') ?>" method="post" class="btn btn-primary" enctype="multipart/form-data">
                         <div class="form-group">
                             <label>Username</label>
                             <div class="input-group mb-3">
@@ -33,10 +33,10 @@
                         </div>
                         <div class="form-group">
                             <label>Jenis Kelamin</label>
-                            <select name="method" class="custom-select">
+                            <select class="custom-select" name="jenis_kelamin">
                                 <option selected class="box" disabled>-- Pilih Jenis Kelamin --</option>
-                                <option name="jenis_kelamin" value="Laki-Laki">Laki-Laki</option>
-                                <option name="jenis_kelamin" value="Perempuan">Perempuan</option>
+                                <option value="Laki-Laki">Laki-Laki</option>
+                                <option value="Perempuan">Perempuan</option>
                             </select>
                         </div>
                         <div class="form-group">
