@@ -2,7 +2,7 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Edit Mahasiswa</h1>
+            <h1>Edit Ruangan</h1>
         </div>
         <div class="section-body">
             <div class="card">
@@ -17,15 +17,17 @@
                         </div>
                         <div class="form-group">
                             <label>Deskripsi</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" value="<?= $tampildata['deskripsi']; ?>" placeholder="" name="deskripsi">
-                            </div>
+                            <select name="deskripsi" class="custom-select">
+                                <option <?php echo $tampildata['deskripsi'] == "Ruang Belajar" ? "selected" : "" ?> value="Ruang Belajar">Ruang Belajar</option>
+                                <option <?php echo $tampildata['deskripsi'] == "Lab Komputer" ? "selected" : "" ?> value="Lab Komputer">Lab Komputer</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Status</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" value="<?= $tampildata['status']; ?>" placeholder="" name="status">
-                            </div>
+                            <select name="status" class="custom-select">
+                                <option <?php echo $tampildata['status'] == "Tersedia" ? "selected" : "" ?> value="Tersedia">Tersedia</option>
+                                <option <?php echo $tampildata['status'] == "Terpakai" ? "selected" : "" ?> value="Terpakai">Terpakai</option>
+                            </select>
                         </div>
                         <input class="btn btn-primary btn-user btn-block" name='submit' type="submit" value='Submit' />
                     </form>
