@@ -41,15 +41,24 @@
                         </div>
                         <div class="form-group">
                             <label>Prodi</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="prodi" size="50">
-                            </div>
+                            <select class="custom-select" name="prodi">
+                                <option selected class="box" disabled>-- Pilih Prodi --</option>
+                                <option value="Ilmu Komputer">Ilmu Komputer</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Pendidikan Matematika">Pendidikan Matematika</option>
+                                <option value="Statistika">Statistika</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Angkatan</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="angkatan" maxlength="4" pattern="{0-9}">
-                            </div>
+                            <select class="custom-select" name="angkatan">
+                                <option selected class="box" disabled>-- Pilih Angkatan --</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                            </select>
                         </div>
                         <input class="btn btn-primary btn-user btn-block" name='submit' type="submit" value='Submit' />
                     </form>
