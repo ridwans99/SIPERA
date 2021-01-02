@@ -49,8 +49,8 @@
                                             <td><?= $tr['status'] ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
-                                                    <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                                                    <a href="<?php echo base_url('Admin/editTransaksiRuangan/' . $tr['orderruangan_id']); ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                                                    <a href="<?php echo base_url('Admin/deleteTransaksiRuangan/' . $tr['orderruangan_id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus transaksi <?php echo $tr['orderruangan_id']; ?> ini?')"><i class="fas fa-trash-alt"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
