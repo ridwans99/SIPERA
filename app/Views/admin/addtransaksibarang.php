@@ -6,7 +6,7 @@
         <div class="section-body">
             <div class="card">
                 <div class="card-body">
-                    <form action="/admin/addtransaksibarang" method="post" class="btn btn-primary" enctype="multipart/form-data">
+                    <form action="<?= base_url('Admin/insertTransaksiBarang') ?>" method="post" class="btn btn-primary" enctype="multipart/form-data">
                         <div class="form-group">
                             <label>Nama Peminjam</label>
                             <div class="input-group mb-3">
@@ -15,11 +15,9 @@
                         </div>
                         <div class="form-group">
                             <label>Barang yg Dipinjam</label>
-                            <select name="method" class="custom-select">
-                                <option selected class="box" disabled>-- Pilih Barang --</option>
-                                <option value="lcd">LCD</option>
-                                <option value="alat">Alat Tulis</option>
-                            </select>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="" name="barang">
+                            </div>
                         </div>
                         <div class="form-group">
                             <label>Tanggal Pinjam</label>
@@ -29,20 +27,42 @@
                         </div>
                         <div class="form-group">
                             <label>Mulai Jam Ke-</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="start">
-                            </div>
+                            <select class="custom-select" name="mulai">
+                                <option selected class="box" disabled>-- Pilih Jam --</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Selesai Jam Ke-</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="end">
-                            </div>
+                            <select class="custom-select" name="selesai">
+                                <option selected class="box" disabled>-- Pilih Jam --</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Nama Dosen</label>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="nama_dosen">
+                                <input type="text" class="form-control" placeholder="" name="dosen">
                             </div>
                         </div>
                         <div class="form-group">
@@ -53,15 +73,21 @@
                         </div>
                         <div class="form-group">
                             <label>Prodi</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="prodi">
-                            </div>
+                            <select class="custom-select" name="prodi">
+                                <option selected class="box" disabled>-- Pilih Prodi --</option>
+                                <option value="Ilmu Komputer">Ilmu Komputer</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Pendidikan Matematika">Pendidikan Matematika</option>
+                                <option value="Statistika">Statistika</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Status</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="status">
-                            </div>
+                            <select class="custom-select" name="status">
+                                <option selected class="box" disabled>-- Pilih Status --</option>
+                                <option value="Disetujui">Disetujui</option>
+                                <option value="Tidak Disetujui">Tidak Disetujui</option>
+                            </select>
                         </div>
                         <input class="btn btn-primary btn-user btn-block" name='submit' type="submit" value='Submit' />
                     </form>
