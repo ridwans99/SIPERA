@@ -69,6 +69,50 @@ class User extends BaseController
 			echo view('user/footer');
 	}
 
+	public function peminjamanbarang()
+	{
+		$data = [
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+		];
+			echo view('user/header', $data);
+			// echo view('user/menu');
+			echo view('user/peminjamanbarang');
+			echo view('user/footer');
+	}
+
+	public function pemilihanbarang()
+	{
+		$data = [
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+		];
+			echo view('user/header', $data);
+			// echo view('user/menu');
+			echo view('user/pemilihanbarang');
+			echo view('user/footer');
+	}
+
+	public function verifikasipeminjamanbarang()
+	{
+		$data = [
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+		];
+			echo view('user/header', $data);
+			// echo view('user/menu');
+			echo view('user/verifikasipeminjamanbarang');
+			echo view('user/footer');
+	}
+
+	public function pengembalianbarang()
+	{
+		$data = [
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+		];
+			echo view('user/header', $data);
+			// echo view('user/menu');
+			echo view('user/pengembalianbarang');
+			echo view('user/footer');
+	}
+
 	// public function daftarLayanan()
 	// {
 	// 	$products = $this->product->getProduct();
