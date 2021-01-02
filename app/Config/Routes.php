@@ -40,16 +40,8 @@ $routes->get('/admin', 'Admin::index');
 $routes->get('/admin/users', 'Admin::showUsers');
 $routes->get('/admin/ruangan', 'Admin::showRuangan');
 $routes->get('/admin/barang', 'Admin::showBarang');
-$routes->get('/admin/adduser', 'Admin::addUsers');
-$routes->post('/admin/edituser', 'Admin::editUsers');
-$routes->post('/admin/updateuser', 'Admin::updateUsers');
-$routes->get('/admin/orders', 'Admin::showOrders');
-$routes->get('/admin/addorder', 'Admin::addOrders');
-$routes->post('/admin/storeorder', 'Admin::storeOrders');
-$routes->post('/admin/updateorder', 'Admin::updateOrders');
-$routes->get('/admin/products', 'Admin::showProducts');
-$routes->get('/admin/addcategory', 'Admin::addCategory');
-$routes->post('/admin/storecategory', 'Admin::storeCategory');
+$routes->get('/admin/transaksiruangan', 'Admin::showTransaksiRuangan');
+$routes->get('/admin/transaksibarang', 'Admin::showTransaksiBarang');
 $routes->post('/submit-login', 'Admin::submitLogin');
 $routes->get('/logout', 'Admin::logout');
 
