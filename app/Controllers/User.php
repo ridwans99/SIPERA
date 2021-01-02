@@ -23,7 +23,7 @@ class User extends BaseController
 		$this->barang = new BarangModel();
 		$this->ruangan = new RuanganModel();
 		$this->transaksibarang = new TransaksiBarangModel();
-		$this->transaksiruangan = new TransaksiRuanganModel();
+		$this->transaksiruangan = new TransaksiRuangModel();
 	}
 
 	// public function checkLoggedIn() {
