@@ -9,8 +9,19 @@
     font-family: sans-serif ;
     opacity: 80%;
 } */
+body {
+    background-image: url(../../images/background/image1.png);
+}
+
+h1 {
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
 
 .login {
+    opacity: 80%;
     margin: 100px auto;
     background-color: rgb(248, 144, 205);
     width: 300px;

@@ -2,6 +2,8 @@
 <html lang="en">
 <body>
     <div class="container">
+    <img src="../../images/logo/Logo-unj-png-7.png" alt="">
+    <h1>Selamat Datang di SIPERA UNJ</h1>
         <div class="row">
             <div class="col">
                 <form action="">
