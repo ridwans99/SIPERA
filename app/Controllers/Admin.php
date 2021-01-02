@@ -34,6 +34,16 @@ class Admin extends BaseController
 		exit;
 	}
 
+	public function login()
+	{
+		// return view('welcome_message');
+		$data = [
+			'title' => 'SIPERA - Admin',
+			// 'admin' => $admin
+		];
+		echo view('admin/login', $data);
+	}
+
 	public function index()
 	{
 		// return view('welcome_message');
@@ -384,6 +394,103 @@ class Admin extends BaseController
 		echo view('admin/footer');
 	}
 
+	public function addTransaksiRuangan()
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$admin = $this->admin->getAdmin(session('admin_id'));
+
+		helper('form');
+		echo view('admin/header');
+		echo view('admin/sidebar');
+		echo view('admin/addtransaksiruang');
+		echo view('admin/footer');
+	}
+
+	public function insertTransaksiRuangan()
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$admin = $this->admin->getAdmin(session('admin_id'));
+		$data = [
+			'user_id' => $this->request->getPost('nama'),
+			'ruangan_id' => $this->request->getPost('ruang'),
+			'tgl_pinjam' => $this->request->getPost('tanggal'),
+			'jam_mulai' => $this->request->getPost('mulai'),
+			'jam_akhir' => $this->request->getPost('selesai'),
+			'nama_dosen' => $this->request->getPost('dosen'),
+			'mata_kuliah' => $this->request->getPost('matkul'),
+			'prodi' => $this->request->getPost('prodi'),
+			'status' => $this->request->getPost('status'),
+		];
+
+		$truang = new TransaksiRuangModel();
+
+		$tambah = $truang->tambah($data);
+
+		if ($tambah) {
+			return redirect()->to('/admin/transaksiruangan');
+		}
+	}
+
+	public function editTransaksiRuangan($id)
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$hapus = $this->user->deleteUser($id);
+		$truang = new TransaksiRuangModel();
+		$data = [
+			'title' => 'SIPERA - Admin',
+			'tampildata' => $truang->tampildata($id)
+			// 'user' => $user,
+			// 'admin' => $admin
+		];
+
+		echo view('admin/header', $data);
+		echo view('admin/sidebar', $data);
+		echo view('admin/edittransaksiruang', $data);
+		echo view('admin/footer');
+	}
+
+	public function updateTransaksiRuangan()
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$admin = $this->admin->getAdmin(session('admin_id'));
+		$id = $this->request->getPost('orderruangan_id');
+		$data = [
+			'user_id' => $this->request->getPost('nama'),
+			'ruangan_id' => $this->request->getPost('ruang'),
+			'tgl_pinjam' => $this->request->getPost('tanggal'),
+			'jam_mulai' => $this->request->getPost('mulai'),
+			'jam_akhir' => $this->request->getPost('selesai'),
+			'nama_dosen' => $this->request->getPost('dosen'),
+			'mata_kuliah' => $this->request->getPost('matkul'),
+			'prodi' => $this->request->getPost('prodi'),
+			'status' => $this->request->getPost('status'),
+		];
+
+		$truang = new TransaksiRuangModel();
+
+		$edit = $truang->updateTransaksiRuangan($data, $id);
+
+		if ($edit) {
+			return redirect()->to('/admin/transaksiruangan');
+		}
+	}
+
+	public function deleteTransaksiRuangan($id)
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$hapus = $this->user->deleteUser($id);
+		$truang = new TransaksiRuangModel();
+		$hapus = $truang->deleteTransaksiRuangan($id);
+		if ($hapus) {
+			return redirect()->to('/admin/transaksiruangan');
+		}
+	}
+
 	public function showTransaksiBarang()
 	{
 		// return view('welcome_message');
@@ -400,5 +507,102 @@ class Admin extends BaseController
 		echo view('admin/sidebar', $data);
 		echo view('admin/transaksibarang', $data);
 		echo view('admin/footer');
+	}
+
+	public function addTransaksiBarang()
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$admin = $this->admin->getAdmin(session('admin_id'));
+
+		helper('form');
+		echo view('admin/header');
+		echo view('admin/sidebar');
+		echo view('admin/addtransaksibarang');
+		echo view('admin/footer');
+	}
+
+	public function insertTransaksiBarang()
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$admin = $this->admin->getAdmin(session('admin_id'));
+		$data = [
+			'user_id' => $this->request->getPost('nama'),
+			'barang_id' => $this->request->getPost('barang'),
+			'tgl_pinjam' => $this->request->getPost('tanggal'),
+			'jam_mulai' => $this->request->getPost('mulai'),
+			'jam_akhir' => $this->request->getPost('selesai'),
+			'nama_dosen' => $this->request->getPost('dosen'),
+			'mata_kuliah' => $this->request->getPost('matkul'),
+			'prodi' => $this->request->getPost('prodi'),
+			'status' => $this->request->getPost('status'),
+		];
+
+		$tbarang = new TransaksiBarangModel();
+
+		$tambah = $tbarang->tambah($data);
+
+		if ($tambah) {
+			return redirect()->to('/admin/transaksibarang');
+		}
+	}
+
+	public function editTransaksiBarang($id)
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$hapus = $this->user->deleteUser($id);
+		$tbarang = new TransaksiBarangModel();
+		$data = [
+			'title' => 'SIPERA - Admin',
+			'tampildata' => $tbarang->tampildata($id)
+			// 'user' => $user,
+			// 'admin' => $admin
+		];
+
+		echo view('admin/header', $data);
+		echo view('admin/sidebar', $data);
+		echo view('admin/edittransaksibarang', $data);
+		echo view('admin/footer');
+	}
+
+	public function updateTransaksiBarang()
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$admin = $this->admin->getAdmin(session('admin_id'));
+		$id = $this->request->getPost('orderbarang_id');
+		$data = [
+			'user_id' => $this->request->getPost('nama'),
+			'barang_id' => $this->request->getPost('barang'),
+			'tgl_pinjam' => $this->request->getPost('tanggal'),
+			'jam_mulai' => $this->request->getPost('mulai'),
+			'jam_akhir' => $this->request->getPost('selesai'),
+			'nama_dosen' => $this->request->getPost('dosen'),
+			'mata_kuliah' => $this->request->getPost('matkul'),
+			'prodi' => $this->request->getPost('prodi'),
+			'status' => $this->request->getPost('status'),
+		];
+
+		$tbarang = new TransaksiBarangModel();
+
+		$edit = $tbarang->updateTransaksiBarang($data, $id);
+
+		if ($edit) {
+			return redirect()->to('/admin/transaksibarang');
+		}
+	}
+
+	public function deleteTransaksiBarang($id)
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$hapus = $this->user->deleteUser($id);
+		$tbarang = new TransaksiBarangModel();
+		$hapus = $tbarang->deleteTransaksiBarang($id);
+		if ($hapus) {
+			return redirect()->to('/admin/transaksibarang');
+		}
 	}
 }
