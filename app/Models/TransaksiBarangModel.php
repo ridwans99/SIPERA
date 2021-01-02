@@ -18,4 +18,21 @@ class TransaksiBarangModel extends Model
             return $this->findAll();
         }
     }
+
+    public function tambah($data)
+    {
+        return $this->db->table('ordersbarang')->insert($data);
+    }
+
+    public function updateTransaksiBarang($data, $id)
+    {
+        $query = $this->db->table($this->table)->update($data, array('orderbarang_id' => $id));
+        return $query;
+    }
+
+    public function deleteTransaksiBarang($id)
+    {
+        $query = $this->db->table($this->table)->delete(array('orderbarang_id' => $id));
+        return $query;
+    }
 }
