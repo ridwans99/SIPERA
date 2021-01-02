@@ -21,9 +21,11 @@
                         </div>
                         <div class="form-group">
                             <label>Status</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="status" size="50">
-                            </div>
+                            <select class="custom-select" name="status">
+                                <option selected class="box" disabled>-- Pilih Status --</option>
+                                <option value="Tersedia">Tersedia</option>
+                                <option value="Terpakai">Terpakai</option>
+                            </select>
                         </div>
                         <input class="btn btn-primary btn-user btn-block" name='submit' type="submit" value='Submit' />
                     </form>
