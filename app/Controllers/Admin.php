@@ -605,4 +605,52 @@ class Admin extends BaseController
 			return redirect()->to('/admin/transaksibarang');
 		}
 	}
+
+	public function submitLogin()
+	{
+		$username = $this->request->getPost('username');
+		$password = $this->request->getPost('password');
+
+		if (isset($_SESSION['admin_logged_in'])) {
+			return redirect()->to(base_url('/admin'));
+		}
+
+		if (!isset($_SESSION['admin_logged_in']) && (empty($username) || empty($password))){
+			// $this->notif->message('Data login tidak lengkap', 'danger');
+			return redirect()->to(base_url('/admin/login'));
+		}
+
+		if (!isset($_SESSION['admin_logged_in']) && isset($username) && isset($password)) {
+			$data = [
+				'username' => $username,
+				'password' => $password
+			];
+			$admin = $this->admin->getAdminByUsername($data['username']);
+			if (count((array) $admin) > 0) {
+				// d($admin);
+				if ($admin['password'] !== $data['password']) {
+					// $this->notif->message('Password salah', 'danger');
+					return redirect()->to(base_url('/admin/login'));
+				} else {
+					$data_session = array(
+						'admin_id' => $admin['admin_id'],
+						'username' => $admin['username'],
+						'admin_logged_in' => TRUE
+					);
+					$this->session->set($data_session);
+					return redirect()->to(base_url('/admin'));
+				}
+			} else {
+				// $this->notif->message('username atau password anda salah', 'danger');
+				return redirect()->to(base_url('/admin/login'));
+			}
+		}
+
+	}
+
+	public function logout(){
+		$array_items = array('admin_id','admin_logged_in');
+		$this->session->remove($array_items);
+		return redirect()->to(base_url('/admin/login'));
+	}
 }
