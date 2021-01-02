@@ -18,4 +18,21 @@ class TransaksiRuangModel extends Model
             return $this->findAll();
         }
     }
+
+    public function tambah($data)
+    {
+        return $this->db->table('ordersruangan')->insert($data);
+    }
+
+    public function updateTransaksiRuangan($data, $id)
+    {
+        $query = $this->db->table($this->table)->update($data, array('orderruangan_id' => $id));
+        return $query;
+    }
+
+    public function deleteTransaksiRuangan($id)
+    {
+        $query = $this->db->table($this->table)->delete(array('orderruangan_id' => $id));
+        return $query;
+    }
 }
