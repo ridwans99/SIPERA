@@ -10,7 +10,7 @@ class UserModel extends Model
     protected $primaryKey = 'user_id';
     protected $useTimestamps = true;
 
-    public function getUser($id = false)
+    public function tampildata($id = false)
     {
         if ($id) {
             return $this->where(['user_id' => $id])->first();
@@ -19,10 +19,9 @@ class UserModel extends Model
         }
     }
 
-    public function insertUser($data)
+    public function tambah($data)
     {
-        $query = $this->db->table($this->table)->insert($data);
-        return $query;
+        return $this->db->table('users')->insert($data);
     }
 
     public function updateUser($data, $id)
@@ -31,7 +30,7 @@ class UserModel extends Model
         return $query;
     }
 
-    public function deleteUser($id)
+    public function deleteUsers($id)
     {
         $query = $this->db->table($this->table)->delete(array('user_id' => $id));
         return $query;

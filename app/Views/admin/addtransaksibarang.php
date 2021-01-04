@@ -6,7 +6,7 @@
         <div class="section-body">
             <div class="card">
                 <div class="card-body">
-                    <form action="<?= base_url('Admin/insertTransaksiBarang') ?>" method="post" class="transaksi-barang" enctype="multipart/form-data">
+                    <form action="<?= base_url('Admin/insertTransaksiBarang') ?>" method="post" class="btn btn-primary" enctype="multipart/form-data">
                         <div class="form-group">
                             <label>Nama Peminjam</label>
                             <div class="input-group mb-3">

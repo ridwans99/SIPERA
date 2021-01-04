@@ -6,7 +6,7 @@
         <div class="section-body">
             <div class="card">
                 <div class="card-body">
-                    <form action="<?= base_url('Admin/insertUsers') ?>" method="post" class="user" enctype="multipart/form-data">
+                    <form action="<?= base_url('Admin/insertUsers') ?>" method="post" class="btn btn-primary" enctype="multipart/form-data">
                         <div class="form-group">
                             <label>Username</label>
                             <div class="input-group mb-3">
@@ -20,15 +20,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>NRM</label>
+                            <label>NIM</label>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="nrm" maxlength="10" pattern="{0-9}+">
+                                <input type="text" class="form-control" placeholder="" name="nim" maxlength="10" pattern="{0-9}+">
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Nama</label>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="full_name" size="50">
+                                <input type="text" class="form-control" placeholder="" name="nama" size="50">
                             </div>
                         </div>
                         <div class="form-group">

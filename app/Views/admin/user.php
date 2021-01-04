@@ -32,7 +32,7 @@
                                 <tbody>
                                     <?php
                                     $nomor = 0;
-                                    foreach ($user as $u) :
+                                    foreach ($tampildata as $u) :
                                         $nomor++;
                                     ?>
                                         <tr>

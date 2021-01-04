@@ -1,13 +1,12 @@
-<?php
-
-namespace Config;
+<?php namespace Config;
 
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
 // Load the system's routing file first, so that the app and ENVIRONMENT
 // can override as needed.
-if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
+if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
+{
 	require SYSTEMPATH . 'Config/Routes.php';
 }
 
@@ -43,7 +42,6 @@ $routes->get('/admin/ruangan', 'Admin::showRuangan');
 $routes->get('/admin/barang', 'Admin::showBarang');
 $routes->get('/admin/transaksiruangan', 'Admin::showTransaksiRuangan');
 $routes->get('/admin/transaksibarang', 'Admin::showTransaksiBarang');
-$routes->get('/admin/inputdata', 'Admin::showInputData');
 $routes->post('/submit-login', 'Admin::submitLogin');
 $routes->get('/logout', 'Admin::logout');
 
@@ -75,6 +73,7 @@ $routes->get('/user/verifikasipeminjamanbarang', 'User::verifikasipeminjamanbara
  * You will have access to the $routes object within that file without
  * needing to reload it.
  */
-if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
+if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php'))
+{
 	require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
