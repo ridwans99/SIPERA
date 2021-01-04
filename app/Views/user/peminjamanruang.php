@@ -2,31 +2,10 @@
 <html lang="en">
 
 <body>
-    <!-- awal navbar -->
-    <!-- logo -->
-    <nav>
-        <div class="logo">
-            <h4>Sipera UNJ</h4>
-        </div>
-        <!-- list -->
-        <ul>
-            <li><a href="<?= base_url('User/index') ?>">Home</a></li>
-            <li><a href="<?= base_url('User/peminjamanruang') ?>">Peminjaman Ruang</a></li>
-            <li><a href="<?= base_url('User/peminjamanbarang') ?>">Peminjaman Barang</a></li>
-            <li><a href="">Log Out</a></li>
-        </ul>
-
-        <div class="menu-toggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
 
     <div class="tabelruangan">
 
-        <form action="/action_page.php" class="datepicker">
+        <form action="/action_page.php" class="datepicker-buatan">
             <label for="birthday">Tanggal:</label>
             <input type="date" id="tanggal" name="birthday">
         </form>
@@ -164,8 +143,8 @@
                 <td>GDS 501</td>
             </tr>
         </table>
-        <li class="back"><a href="<?= base_url('User/index') ?>">Back</li>
-        <li class="booking"><a href="<?= base_url('User/formpeminjamanruang') ?>">Booking</a></li>
+        <li class="tombol-back"><a href="<?= base_url('User/index') ?>">Back</li>
+        <li class="tombol-booking"><a href="<?= base_url('User/formpeminjamanruang') ?>">Booking</a></li>
         <br><br><br>
     </div>
 

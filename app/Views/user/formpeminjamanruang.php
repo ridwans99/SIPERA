@@ -2,30 +2,10 @@
 <html lang="en">
 
 <body>
-    <!-- awal navbar -->
-    <!-- logo -->
-    <nav>
-        <div class="logo">
-            <h4>Sipera UNJ</h4>
-        </div>
-        <!-- list -->
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Peminjaman Ruang</a></li>
-            <li><a href="">Log Out</a></li>
-        </ul>
-
-        <div class="menu-toggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
 
     <div class="tabelruanganform">
 
-        <form action="/action_page.php" class="datepicker">
+        <form action="/action_page.php" class="datepicker-buatan">
             <label for="birthday">Tanggal:</label>
             <input type="date" id="tanggal" name="birthday">
         </form>
@@ -162,7 +142,8 @@
             </tr>
             
         </table>
-        <li class="save">SAVE</li>
+        <li class="back-btn">BACK</li>
+        <li class="save-btn">SAVE</li>
         <br><br><br>
     </div>
 
