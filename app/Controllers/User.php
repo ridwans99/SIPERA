@@ -1,4 +1,6 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 
 use App\Models\AdminModel;
@@ -11,7 +13,7 @@ use App\Models\TransaksiRuangModel;
 
 class User extends BaseController
 {
-	protected $helpers = ['form','date'];
+	protected $helpers = ['form', 'date'];
 	protected $session = null;
 	protected $request = null;
 
@@ -39,23 +41,23 @@ class User extends BaseController
 		$data = [
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
-			echo view('user/header', $data);
-			// echo view('user/menu');
-			echo view('user/index');
-			echo view('user/footer');
+		echo view('user/header', $data);
+		// echo view('user/menu');
+		echo view('user/index');
+		echo view('user/footer');
 	}
 
-	
+
 
 	public function formpeminjamanruang()
 	{
 		$data = [
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
-			echo view('user/header', $data);
-			// echo view('user/menu');
-			echo view('user/formpeminjamanruang');
-			echo view('user/footer');
+		echo view('user/header', $data);
+		// echo view('user/menu');
+		echo view('user/formpeminjamanruang');
+		echo view('user/footer');
 	}
 
 	public function peminjamanruang()
@@ -63,10 +65,10 @@ class User extends BaseController
 		$data = [
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
-			echo view('user/header', $data);
-			// echo view('user/menu');
-			echo view('user/peminjamanruang');
-			echo view('user/footer');
+		echo view('user/header', $data);
+		// echo view('user/menu');
+		echo view('user/peminjamanruang');
+		echo view('user/footer');
 	}
 
 	public function peminjamanbarang()
@@ -74,10 +76,10 @@ class User extends BaseController
 		$data = [
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
-			echo view('user/header', $data);
-			// echo view('user/menu');
-			echo view('user/peminjamanbarang');
-			echo view('user/footer');
+		echo view('user/header', $data);
+		// echo view('user/menu');
+		echo view('user/peminjamanbarang');
+		echo view('user/footer');
 	}
 
 	public function pemilihanbarang()
@@ -85,10 +87,10 @@ class User extends BaseController
 		$data = [
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
-			echo view('user/header', $data);
-			// echo view('user/menu');
-			echo view('user/pemilihanbarang');
-			echo view('user/footer');
+		echo view('user/header', $data);
+		// echo view('user/menu');
+		echo view('user/pemilihanbarang');
+		echo view('user/footer');
 	}
 
 	public function verifikasipeminjamanbarang()
@@ -96,10 +98,10 @@ class User extends BaseController
 		$data = [
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
-			echo view('user/header', $data);
-			// echo view('user/menu');
-			echo view('user/verifikasipeminjamanbarang');
-			echo view('user/footer');
+		echo view('user/header', $data);
+		// echo view('user/menu');
+		echo view('user/verifikasipeminjamanbarang');
+		echo view('user/footer');
 	}
 
 	public function pengembalianbarang()
@@ -107,10 +109,10 @@ class User extends BaseController
 		$data = [
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
-			echo view('user/header', $data);
-			// echo view('user/menu');
-			echo view('user/pengembalianbarang');
-			echo view('user/footer');
+		echo view('user/header', $data);
+		// echo view('user/menu');
+		echo view('user/pengembalianbarang');
+		echo view('user/footer');
 	}
 
 	// public function daftarLayanan()
@@ -305,7 +307,7 @@ class User extends BaseController
 	// 		$hargauser = $this->request->getPost('hargauser');
 	// 		$image->move('uploads/buktibayar');
 	// 		$imgname = $image->getName();
-			
+
 	// 		$dataorder = [
 	// 			'total_price' => $hargauser,
 	// 			'orderstatus_id' => 4,
@@ -327,7 +329,7 @@ class User extends BaseController
 
 	// public function login(){
 	// 	$googletoken = $this->request->getPost('google-token');
-		
+
 	// 	$result = file_get_contents('https://oauth2.googleapis.com/tokeninfo?id_token='.$googletoken);
 	// 	$result_json = json_decode($result, true);
 
@@ -370,7 +372,7 @@ class User extends BaseController
 	// {
 	// 	$array_items = array('user_id','user_logged_in');
 	// 	$this->session->remove($array_items);
-    //     $data = [
+	//     $data = [
 	// 		'title' => 'Jasa Sosmed ID - Login Admin'
 	// 	];
 

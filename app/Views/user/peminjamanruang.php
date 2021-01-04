@@ -10,8 +10,9 @@
         </div>
         <!-- list -->
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Peminjaman Ruang</a></li>
+            <li><a href="<?= base_url('User/index') ?>">Home</a></li>
+            <li><a href="<?= base_url('User/peminjamanruang') ?>">Peminjaman Ruang</a></li>
+            <li><a href="<?= base_url('User/peminjamanbarang') ?>">Peminjaman Barang</a></li>
             <li><a href="">Log Out</a></li>
         </ul>
 
@@ -163,8 +164,8 @@
                 <td>GDS 501</td>
             </tr>
         </table>
-        <li class="back">Back</li>
-        <li class="booking">Booking</li>
+        <li class="back"><a href="<?= base_url('User/index') ?>">Back</li>
+        <li class="booking"><a href="<?= base_url('User/formpeminjamanruang') ?>">Booking</a></li>
         <br><br><br>
     </div>
 
