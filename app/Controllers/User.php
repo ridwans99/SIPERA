@@ -42,7 +42,7 @@ class User extends BaseController
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
 		echo view('user/header', $data);
-		// echo view('user/menu');
+		echo view('user/menu');
 		echo view('user/index');
 		echo view('user/footer');
 	}
@@ -55,7 +55,7 @@ class User extends BaseController
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
 		echo view('user/header', $data);
-		// echo view('user/menu');
+		echo view('user/menu');
 		echo view('user/formpeminjamanruang');
 		echo view('user/footer');
 	}
@@ -66,7 +66,7 @@ class User extends BaseController
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
 		echo view('user/header', $data);
-		// echo view('user/menu');
+		echo view('user/menu');
 		echo view('user/peminjamanruang');
 		echo view('user/footer');
 	}
@@ -77,7 +77,7 @@ class User extends BaseController
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
 		echo view('user/header', $data);
-		// echo view('user/menu');
+		echo view('user/menu');
 		echo view('user/peminjamanbarang');
 		echo view('user/footer');
 	}
@@ -88,7 +88,7 @@ class User extends BaseController
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
 		echo view('user/header', $data);
-		// echo view('user/menu');
+		echo view('user/menu');
 		echo view('user/pemilihanbarang');
 		echo view('user/footer');
 	}
@@ -99,7 +99,7 @@ class User extends BaseController
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
 		echo view('user/header', $data);
-		// echo view('user/menu');
+		echo view('user/menu');
 		echo view('user/verifikasipeminjamanbarang');
 		echo view('user/footer');
 	}
@@ -110,7 +110,7 @@ class User extends BaseController
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
 		echo view('user/header', $data);
-		// echo view('user/menu');
+		echo view('user/menu');
 		echo view('user/pengembalianbarang');
 		echo view('user/footer');
 	}
