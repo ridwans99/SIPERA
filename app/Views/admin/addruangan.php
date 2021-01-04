@@ -6,7 +6,7 @@
         <div class="section-body">
             <div class="card">
                 <div class="card-body">
-                    <form action="/Admin/insertRuangan" method="post" class="btn btn-primary" enctype="multipart/form-data">
+                    <form action="/Admin/insertRuangan" method="post" class="ruangan" enctype="multipart/form-data">
                         <div class="form-group">
                             <label>Ruangan</label>
                             <div class="input-group mb-3">

@@ -6,7 +6,7 @@
         <div class="section-body">
             <div class="card">
                 <div class="card-body">
-                    <form action="<?= base_url('Admin/insertUsers') ?>" method="post" class="btn btn-primary" enctype="multipart/form-data">
+                    <form action="<?= base_url('Admin/insertUsers') ?>" method="post" class="user" enctype="multipart/form-data">
                         <div class="form-group">
                             <label>Username</label>
                             <div class="input-group mb-3">
