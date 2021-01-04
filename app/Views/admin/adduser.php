@@ -20,15 +20,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>NIM</label>
+                            <label>NRM</label>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="nim" maxlength="10" pattern="{0-9}+">
+                                <input type="text" class="form-control" placeholder="" name="nrm" maxlength="10" pattern="{0-9}+">
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Nama</label>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="nama" size="50">
+                                <input type="text" class="form-control" placeholder="" name="full_name" size="50">
                             </div>
                         </div>
                         <div class="form-group">
