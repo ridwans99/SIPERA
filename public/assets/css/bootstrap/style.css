@@ -132,13 +132,13 @@ nav ul li a:hover {
 }
 
 /* Homepage */
-.konten {
+.konten-homepage {
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(54, 250, 136);
-    width: 200px;
-    height: 220px;
+    width: 40%;
+    height: 50%;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     box-sizing: border-box;
     border-radius: 10px;
     /* align-items: center; */
@@ -151,11 +151,11 @@ nav ul li a:hover {
 }
 
 /* Peminjaman Ruangan */
-.datepicker {
+.datepicker-buatan {
     text-align: center;
 }
 
-.back {
+.tombol-back {
     /* display: flex; */
     /* flex-direction: column-reverse; */
     background-color: #ffffff;
@@ -171,13 +171,13 @@ nav ul li a:hover {
     float: left;
     list-style: none;
 }
-.back:hover {
+.tombol-back:hover {
     background-color: #000000;
     color: #ffffff;
     cursor: pointer;
 }
 
-.booking {
+.tombol-booking {
      background-color: #ffffff;
     color: #00F0FF;
     text-align: center;
@@ -192,7 +192,7 @@ nav ul li a:hover {
     float: left;
     list-style: none;
 }
-.booking:hover {
+.tombol-booking:hover {
     background-color: #000000;
     color: #ffffff;
     cursor: pointer; 
@@ -244,13 +244,6 @@ nav ul li a:hover {
     
 }
 
-.hari {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-
 /* form peminjaman ruang */
 .tabelruanganform {
     margin: 100px auto;
@@ -298,22 +291,42 @@ nav ul li a:hover {
     
 }
 
-.save {
+.save-btn {
      background-color: #ffffff;
     color: #00F0FF;
     text-align: center;
     padding: 8px;
     padding-left: 100px;
     padding-right: 100px;
+    margin-left: 49%;
     margin-top: 60px;
-    margin-left: 74%;
     border-color: rgb(112, 112, 112);
     border-radius: 5px;
     float: right;
     float: left;
     list-style: none;
 }
-.save:hover {
+.save-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer; 
+}
+
+.back-btn {
+    background-color: #ffffff;
+    color: #00F0FF;
+    text-align: center;
+    padding: 8px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 60px;
+    border-color: rgb(112, 112, 112);
+    border-radius: 5px;
+    float: right;
+    float: left;
+    list-style: none;
+}
+.back-btn:hover {
     background-color: #000000;
     color: #ffffff;
     cursor: pointer; 
