@@ -2,32 +2,11 @@
 <html lang="en">
 
 <body>
-    <!-- awal navbar -->
-    <!-- logo -->
-    <nav>
-        <div class="logo">
-            <img src="" alt="">
-        </div>
-        <!-- list -->
-        <ul>
-            <li><a href="<?= base_url('User/index') ?>">Home</a></li>
-            <li><a href="<?= base_url('User/peminjamanruang') ?>">Peminjaman Ruang</a></li>
-            <li><a href="<?= base_url('User/peminjamanbarang') ?>">Peminjaman Barang</a></li>
-            <li><a href="">Log Out</a></li>
-        </ul>
-
-        <div class="menu-toggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-
-    <!-- akhir navbar -->
-
-    <div class="konten">
-        <h4>Selamat datang di Sipera UNJ. Website dimana kalian dapat meminjam ruangan</h4>
+    <div class="konten-homepage">
+        <h4>Jika barang yang pinjam rusak atau hilang, orang yang bersangkutan harus megnganti rugi sebanyak yang tertera pada peraturan.
+            Berlaku juga pada ruangan yang dipinjam. Jika ada barang yang hilang atau rusak diruangan yang bersangkutan dikarenakan kesalahan individu,
+            maka individu tersebut harus bertanggung jawab. Kecuali barang pribadi
+        </h4>
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
