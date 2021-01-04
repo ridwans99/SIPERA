@@ -11,6 +11,7 @@ use App\Models\OrderBarangModel;
 use App\Models\OrderRuanganModel;
 use App\Models\TransaksiBarangModel;
 use App\Models\TransaksiRuangModel;
+use App\Models\InputModel;
 
 class Admin extends BaseController
 {
@@ -606,6 +607,119 @@ class Admin extends BaseController
 		}
 	}
 
+	public function showInputData()
+	{
+		// return view('welcome_message');
+		$in = new InputModel();
+		$tampildata = $in->tampildata();
+		// dd($tampildata);
+		$data = [
+			'title' => 'SIPERA - Admin',
+			'tampildata' => $tampildata
+			// 'user' => $user,
+			// 'admin' => $admin
+		];
+		echo view('admin/header', $data);
+		echo view('admin/sidebar', $data);
+		echo view('admin/inputdata', $data);
+		echo view('admin/footer');
+	}
+
+	public function addInputData()
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$admin = $this->admin->getAdmin(session('admin_id'));
+
+		helper('form');
+		echo view('admin/header');
+		echo view('admin/sidebar');
+		echo view('admin/addinput');
+		echo view('admin/footer');
+	}
+
+	public function insertInputData()
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$admin = $this->admin->getAdmin(session('admin_id'));
+		$data = [
+			'ruangan_id' => $this->request->getPost('ruang'),
+			'tgl_pinjam' => $this->request->getPost('tanggal'),
+			'jam_mulai' => $this->request->getPost('mulai'),
+			'jam_akhir' => $this->request->getPost('selesai'),
+			'nama_dosen' => $this->request->getPost('dosen'),
+			'mata_kuliah' => $this->request->getPost('matkul'),
+			'prodi' => $this->request->getPost('prodi'),
+			'status' => $this->request->getPost('status'),
+		];
+
+		$in = new InputModel();
+
+		$tambah = $in->tambah($data);
+
+		if ($tambah) {
+			return redirect()->to('/admin/inputdata');
+		}
+	}
+
+	public function editInputData($id)
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$hapus = $this->user->deleteUser($id);
+		$in = new InputModel();
+		$data = [
+			'title' => 'SIPERA - Admin',
+			'tampildata' => $in->tampildata($id)
+			// 'user' => $user,
+			// 'admin' => $admin
+		];
+
+		echo view('admin/header', $data);
+		echo view('admin/sidebar', $data);
+		echo view('admin/editinput', $data);
+		echo view('admin/footer');
+	}
+
+	public function updateInputData()
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$admin = $this->admin->getAdmin(session('admin_id'));
+		$id = $this->request->getPost('input_id');
+		$data = [
+			'ruangan_id' => $this->request->getPost('ruang'),
+			'tgl_pinjam' => $this->request->getPost('tanggal'),
+			'jam_mulai' => $this->request->getPost('mulai'),
+			'jam_akhir' => $this->request->getPost('selesai'),
+			'nama_dosen' => $this->request->getPost('dosen'),
+			'mata_kuliah' => $this->request->getPost('matkul'),
+			'prodi' => $this->request->getPost('prodi'),
+			'status' => $this->request->getPost('status'),
+		];
+
+		$in = new InputModel();
+
+		$edit = $in->updateInputData($data, $id);
+
+		if ($edit) {
+			return redirect()->to('/admin/inputdata');
+		}
+	}
+
+	public function deleteInputData($id)
+	{
+		// return view('welcome_message');
+		// if ($this->checkLoggedIn()) {
+		// 	$hapus = $this->user->deleteUser($id);
+		$in = new InputModel();
+		$hapus = $in->deleteInputData($id);
+		if ($hapus) {
+			return redirect()->to('/admin/inputdata');
+		}
+	}
+
 	public function submitLogin()
 	{
 		$username = $this->request->getPost('username');
@@ -615,7 +729,7 @@ class Admin extends BaseController
 			return redirect()->to(base_url('/admin'));
 		}
 
-		if (!isset($_SESSION['admin_logged_in']) && (empty($username) || empty($password))){
+		if (!isset($_SESSION['admin_logged_in']) && (empty($username) || empty($password))) {
 			// $this->notif->message('Data login tidak lengkap', 'danger');
 			return redirect()->to(base_url('/admin/login'));
 		}
@@ -645,11 +759,11 @@ class Admin extends BaseController
 				return redirect()->to(base_url('/admin/login'));
 			}
 		}
-
 	}
 
-	public function logout(){
-		$array_items = array('admin_id','admin_logged_in');
+	public function logout()
+	{
+		$array_items = array('admin_id', 'admin_logged_in');
 		$this->session->remove($array_items);
 		return redirect()->to(base_url('/admin/login'));
 	}
