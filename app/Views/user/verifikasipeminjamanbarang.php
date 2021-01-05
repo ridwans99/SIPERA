@@ -7,13 +7,13 @@
             <div class="card-body">
                 <form action="" method="post" class="verif" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label>NIM</label>
+                        <label>Nama Lengkap</label>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="" name="nim" size="50">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Nama Lengkap</label>
+                        <label>Tanggal</label>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="" name="nama" size="50">
                         </div>
@@ -33,7 +33,7 @@
                             <option value="Terpakai">3SKS</option>
                         </select>
                     </div>
-                    <input class="btn btn-primary btn-user btn-block" name='submit' type="submit" value='Submit' />
+                    <input class="btn btn-success btn-user btn-block" name='submit' type="submit" value='Submit' />
                 </form>
             </div>
         </div>
