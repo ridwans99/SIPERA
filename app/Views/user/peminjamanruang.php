@@ -6,7 +6,7 @@
     <div class="tabelruangan">
 
         <form action="/action_page.php" class="datepicker-buatan">
-             <div class="btn-group">
+             <!-- <div class="btn-group">
                     <a href="<?= base_url('User/peminjamanruang') ?>"  class="btn btn-success">Senin</a>
                     <br>
                     <a href="<?= base_url('User/peminjamanruang2') ?>" class="btn btn-success">Selasa</a>
@@ -16,10 +16,31 @@
                     <a href="<?= base_url('User/peminjamanruang4') ?>"  class="btn btn-success">Kamis</a>
                     <br>
                     <a href="<?= base_url('User/peminjamanruang5') ?>"  class="btn btn-success">Jumat</a>
+                </div> -->
+
+                <div class="container-fluid">
+                    <div class="nav-wrapper navbar-expand-sm mx-4">
+                        <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
+                            <li class="nav-item col-12 col-sm-12 col-md-3">
+                                <a class="nav-link mb-sm-3 mb-md-3" href="<?= base_url('User/peminjamanruang') ?>">Senin</a>
+                            </li>
+                            <li class="nav-item col-12 col-sm-12 col-md-2">
+                                <a class="nav-link mb-sm-3 mb-md-2" href="<?= base_url('User/peminjamanruang2') ?>">Selasa</a>
+                            </li>
+                            <li class="nav-item col-12 col-sm-12 col-md-2">
+                                <a class="nav-link mb-sm-3 mb-md-2" href="<?= base_url('User/peminjamanruang3') ?>">Rabu</a>
+                            </li>
+                            <li class="nav-item col-12 col-sm-12 col-md-2">
+                                <a class="nav-link mb-sm-3 mb-md-2" href="<?= base_url('User/peminjamanruang4') ?>">Kamis</a>
+                            </li>
+                            <li class="nav-item col-12 col-sm-12 col-md-3">
+                                <a class="nav-link mb-sm-3 mb-md-3" href="<?= base_url('User/peminjamanruang5') ?>">Jumat</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <br>
-                <br>
-                <p style="font-weight:bold;">SENIN</p>
+                <p style="font-weight:bold; font-size:30px; color: white;">Senin</p>
         </form>
 
         <!-- <h2 class="hari">Senin</h2> -->
@@ -181,9 +202,16 @@
                 <td></td>
             </tr>
         </table>
-        <li class="tombol-back"><a href="<?= base_url('User/index') ?>">Back</li>
-        <li class="tombol-booking"><a href="<?= base_url('User/formpeminjamanruang') ?>">Booking</a></li>
-        <br><br><br>
+        <br><br>
+        <div class="nav-wrapper navbar-expand-sm mx-4">
+            <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
+                <li class="nav-item col-12 col-sm-12 col-md-6">
+                    <a class="nav-link mb-sm-3 mb-md-3" href="<?= base_url('User/index') ?>">Back</a>
+                </li>
+                <li class="nav-item col-12 col-sm-12 col-md-6">
+                    <a class="nav-link mb-sm-3 mb-md-2" href="<?= base_url('User/formpeminjamanruang') ?>">Booking</a>
+            </ul>
+        </div>
     </div>
 
     <br><br><br><br>

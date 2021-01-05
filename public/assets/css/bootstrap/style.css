@@ -245,11 +245,11 @@ nav ul li a:hover {
 }
 
 /* form peminjaman ruang */
-.tabelruanganform {
+/* .tabelruanganform {
     margin: 100px auto;
     padding: 40px;
-    /* padding-left: 20px;
-    padding-right: 20px; */
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 50px;
     border-radius: 30px;
     background-color: #17ff78;
@@ -259,10 +259,10 @@ nav ul li a:hover {
     width: 80%;
     height: 65%;
     border: 1px solid;
-    /* margin-top: 50px;
-    margin-left: 25%; */
+    margin-top: 50px;
+    margin-left: 25%; *
     opacity: 80%; 
-}
+} */
 
 .tabelruanganform tr th {
     align-items: center;

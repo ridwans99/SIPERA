@@ -70,6 +70,50 @@ class User extends BaseController
 		echo view('user/footer');
 	}
 
+	public function peminjamanruang2()
+	{
+		$data = [
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+		];
+		echo view('user/header', $data);
+		echo view('user/menu');
+		echo view('user/selasa');
+		echo view('user/footer');
+	}
+
+	public function peminjamanruang3()
+	{
+		$data = [
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+		];
+		echo view('user/header', $data);
+		echo view('user/menu');
+		echo view('user/rabu');
+		echo view('user/footer');
+	}
+
+	public function peminjamanruang4()
+	{
+		$data = [
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+		];
+		echo view('user/header', $data);
+		echo view('user/menu');
+		echo view('user/kamis');
+		echo view('user/footer');
+	}
+
+	public function peminjamanruang5()
+	{
+		$data = [
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+		];
+		echo view('user/header', $data);
+		echo view('user/menu');
+		echo view('user/jumat');
+		echo view('user/footer');
+	}
+
 	public function peminjamanbarang()
 	{
 		$data = [

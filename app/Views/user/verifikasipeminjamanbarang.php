@@ -6,6 +6,7 @@
         <div class="card" style="width: 50%; margin:3% auto;">
             <div class="card-body">
                 <form action="" method="post" class="verif" enctype="multipart/form-data">
+                    <p style="background-color: rgb(58, 202, 142); color:white; padding: 2%">Isi Form Untuk Melakukan Pemimjaman Barang</p>
                     <div class="form-group">
                         <label>Nama Peminjam</label>
                         <div class="input-group mb-3">

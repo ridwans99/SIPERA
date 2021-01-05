@@ -9,6 +9,7 @@
         </form>
         <div class="section-body" style="text-align: center;">
             <div class="card" style="width: 50%; margin:3% auto;">
+                <p style="background-color: rgb(58, 202, 142); padding: 2%; color:white">Isi Data-data Untuk Meminjam Ruangan</p>
                 <div class="card-body">
                     <form action="" method="post" class="verif" enctype="multipart/form-data">
                         <div class="form-group">
@@ -86,10 +87,6 @@
                 </div>
             </div>
         </div>
-        
-        <li class="back-btn">BACK</li>
-        <li class="save-btn">SAVE</li>
-        <br><br><br>
     </div>
 
     <br><br><br><br>
