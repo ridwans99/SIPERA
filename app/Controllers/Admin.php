@@ -34,10 +34,10 @@ class Admin extends BaseController
 		$this->transaksiruangan = new TransaksiRuangModel();
 		$this->input = new InputModel();
 		$this->day1 = new Day1Model();
-		$this->day2 = new Day1Model();
-		$this->day3 = new Day1Model();
-		$this->day4 = new Day1Model();
-		$this->day5 = new Day1Model();
+		$this->day2 = new Day2Model();
+		$this->day3 = new Day3Model();
+		$this->day4 = new Day4Model();
+		$this->day5 = new Day5Model();
 		// $this->user = new \App\Models\UserModel();
 		// $this->user = new \App\Models\BarangModel();
 		// $this->user = new \App\Models\RuanganModel();
@@ -686,6 +686,111 @@ class Admin extends BaseController
 			$hapus = $this->input->deleteInputData($id);
 			if ($hapus) {
 				return redirect()->to(base_url('/admin/inputdata'));
+			}
+		}
+	}
+
+	public function showDay1()
+	{
+		$admin = $this->admin->getAdmin(session('admin_id'));
+		$day1 = $this->day1->getDay1();
+		// dd($tampildata);
+		$data = [
+			'title' => 'SIPERA - Admin',
+			'day1' => $day1,
+			'admin' => $admin
+		];
+		if ($this->checkLoggedIn()) {
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/senin', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function addDay1()
+	{
+		if ($this->checkLoggedIn()) {
+			$admin = $this->admin->getAdmin(session('admin_id'));
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'admin' => $admin
+			];
+			helper('form');
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/addsenin', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function insertDay1()
+	{
+		if ($this->checkLoggedIn()) {
+			$data = [
+				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
+				'ruangan1' => $this->request->getPost('ruangan1'),
+				'ruangan2' => $this->request->getPost('ruangan2'),
+				'ruangan3' => $this->request->getPost('ruangan3'),
+				'ruangan4' => $this->request->getPost('ruangan4'),
+				'ruangan5' => $this->request->getPost('ruangan5'),
+				'ruangan6' => $this->request->getPost('ruangan6'),
+				'ruangan7' => $this->request->getPost('ruangan7'),
+				'ruangan8' => $this->request->getPost('ruangan8'),
+				'ruangan9' => $this->request->getPost('ruangan9'),
+				'ruangan10' => $this->request->getPost('ruangan10'),
+			];
+			$tambah = $this->day1->insertDay1($data);
+			if ($tambah) {
+				return redirect()->to(base_url('/admin/senin'));
+			}
+		}
+	}
+
+	public function editDay1($id)
+	{
+		if ($this->checkLoggedIn()) {
+			$admin = $this->admin->getAdmin(session('admin_id'));
+			$day1 = $this->day1->getDay1($id);
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'day1' => $day1,
+				'admin' => $admin
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/editsenin', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function updateDay1()
+	{
+		if ($this->checkLoggedIn()) {
+			$id = $this->request->getPost('admin_id');
+			$data = [
+				'ruangan_id' => $this->request->getPost('ruang'),
+				'tgl_pinjam' => $this->request->getPost('tanggal'),
+				'jam_mulai' => $this->request->getPost('mulai'),
+				'jam_akhir' => $this->request->getPost('selesai'),
+				'nama_dosen' => $this->request->getPost('dosen'),
+				'mata_kuliah' => $this->request->getPost('matkul'),
+				'prodi' => $this->request->getPost('prodi'),
+				'status' => $this->request->getPost('status'),
+			];
+			$edit = $this->day1->updateDay1($data, $id);
+			if ($edit) {
+				return redirect()->to(base_url('/admin/senin'));
+			}
+		}
+	}
+
+	public function deleteDay1($id)
+	{
+		if ($this->checkLoggedIn()) {
+			$hapus = $this->day1->deleteDay1($id);
+			if ($hapus) {
+				return redirect()->to(base_url('/admin/senin'));
 			}
 		}
 	}
