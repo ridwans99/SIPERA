@@ -182,8 +182,8 @@ class User extends BaseController
 
 	public function showDay1()
 	{
-		$user = $this->user->getUser(session('user_id'));
-		if($this->checkLoggedIn()){
+		// $user = $this->user->getUser(session('user_id'));
+		// if($this->checkLoggedIn()){
 			$day1 = $this->day1->getDay1();
 			// dd($getUser);
 			$data = [
@@ -195,13 +195,13 @@ class User extends BaseController
 			echo view('user/menu');
 			echo view('user/peminjamanruang');
 			echo view('user/footer');
-		}
+		// }
 	}
 
 	public function showDay2()
 	{
-		$user = $this->user->getUser(session('user_id'));
-		if($this->checkLoggedIn()){
+		// $user = $this->user->getUser(session('user_id'));
+		// if($this->checkLoggedIn()){
 			$day2 = $this->day2->getDay2();
 			// dd($getUser);
 			$data = [
@@ -213,13 +213,13 @@ class User extends BaseController
 			echo view('user/menu');
 			echo view('user/selasa', $data);
 			echo view('user/footer');
-		}
+		// }
 	}
 
 	public function showDay3()
 	{
-		$user = $this->user->getUser(session('user_id'));
-		if($this->checkLoggedIn()){
+		// $user = $this->user->getUser(session('user_id'));
+		// if($this->checkLoggedIn()){
 			$day3 = $this->day3->getDay3();
 			// dd($getUser);
 			$data = [
@@ -231,13 +231,13 @@ class User extends BaseController
 			echo view('user/menu');
 			echo view('user/rabu', $data);
 			echo view('user/footer');
-		}
+		// }
 	}
 
 	public function showDay4()
 	{
-		$user = $this->user->getUser(session('user_id'));
-		if($this->checkLoggedIn()){
+		// $user = $this->user->getUser(session('user_id'));
+		// if($this->checkLoggedIn()){
 			$day4 = $this->day4->getDay4();
 			// dd($getUser);
 			$data = [
@@ -249,13 +249,13 @@ class User extends BaseController
 			echo view('user/menu');
 			echo view('user/kamis', $data);
 			echo view('user/footer');
-		}
+		// }
 	}
 
 	public function showDay5()
 	{
-		$user = $this->user->getUser(session('user_id'));
-		if($this->checkLoggedIn()){
+		// $user = $this->user->getUser(session('user_id'));
+		// if($this->checkLoggedIn()){
 			$day5 = $this->day5->getDay5();
 			// dd($getUser);
 			$data = [
@@ -267,7 +267,7 @@ class User extends BaseController
 			echo view('user/menu');
 			echo view('user/jumat', $data);
 			echo view('user/footer');
-		}
+		// }
 	}
 
 	// public function daftarLayanan()
