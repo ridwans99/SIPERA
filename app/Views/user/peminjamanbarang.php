@@ -42,13 +42,13 @@
                     <h5 class="modal-title" id="exampleModalLabel">List Barang Yang Dapat Dipinjam</h5>
                 </div>
                 <div class="btn-group-vertical">
-                    <a href="<?= base_url('User/verifikasipengembalianbarang') ?>"  class="btn btn-primary">Alat Tulis</a>
+                    <a href="<?= base_url('User/verifikasipengembalianbarang') ?>"  class="btn btn-success">Alat Tulis</a>
                     <br>
-                    <a href="<?= base_url('User/verifikasipengembalianbarang') ?>" class="btn btn-primary">Proyektor</a>
+                    <a href="<?= base_url('User/verifikasipengembalianbarang') ?>" class="btn btn-success">Proyektor</a>
                     <br>
-                    <a href="<?= base_url('User/verifikasipengembalianbarang') ?>"  class="btn btn-primary">Kabel HDMI</a>
+                    <a href="<?= base_url('User/verifikasipengembalianbarang') ?>"  class="btn btn-success">Kabel HDMI</a>
                     <br>
-                    <a href="<?= base_url('User/verifikasipengembalianbarang') ?>"  class="btn btn-primary">Kabel Rol</a>
+                    <a href="<?= base_url('User/verifikasipengembalianbarang') ?>"  class="btn btn-success">Kabel Rol</a>
                     <br>
                 </div>
             </div>
