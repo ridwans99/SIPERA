@@ -7,13 +7,19 @@
             <div class="card-body">
                 <form action="" method="post" class="verif" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label>NIM</label>
+                        <label>Nama Peminjam</label>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="" name="nim" size="50">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Nama Lengkap</label>
+                        <label>Nama Dosen</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="" name="nama" size="50">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Mata Kuliah</label>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="" name="nama" size="50">
                         </div>
@@ -24,7 +30,7 @@
                             <input type="text" class="form-control" placeholder="" name="prodi" size="50">
                         </div>
                     </div>
-                    <input class="btn btn-success btn-user btn-block" name='submit' type="submit" value='Kembalikan' />
+                    <a href="<?= base_url('User/index') ?>"  class="btn btn-success">Kembalikan</a>
                 </form>
             </div>
         </div>

@@ -19,7 +19,7 @@
                 </div>
                 <br>
                 <br>
-                <p style="font-weight:bold;">SENIN</p>
+                <p style="font-weight:bold;">JUMAT</p>
         </form>
 
         <!-- <h2 class="hari">Senin</h2> -->

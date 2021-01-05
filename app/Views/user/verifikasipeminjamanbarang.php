@@ -70,7 +70,7 @@
                             <input type="text" class="form-control" placeholder="" name="prodi" size="50">
                         </div>
                     </div>
-                    <input class="btn btn-success btn-user btn-block" name='submit' type="submit" value='Submit' />
+                    <a href="<?= base_url('User/index') ?>"  class="btn btn-success">Pinjam Sekarang</a>
                 </form>
             </div>
         </div>
