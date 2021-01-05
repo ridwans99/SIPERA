@@ -10,6 +10,11 @@ use App\Models\RuanganModel;
 use App\Models\TransaksiBarangModel;
 use App\Models\TransaksiRuangModel;
 use App\Models\InputModel;
+use App\Models\Day1Model;
+use App\Models\Day2Model;
+use App\Models\Day3Model;
+use App\Models\Day4Model;
+use App\Models\Day5Model;
 
 class Admin extends BaseController
 {
@@ -28,6 +33,11 @@ class Admin extends BaseController
 		$this->transaksibarang = new TransaksiBarangModel();
 		$this->transaksiruangan = new TransaksiRuangModel();
 		$this->input = new InputModel();
+		$this->day1 = new Day1Model();
+		$this->day2 = new Day1Model();
+		$this->day3 = new Day1Model();
+		$this->day4 = new Day1Model();
+		$this->day5 = new Day1Model();
 		// $this->user = new \App\Models\UserModel();
 		// $this->user = new \App\Models\BarangModel();
 		// $this->user = new \App\Models\RuanganModel();
