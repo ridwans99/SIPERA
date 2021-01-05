@@ -24,15 +24,6 @@
                             <input type="text" class="form-control" placeholder="" name="prodi" size="50">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label>Durasi Peminjaman</label>
-                        <select class="custom-select" name="durasi">
-                            <option selected class="box" disabled>-- Pilih Durasi --</option>
-                            <option value="Tersedia">1SKS</option>
-                            <option value="Terpakai">2SKS</option>
-                            <option value="Terpakai">3SKS</option>
-                        </select>
-                    </div>
                     <input class="btn btn-primary btn-user btn-block" name='submit' type="submit" value='Submit' />
                 </form>
             </div>
