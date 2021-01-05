@@ -421,7 +421,7 @@ class Admin extends BaseController
 			];
 			$tambah = $this->transaksiruangan->tambah($data);
 			if ($tambah) {
-				return redirect()->to(base_urdl('/admin/transaksiruangan'));
+				return redirect()->to(base_url('/admin/transaksiruangan'));
 			}
 		}
 	}
