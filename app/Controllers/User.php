@@ -180,6 +180,96 @@ class User extends BaseController
 		echo view('user/footer');
 	}
 
+	public function showDay1()
+	{
+		$user = $this->user->getUser(session('user_id'));
+		if($this->checkLoggedIn()){
+			$day1 = $this->day1->getDay1();
+			// dd($getUser);
+			$data = [
+				'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG',
+				'day1' => $day1,
+				'user' => $user
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/user', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function showDay2()
+	{
+		$user = $this->user->getUser(session('user_id'));
+		if($this->checkLoggedIn()){
+			$day2 = $this->day2->getDay2();
+			// dd($getUser);
+			$data = [
+				'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG',
+				'day2' => $day2,
+				'user' => $user
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/user', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function showDay3()
+	{
+		$user = $this->user->getUser(session('user_id'));
+		if($this->checkLoggedIn()){
+			$day3 = $this->day3->getDay3();
+			// dd($getUser);
+			$data = [
+				'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG',
+				'day3' => $day3,
+				'user' => $user
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/user', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function showDay4()
+	{
+		$user = $this->user->getUser(session('user_id'));
+		if($this->checkLoggedIn()){
+			$day4 = $this->day4->getDay4();
+			// dd($getUser);
+			$data = [
+				'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG',
+				'day4' => $day4,
+				'user' => $user
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/user', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function showDay5()
+	{
+		$user = $this->user->getUser(session('user_id'));
+		if($this->checkLoggedIn()){
+			$day5 = $this->day5->getDay5();
+			// dd($getUser);
+			$data = [
+				'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG',
+				'day5' => $day5,
+				'user' => $user
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/user', $data);
+			echo view('admin/footer');
+		}
+	}
+
 	// public function daftarLayanan()
 	// {
 	// 	$products = $this->product->getProduct();
