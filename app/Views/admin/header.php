@@ -20,5 +20,3 @@
     <link rel="stylesheet" href="<?php echo base_url('stisla-assets/css/style.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('stisla-assets/css/components.css') ?>">
 </head>
-
-<body>

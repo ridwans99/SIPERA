@@ -51,6 +51,7 @@
                         <li><a class="nav-link" href="<?= base_url('Admin/showTransaksiRuangan') ?>"> Transaksi Ruangan</a></li>
                         <li><a class="nav-link" href="<?= base_url('Admin/showTransaksiBarang') ?>">Transaksi Barang</a></li>
                     </ul>
+                    <a class="nav-link" href="<?= base_url('Admin/showInputData') ?>"><i class=""></i> <span> Input Data</span></a>
                 </ul>
             </aside>
         </div>
