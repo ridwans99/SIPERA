@@ -1,4 +1,3 @@
-
 <!-- awal navbar -->
 <!-- logo -->
 <nav>
@@ -8,7 +7,7 @@
     <!-- list -->
     <ul>
         <li><a href="<?= base_url('User/index') ?>">Home</a></li>
-        <li><a href="<?= base_url('User/peminjamanruang') ?>">Peminjaman Ruang</a></li>
+        <li><a href="<?= base_url('User/showDay1') ?>">Peminjaman Ruang</a></li>
         <li><a href="<?= base_url('User/peminjamanbarang') ?>">Peminjaman Barang</a></li>
         <li><a href="">Log Out</a></li>
     </ul>
