@@ -70,60 +70,60 @@ class User extends BaseController
 		echo view('user/footer');
 	}
 
-	public function peminjamanruang()
-	{
-		$data = [
-			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
-		];
-		echo view('user/header', $data);
-		echo view('user/menu');
-		echo view('user/peminjamanruang');
-		echo view('user/footer');
-	}
+	// public function peminjamanruang()
+	// {
+	// 	$data = [
+	// 		'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+	// 	];
+	// 	echo view('user/header', $data);
+	// 	echo view('user/menu');
+	// 	echo view('user/peminjamanruang');
+	// 	echo view('user/footer');
+	// }
 
-	public function peminjamanruang2()
-	{
-		$data = [
-			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
-		];
-		echo view('user/header', $data);
-		echo view('user/menu');
-		echo view('user/selasa');
-		echo view('user/footer');
-	}
+	// public function peminjamanruang2()
+	// {
+	// 	$data = [
+	// 		'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+	// 	];
+	// 	echo view('user/header', $data);
+	// 	echo view('user/menu');
+	// 	echo view('user/selasa');
+	// 	echo view('user/footer');
+	// }
 
-	public function peminjamanruang3()
-	{
-		$data = [
-			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
-		];
-		echo view('user/header', $data);
-		echo view('user/menu');
-		echo view('user/rabu');
-		echo view('user/footer');
-	}
+	// public function peminjamanruang3()
+	// {
+	// 	$data = [
+	// 		'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+	// 	];
+	// 	echo view('user/header', $data);
+	// 	echo view('user/menu');
+	// 	echo view('user/rabu');
+	// 	echo view('user/footer');
+	// }
 
-	public function peminjamanruang4()
-	{
-		$data = [
-			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
-		];
-		echo view('user/header', $data);
-		echo view('user/menu');
-		echo view('user/kamis');
-		echo view('user/footer');
-	}
+	// public function peminjamanruang4()
+	// {
+	// 	$data = [
+	// 		'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+	// 	];
+	// 	echo view('user/header', $data);
+	// 	echo view('user/menu');
+	// 	echo view('user/kamis');
+	// 	echo view('user/footer');
+	// }
 
-	public function peminjamanruang5()
-	{
-		$data = [
-			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
-		];
-		echo view('user/header', $data);
-		echo view('user/menu');
-		echo view('user/jumat');
-		echo view('user/footer');
-	}
+	// public function peminjamanruang5()
+	// {
+	// 	$data = [
+	// 		'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+	// 	];
+	// 	echo view('user/header', $data);
+	// 	echo view('user/menu');
+	// 	echo view('user/jumat');
+	// 	echo view('user/footer');
+	// }
 
 	public function peminjamanbarang()
 	{
@@ -191,10 +191,10 @@ class User extends BaseController
 				'day1' => $day1,
 				'user' => $user
 			];
-			echo view('admin/header', $data);
-			echo view('admin/sidebar', $data);
-			echo view('admin/user', $data);
-			echo view('admin/footer');
+			echo view('user/header', $data);
+			echo view('user/menu');
+			echo view('user/peminjamanruang');
+			echo view('user/footer');
 		}
 	}
 
@@ -209,10 +209,10 @@ class User extends BaseController
 				'day2' => $day2,
 				'user' => $user
 			];
-			echo view('admin/header', $data);
-			echo view('admin/sidebar', $data);
-			echo view('admin/user', $data);
-			echo view('admin/footer');
+			echo view('user/header', $data);
+			echo view('user/menu');
+			echo view('user/selasa', $data);
+			echo view('user/footer');
 		}
 	}
 
@@ -227,10 +227,10 @@ class User extends BaseController
 				'day3' => $day3,
 				'user' => $user
 			];
-			echo view('admin/header', $data);
-			echo view('admin/sidebar', $data);
-			echo view('admin/user', $data);
-			echo view('admin/footer');
+			echo view('user/header', $data);
+			echo view('user/menu');
+			echo view('user/rabu', $data);
+			echo view('user/footer');
 		}
 	}
 
@@ -245,10 +245,10 @@ class User extends BaseController
 				'day4' => $day4,
 				'user' => $user
 			];
-			echo view('admin/header', $data);
-			echo view('admin/sidebar', $data);
-			echo view('admin/user', $data);
-			echo view('admin/footer');
+			echo view('user/header', $data);
+			echo view('user/menu');
+			echo view('user/kamis', $data);
+			echo view('user/footer');
 		}
 	}
 
@@ -263,10 +263,10 @@ class User extends BaseController
 				'day5' => $day5,
 				'user' => $user
 			];
-			echo view('admin/header', $data);
-			echo view('admin/sidebar', $data);
-			echo view('admin/user', $data);
-			echo view('admin/footer');
+			echo view('user/header', $data);
+			echo view('user/menu');
+			echo view('user/jumat', $data);
+			echo view('user/footer');
 		}
 	}
 
