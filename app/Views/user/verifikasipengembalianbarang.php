@@ -24,7 +24,7 @@
                             <input type="text" class="form-control" placeholder="" name="prodi" size="50">
                         </div>
                     </div>
-                    <input class="btn btn-primary btn-user btn-block" name='submit' type="submit" value='Submit' />
+                    <input class="btn btn-success btn-user btn-block" name='submit' type="submit" value='Kembalikan' />
                 </form>
             </div>
         </div>

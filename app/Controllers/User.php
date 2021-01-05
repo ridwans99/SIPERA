@@ -114,6 +114,17 @@ class User extends BaseController
 		echo view('user/footer');
 	}
 
+	public function verifikasipengembalianbarang()
+	{
+		$data = [
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+		];
+		echo view('user/header', $data);
+		echo view('user/menu');
+		echo view('user/verifikasipengembalianbarang');
+		echo view('user/footer');
+	}
+
 	// public function daftarLayanan()
 	// {
 	// 	$products = $this->product->getProduct();
