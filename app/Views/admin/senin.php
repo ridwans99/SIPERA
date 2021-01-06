@@ -9,7 +9,8 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="section-header-button">
-                            <a href="<?= base_url('Admin/addDay1') ?>" class="btn btn-primary">Tambah </a>
+                            <a href="<?= base_url('Admin/addDay1') ?>" class="btn btn-primary">Tambah</a>
+                            <a href="<?= base_url('Admin/mengosongkanRuanganDay1') ?>" class="btn btn-danger">Mengosongkan Ruangan</a>
                         </div>
                     </div>
                     <div class="card-body">

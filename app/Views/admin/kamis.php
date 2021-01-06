@@ -10,6 +10,7 @@
                     <div class="card-header">
                         <div class="section-header-button">
                             <a href="<?= base_url('Admin/addDay4') ?>" class="btn btn-primary">Tambah </a>
+                            <a href="<?= base_url('Admin/mengosongkanRuanganDay4') ?>" class="btn btn-danger">Mengosongkan Ruangan</a>
                         </div>
                     </div>
                     <div class="card-body">

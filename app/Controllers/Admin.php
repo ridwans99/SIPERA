@@ -824,6 +824,32 @@ class Admin extends BaseController
 		}
 	}
 
+	public function mengosongkanRuanganDay1()
+	{
+		if ($this->checkLoggedIn()) {
+			$day1 = $this->day1->getDay1();
+			foreach ($day1 as $key => $d1) {
+				$data = [
+					'waktu_perkuliahan' => $d1['waktu_perkuliahan'],
+					'ruangan1' => "",
+					'ruangan2' => "",
+					'ruangan3' => "",
+					'ruangan4' => "",
+					'ruangan5' => "",
+					'ruangan6' => "",
+					'ruangan7' => "",
+					'ruangan8' => "",
+					'ruangan9' => "",
+					'ruangan10' => "",
+				];
+				$mengosongkanruangan = $this->day1->updateDay1($data, $d1['day1_id']);
+			}
+				// if ($mengosongkanruangan) {
+					return redirect()->to(base_url('/admin/senin'));
+				// }
+		}
+	}
+
 	public function showDay2()
 	{
 		$admin = $this->admin->getAdmin(session('admin_id'));
@@ -929,6 +955,32 @@ class Admin extends BaseController
 			if ($hapus) {
 				return redirect()->to(base_url('/admin/selasa'));
 			}
+		}
+	}
+
+	public function mengosongkanRuanganDay2()
+	{
+		if ($this->checkLoggedIn()) {
+			$day2 = $this->day2->getDay2();
+			foreach ($day2 as $key => $d2) {
+				$data = [
+					'waktu_perkuliahan' => $d2['waktu_perkuliahan'],
+					'ruangan1' => "",
+					'ruangan2' => "",
+					'ruangan3' => "",
+					'ruangan4' => "",
+					'ruangan5' => "",
+					'ruangan6' => "",
+					'ruangan7' => "",
+					'ruangan8' => "",
+					'ruangan9' => "",
+					'ruangan10' => "",
+				];
+				$mengosongkanruangan = $this->day2->updateDay2($data, $d2['day2_id']);
+			}
+				// if ($mengosongkanruangan) {
+					return redirect()->to(base_url('/admin/selasa'));
+				// }
 		}
 	}
 
@@ -1040,6 +1092,32 @@ class Admin extends BaseController
 		}
 	}
 
+	public function mengosongkanRuanganDay3()
+	{
+		if ($this->checkLoggedIn()) {
+			$day3 = $this->day3->getDay3();
+			foreach ($day3 as $key => $d3) {
+				$data = [
+					'waktu_perkuliahan' => $d3['waktu_perkuliahan'],
+					'ruangan1' => "",
+					'ruangan2' => "",
+					'ruangan3' => "",
+					'ruangan4' => "",
+					'ruangan5' => "",
+					'ruangan6' => "",
+					'ruangan7' => "",
+					'ruangan8' => "",
+					'ruangan9' => "",
+					'ruangan10' => "",
+				];
+				$mengosongkanruangan = $this->day3->updateDay3($data, $d3['day3_id']);
+			}
+				// if ($mengosongkanruangan) {
+					return redirect()->to(base_url('/admin/rabu'));
+				// }
+		}
+	}
+
 	public function showDay4()
 	{
 		$admin = $this->admin->getAdmin(session('admin_id'));
@@ -1148,6 +1226,32 @@ class Admin extends BaseController
 		}
 	}
 
+	public function mengosongkanRuanganDay4()
+	{
+		if ($this->checkLoggedIn()) {
+			$day4 = $this->day4->getDay4();
+			foreach ($day4 as $key => $d4) {
+				$data = [
+					'waktu_perkuliahan' => $d4['waktu_perkuliahan'],
+					'ruangan1' => "",
+					'ruangan2' => "",
+					'ruangan3' => "",
+					'ruangan4' => "",
+					'ruangan5' => "",
+					'ruangan6' => "",
+					'ruangan7' => "",
+					'ruangan8' => "",
+					'ruangan9' => "",
+					'ruangan10' => "",
+				];
+				$mengosongkanruangan = $this->day4->updateDay4($data, $d4['day4_id']);
+			}
+				// if ($mengosongkanruangan) {
+					return redirect()->to(base_url('/admin/kamis'));
+				// }
+		}
+	}
+
 	public function showDay5()
 	{
 		$admin = $this->admin->getAdmin(session('admin_id'));
@@ -1253,6 +1357,32 @@ class Admin extends BaseController
 			if ($hapus) {
 				return redirect()->to(base_url('/admin/jumat'));
 			}
+		}
+	}
+
+	public function mengosongkanRuanganDay5()
+	{
+		if ($this->checkLoggedIn()) {
+			$day5 = $this->day5->getDay5();
+			foreach ($day5 as $key => $d5) {
+				$data = [
+					'waktu_perkuliahan' => $d5['waktu_perkuliahan'],
+					'ruangan1' => "",
+					'ruangan2' => "",
+					'ruangan3' => "",
+					'ruangan4' => "",
+					'ruangan5' => "",
+					'ruangan6' => "",
+					'ruangan7' => "",
+					'ruangan8' => "",
+					'ruangan9' => "",
+					'ruangan10' => "",
+				];
+				$mengosongkanruangan = $this->day5->updateDay5($data, $d5['day5_id']);
+			}
+				// if ($mengosongkanruangan) {
+					return redirect()->to(base_url('/admin/jumat'));
+				// }
 		}
 	}
 
