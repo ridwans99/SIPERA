@@ -59,70 +59,15 @@ class User extends BaseController
 	}
 
 
-	public function formpeminjamanruang()
-	{
-		$data = [
-			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
-		];
-		echo view('user/header', $data);
-		echo view('user/menu');
-		echo view('user/formpeminjamanruang');
-		echo view('user/footer');
-	}
-
-	// public function peminjamanruang()
+	// public function formpeminjamanruang()
 	// {
 	// 	$data = [
 	// 		'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 	// 	];
 	// 	echo view('user/header', $data);
 	// 	echo view('user/menu');
-	// 	echo view('user/peminjamanruang');
-	// 	echo view('user/footer');
-	// }
-
-	// public function peminjamanruang2()
-	// {
-	// 	$data = [
-	// 		'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
-	// 	];
-	// 	echo view('user/header', $data);
-	// 	echo view('user/menu');
-	// 	echo view('user/selasa');
-	// 	echo view('user/footer');
-	// }
-
-	// public function peminjamanruang3()
-	// {
-	// 	$data = [
-	// 		'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
-	// 	];
-	// 	echo view('user/header', $data);
-	// 	echo view('user/menu');
-	// 	echo view('user/rabu');
-	// 	echo view('user/footer');
-	// }
-
-	// public function peminjamanruang4()
-	// {
-	// 	$data = [
-	// 		'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
-	// 	];
-	// 	echo view('user/header', $data);
-	// 	echo view('user/menu');
-	// 	echo view('user/kamis');
-	// 	echo view('user/footer');
-	// }
-
-	// public function peminjamanruang5()
-	// {
-	// 	$data = [
-	// 		'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
-	// 	];
-	// 	echo view('user/header', $data);
-	// 	echo view('user/menu');
-	// 	echo view('user/jumat');
-	// 	echo view('user/footer');
+	// 	echo view('user/formpeminjamanruang');
+	// echo view('user/footer');
 	// }
 
 	public function peminjamanbarang()
@@ -314,90 +259,42 @@ class User extends BaseController
 	// 	}
 	// }
 
-	// public function pesanan()
-	// {
-	// 	$product = $this->product->getProduct();
-	// 	$user = $this->user->getUser(session('user_id'));
-	// 	$orders = $this->order->GetOrder();
-	// 	$array_order = [];
-	// 	if (isset($orders)) {
-	// 		foreach ($orders as $key => $order) {
-	// 			if ($order['user_id'] == session('user_id')) {
-	// 				$user = $this->user->getUser($order['user_id']);
-	// 				$productuser = $this->product->getProduct($order['product_id']);
-	// 				$status = $this->status->getOrderStatus($order['orderstatus_id']);
-	// 				$payment = $this->payment->getPayment($order['payment_id']);
-	// 				$order['user_id'] = $user['full_name'];
-	// 				$order['product_id'] = $productuser['name'];
-	// 				$order['orderstatus_id'] = $status['name'];
-	// 				array_push($array_order, $order);
-	// 			}
-	// 		} 
-	// 	}
-	// 	$lastorder = array(end($array_order));
-	// 	$data = [
-	// 		'title' => 'Jasa Sosmed ID - User',
-	// 		'product' => $product,
-	// 		'user' => $user,
-	// 		'lastorder' => $lastorder
-	// 	];
-	// 	if($this->checkLoggedIn()){
-	// 		echo view('user/header', $data);
-	// 		echo view('user/menu', $data);
-	// 		echo view('user/pesanan', $data);
-	// 		echo view('user/footer');
-	// 	}
-	// }
+	public function formPeminjamanRuangan()
+	{
+		// if($this->checkLoggedIn()){
+		// 	$user = $this->user->getUser(session('user_id'));
+			$data = [
+				'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG',
+				// 'user' => $user
+			];
+			// helper('form');
+			echo view('user/header',$data);
+			echo view('user/menu');
+			echo view('user/formpeminjamanruang');
+			echo view('user/footer');
+		// }
+	}
 
-	// public function storeOrders()
-	// {
-	// 	if($this->checkLoggedIn()){
-	// 		$userid = session('user_id');
-	// 		$product = $this->request->getPost('produk');
-	// 		$productquery = $this->product->getProduct($product);
-	// 		$orderstatus = 1;
-	// 		$startcount = '';
-	// 		$quantity = $this->request->getPost('quantity');
-	// 		$message = $this->request->getPost('message');
-	// 		$target = $this->request->getPost('target');
-	// 		$method = $this->request->getPost('method');
-	// 		$harga = $productquery['price'] * $quantity / 1000;
-
-	// 		$datapayment = [
-	// 			'user_id' => $userid,
-	// 			'amounts' => $harga,
-	// 			'payment_method' => $method,
-	// 			'customer_confirmed' => 0,
-	// 			'admin_confirmed' => 0,
-	// 			'attachment_path' => '',
-	// 			'created_at' => date("Y-m-d H:i:s"),
-	// 			'updated_at' => date("Y-m-d H:i:s")
-
-	// 		];
-	// 		$simpanpayment = $this->payment->insertPayment($datapayment);
-	// 		$payment = $this->payment->getPayment();
-	// 		$lastpayment = end($payment);
-	// 		$payment_id = $lastpayment['payment_id'];
-	// 		$data = [
-	// 			'user_id' => $userid,
-	// 			'product_id' => $product,
-	// 			'orderstatus_id' => $orderstatus,
-	// 			'payment_id' => $payment_id,
-	// 			'start_count' => $startcount,
-	// 			'quantity' => $quantity,
-	// 			'total_price' => $harga,
-	// 			'target_link' => $target,
-	// 			'additional_message' => $message,
-	// 			'created_at' => date("Y-m-d H:i:s"),
-	// 			'updated_at' => date("Y-m-d H:i:s")
-
-	// 		];
-	// 		$simpan = $this->order->insertOrder($data);
-	// 		if($simpan) {
-	// 			return redirect()->to(base_url('/user/riwayatpemesanan')); 
-	// 		}
-	// 	}
-	// }
+	public function insertPeminjamanRuangan()
+	{
+		// if ($this->checkLoggedIn()) {
+			$data = [
+				'user_id' => $this->request->getPost('nama'),
+				'ruangan_id' => $this->request->getPost('ruang'),
+				'tgl_pinjam' => $this->request->getPost('tanggal'),
+				'jam_mulai' => $this->request->getPost('mulai'),
+				'jam_akhir' => $this->request->getPost('selesai'),
+				'nama_dosen' => $this->request->getPost('dosen'),
+				'mata_kuliah' => $this->request->getPost('matkul'),
+				'prodi' => $this->request->getPost('prodi'),
+				'status' => $this->request->getPost('status'),
+			];
+			$tambah = $this->transaksiruangan->tambah($data);
+			if ($tambah) {
+				return redirect()->to(base_url('/user/index'));
+			}
+		// }
+	}
 
 	// public function riwayatPemesanan()
 	// {

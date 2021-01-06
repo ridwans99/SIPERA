@@ -54,7 +54,7 @@ $routes->get('/logout', 'Admin::logout');
 
 // User Routes
 $routes->get('/user', 'User::index');
-$routes->get('/user/formpeminjamanruang', 'User::formpeminjamanruang');
+$routes->get('/user/formpeminjamanruang', 'User::formPeminjamanRuangan');
 $routes->get('/user/peminjamanruang', 'User::showDay1');
 $routes->get('/user/selasa', 'User::showDay2');
 $routes->get('/user/rabu', 'User::showDay3');
