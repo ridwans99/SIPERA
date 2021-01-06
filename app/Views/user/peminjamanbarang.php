@@ -20,11 +20,40 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">List Barang Yang Dapat Dipinjam</h5>
                 </div>
-                <div class="card shadow col-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#adb5bd;">
+                <div class="container-fluid">
+                    <div class="col-12 col-md-12" style="background-color:  rgb(87, 241, 151); paddoing:10px>
+                        <div class="table-responsive text-wrap">
+                            <table class="table table-hover table-bordered text-white">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" scope="row">Nama Barang</th>
+                                        <th class="text-center" scope="row">Stock</th>
+                                        <th class="text-center" scope="row">Status</th>
+                                        <th class="text-center" scope="row">Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($tampildata as $key => $data) { ?>
+                                        <tr>
+                                            <td class="text-center"><?php echo $data['nama_barang']; ?></td>
+                                            <td class="text-center"><?php echo $data['stock']; ?></td>
+                                            <td class="text-center"><?php echo $data['status']; ?></td>
+                                            <td>
+                                                <a class="nav-link mb-sm-3 mb-md-3 text-white" href="<?= base_url('User/verifikasipeminjamanbarang') ?>" style="background-color:#172b4d">Pinjam</a>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card shadow col-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#adb5bd;">
                     <div class="card-body">
                         <!-- <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active"> -->
-                        <div class="card bg-success">
+                        <!-- <div class="card bg-success" >
                             <div class="card-body">
                                 <h3 class="text-center text-white">List Barang</h3>
                                 <div class="container-fluid">
@@ -58,10 +87,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- </div>
-                </div> -->
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
             </div>
         </div>
     </div>
