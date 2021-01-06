@@ -10,16 +10,20 @@
                     <form action="<?= base_url('Admin/updateTransaksiBarang') ?>" method="post" class="barang" enctype="multipart/form-data">
                         <input name="orderbarang_id" value="<?= $tampildata['orderbarang_id']; ?>" hidden>
                         <div class="form-group">
-                            <label>Nama Peminjam</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" value="<?= $tampildata['user_id']; ?>" placeholder="" name="nama">
-                            </div>
+                            <select id="nama" required class="custom-select" name='nama'>
+                                <option selected class="box" disabled value="">-- Pilih Nama --</option>
+                                <?php foreach ($nama as $val) :
+                                    echo "<option value=" . $val['user_id'] . "> " . $val['full_name'] . " </option>";
+                                endforeach; ?>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label>Nama Barang</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" value="<?= $tampildata['barang_id']; ?>" placeholder="" name="barang">
-                            </div>
+                            <select id="barang" required class="custom-select" name='barang'>
+                                <option selected class="box" disabled value="">-- Pilih Barang --</option>
+                                <?php foreach ($barang as $val) :
+                                    echo "<option value=" . $val['barang_id'] . "> " . $val['nama_barang'] . " </option>";
+                                endforeach; ?>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Tanggal Pinjam</label>

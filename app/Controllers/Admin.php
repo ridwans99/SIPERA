@@ -450,12 +450,16 @@ class Admin extends BaseController
 
 	public function editTransaksiRuangan($id)
 	{
+		$nama = $this->user->getUser();
+		$ruangan = $this->ruangan->tampildata();
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$data = [
 				'title' => 'SIPERA - Admin',
 				'tampildata' => $this->transaksiruangan->tampildata($id),
-				'admin' => $admin
+				'admin' => $admin,
+				'nama' => $nama,
+				'ruangan' => $ruangan
 			];
 
 			echo view('admin/header', $data);
@@ -568,12 +572,16 @@ class Admin extends BaseController
 
 	public function editTransaksiBarang($id)
 	{
+		$nama = $this->user->getUser();
+		$barang = $this->barang->tampildata();
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$data = [
 				'title' => 'SIPERA - Admin',
 				'tampildata' => $this->transaksibarang->tampildata($id),
-				'admin' => $admin
+				'admin' => $admin,
+				'nama' => $nama,
+				'barang' => $barang
 			];
 
 			echo view('admin/header', $data);

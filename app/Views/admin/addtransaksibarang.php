@@ -16,10 +16,10 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <select id="ruangan" required class="custom-select" name='ruang'>
-                                <option selected class="box" disabled value="">-- Pilih Ruangan --</option>
-                                <?php foreach ($ruangan as $val) :
-                                    echo "<option value=" . $val['ruangan_id'] . "> " . $val['nama_ruangan'] . " </option>";
+                            <select id="barang" required class="custom-select" name='barang'>
+                                <option selected class="box" disabled value="">-- Pilih Barang --</option>
+                                <?php foreach ($barang as $val) :
+                                    echo "<option value=" . $val['barang_id'] . "> " . $val['nama_barang'] . " </option>";
                                 endforeach; ?>
                             </select>
                         </div>

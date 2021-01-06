@@ -30,7 +30,7 @@
                         <div class="form-group">
                             <label>Nama</label>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" value="<?= $user['full_name']; ?>" placeholder="" name="nama">
+                                <input type="text" class="form-control" value="<?= $user['full_name']; ?>" placeholder="" name="full_name">
                             </div>
                         </div>
                         <div class="form-group">
