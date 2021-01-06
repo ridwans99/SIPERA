@@ -330,7 +330,7 @@ class User extends BaseController
 
 	public function logout()
 	{
-		$array_items = array('admin_id', 'user_logged_in');
+		$array_items = array('user_id', 'user_logged_in');
 		$this->session->remove($array_items);
 		return redirect()->to(base_url('/'));
 	}
