@@ -12,12 +12,12 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="footer-info">
-                        <p>Hubungi kami melalui :</p>
+                        <!-- <p>Hubungi kami melalui :</p>
                         <p style="margin-top:-2%">email</p>
                         <a href="http://linktr.ee/#">
                             <i class="fab fa-whatsapp fa-3x" style="margin-top:-1%"><p>Klik di sini</p></i>
                         </a>
-                        <br>
+                        <br> -->
                         <span>&copy; SIPERA 2020, All Rights Reserved.</span>
                     </div>
                 </div>
