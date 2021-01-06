@@ -6,23 +6,23 @@
     <h1>Selamat Datang di SIPERA UNJ</h1>
         <div class="row">
             <div class="col">
-                <form action="">
+                <form method="POST" action="/submit-login-user" class="needs-validation" novalidate="">
                     <div class="login">
                         <h2> Login </h2>
                         <div class="input-group">
-                            <input type="text" required="">
+                            <input type="username" id="username" name="nrm" required>
                             <span>Username</span>
                         </div>
                         <div class="input-group">
-                            <input type="password" required="">
+                            <input type="password" id="password" name="password" required>
                             <span>Password</span>
                         </div>
                         <div class="input-group">
                             <input type="submit" value="Login">
                         </div>
-                        <div class="input-group">
+                        <!-- <div class="input-group">
                             <input type="button" value="Lupa Password">
-                        </div>
+                        </div> -->
                     </div>
                 </form>
             </div>

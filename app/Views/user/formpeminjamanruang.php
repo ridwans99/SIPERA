@@ -88,7 +88,7 @@
                         <div class="form-group">
                             <label>Nama Peminjam</label>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="nama">
+                                <input type="text" class="form-control" placeholder="<?= $user['full_name']; ?>" name="nama" value="<?= $user['full_name']; ?>" readonly>
                             </div>
                         </div>
                         <div class="form-group">

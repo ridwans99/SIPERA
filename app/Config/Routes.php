@@ -53,6 +53,7 @@ $routes->post('/submit-login', 'Admin::submitLogin');
 $routes->get('/logout', 'Admin::logout');
 
 // User Routes
+$routes->post('/submit-login-user', 'User::submitLogin');
 $routes->get('/user', 'User::index');
 $routes->get('/user/formpeminjamanruang', 'User::formPeminjamanRuangan');
 $routes->get('/user/peminjamanruang', 'User::showDay1');

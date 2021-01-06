@@ -87,10 +87,10 @@
         <div class="nav-wrapper navbar-expand-sm mx-4">
             <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
                 <li class="nav-item col-12 col-sm-12 col-md-6">
-                    <a class="nav-link mb-sm-3 mb-md-3 text-white" href="<?= base_url('User/index') ?>" style="background-color:#172b4d">Back</a>
+                    <a class="nav-link mb-sm-3 mb-md-3 text-white" href="<?= base_url('user/index') ?>" style="background-color:#172b4d">Back</a>
                 </li>
                 <li class="nav-item col-12 col-sm-12 col-md-6">
-                    <a class="nav-link mb-sm-3 mb-md-2 text-white" href="<?= base_url('User/formpeminjamanruang') ?>" style="background-color:#172b4d">Booking</a>
+                    <a class="nav-link mb-sm-3 mb-md-2 text-white" href="<?= base_url('user/formpeminjamanruang') ?>" style="background-color:#172b4d">Booking</a>
             </ul>
         </div>
     </div>

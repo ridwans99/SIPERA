@@ -19,6 +19,15 @@ class UserModel extends Model
         }
     }
 
+    public function getUserByNRM($nrm = false)
+    {
+        if($nrm == false){
+            return $this->findAll();
+        } else {
+            return $this->where(['nrm' => $nrm]) -> first();
+        }   
+    } 
+
     public function insertUser($data)
     {
         $query = $this->db->table($this->table)->insert($data);
