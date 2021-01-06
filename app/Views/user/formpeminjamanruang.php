@@ -86,12 +86,10 @@
                     </form> -->
                     <form action="<?= base_url('User/insertPeminjamanRuangan') ?>" method="post" class="transaksiruang" enctype="multipart/form-data">
                         <div class="form-group">
-                            <select id="nama" required class="custom-select" name='nama'>
-                                <option selected class="box" disabled value="">-- Pilih Nama --</option>
-                                <?php foreach ($nama as $val) :
-                                    echo "<option value=" . $val['user_id'] . "> " . $val['full_name'] . " </option>";
-                                endforeach; ?>
-                            </select>
+                        <label>Nama Peminjam</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder=" <?= $user['full_name']; ?>" value=" <?= $user['full_name']; ?>" name="nama" readonly>
+                            </div>
                         </div>
                         <div class="form-group">
                             <select id="ruangan" required class="custom-select" name='ruang'>
