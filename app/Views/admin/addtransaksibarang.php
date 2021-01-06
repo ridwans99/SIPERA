@@ -8,16 +8,20 @@
                 <div class="card-body">
                     <form action="<?= base_url('Admin/insertTransaksiBarang') ?>" method="post" class="transaksi-barang" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label>Nama Peminjam</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="nama">
-                            </div>
+                            <select id="nama" required class="custom-select" name='nama'>
+                                <option selected class="box" disabled value="">-- Pilih Nama --</option>
+                                <?php foreach ($nama as $val) :
+                                    echo "<option value=" . $val['user_id'] . "> " . $val['full_name'] . " </option>";
+                                endforeach; ?>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label>Barang yg Dipinjam</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="" name="barang">
-                            </div>
+                            <select id="ruangan" required class="custom-select" name='ruang'>
+                                <option selected class="box" disabled value="">-- Pilih Ruangan --</option>
+                                <?php foreach ($ruangan as $val) :
+                                    echo "<option value=" . $val['ruangan_id'] . "> " . $val['nama_ruangan'] . " </option>";
+                                endforeach; ?>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Tanggal Pinjam</label>

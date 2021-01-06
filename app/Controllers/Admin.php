@@ -383,12 +383,20 @@ class Admin extends BaseController
 
 	public function showTransaksiRuangan()
 	{
+		$array_ruangan = [];
 		$admin = $this->admin->getAdmin(session('admin_id'));
 		$tampildata = $this->transaksiruangan->tampildata();
+		foreach ($tampildata as $key => $ruangan) {
+			$query = $this->user->getUser($ruangan['user_id']);
+			$query2 = $this->ruangan->tampildata($ruangan['ruangan_id']);
+			$ruangan['user_id'] =  $query["full_name"];
+			$ruangan['ruangan_id'] =  $query2["nama_ruangan"];
+			array_push($array_ruangan, $ruangan);
+		}
 		// dd($tampildata);
 		$data = [
 			'title' => 'SIPERA - Admin',
-			'tampildata' => $tampildata,
+			'tampildata' => $array_ruangan,
 			'admin' => $admin
 		];
 		if ($this->checkLoggedIn()) {
@@ -401,11 +409,15 @@ class Admin extends BaseController
 
 	public function addTransaksiRuangan()
 	{
+		$nama = $this->user->getUser();
+		$ruangan = $this->ruangan->tampildata();
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$data = [
 				'title' => 'SIPERA - Admin',
-				'admin' => $admin
+				'admin' => $admin,
+				'nama' => $nama,
+				'ruangan' => $ruangan
 			];
 			helper('form');
 			echo view('admin/header', $data);
@@ -487,12 +499,22 @@ class Admin extends BaseController
 
 	public function showTransaksiBarang()
 	{
+		$array_barang = [];
 		$admin = $this->admin->getAdmin(session('admin_id'));
 		$tampildata = $this->transaksibarang->tampildata();
+
+		foreach ($tampildata as $key => $barang) {
+			// dd($barang);
+			$query = $this->user->getUser($barang['user_id']);
+			$query2 = $this->barang->tampildata($barang['barang_id']);
+			$barang['user_id'] = $query["full_name"];
+			$barang['barang_id'] = $query2["nama_barang"];
+			array_push($array_barang, $barang);
+		}
 		// dd($tampildata);
 		$data = [
 			'title' => 'SIPERA - Admin',
-			'tampildata' => $tampildata,
+			'tampildata' => $array_barang,
 			'admin' => $admin
 		];
 		if ($this->checkLoggedIn()) {
@@ -505,11 +527,15 @@ class Admin extends BaseController
 
 	public function addTransaksiBarang()
 	{
+		$nama = $this->user->getUser();
+		$barang = $this->barang->tampildata();
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$data = [
 				'title' => 'SIPERA - Admin',
-				'admin' => $admin
+				'admin' => $admin,
+				'nama' => $nama,
+				'barang' => $barang
 			];
 			helper('form');
 			echo view('admin/header', $data);

@@ -101,8 +101,12 @@ class User extends BaseController
 
 	public function verifikasipeminjamanbarang()
 	{
+		$nama = $this->user->getUser();
+		$barang = $this->barang->tampildata();
 		$data = [
-			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG',
+			'nama' => $nama,
+			'barang' => $barang
 		];
 		echo view('user/header', $data);
 		echo view('user/menu');
@@ -291,8 +295,12 @@ class User extends BaseController
 	{
 		// if($this->checkLoggedIn()){
 		// 	$user = $this->user->getUser(session('user_id'));
+		$nama = $this->user->getUser();
+		$ruangan = $this->ruangan->tampildata();
 		$data = [
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG',
+			'nama' => $nama,
+			'ruangan' => $ruangan
 			// 'user' => $user
 		];
 		// helper('form');
