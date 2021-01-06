@@ -110,6 +110,27 @@ class User extends BaseController
 		echo view('user/footer');
 	}
 
+	public function insertPeminjamanBarang()
+	{
+		// if ($this->checkLoggedIn()) {
+		$data = [
+			'user_id' => $this->request->getPost('nama'),
+			'barang_id' => $this->request->getPost('barang'),
+			'tgl_pinjam' => $this->request->getPost('tanggal'),
+			'jam_mulai' => $this->request->getPost('mulai'),
+			'jam_akhir' => $this->request->getPost('selesai'),
+			'nama_dosen' => $this->request->getPost('dosen'),
+			'mata_kuliah' => $this->request->getPost('matkul'),
+			'prodi' => $this->request->getPost('prodi'),
+			'status' => $this->request->getPost('status'),
+		];
+		$tambah = $this->transaksibarang->tambah($data);
+		if ($tambah) {
+			return redirect()->to(base_url('/user/index'));
+		}
+		// }
+	}
+
 	public function pengembalianbarang()
 	{
 		$data = [
