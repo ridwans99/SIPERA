@@ -72,13 +72,20 @@ class User extends BaseController
 
 	public function peminjamanbarang()
 	{
+		// $user = $this->user->getUser(session('user_id'));
+		// if($this->checkLoggedIn()){
+		$tampildata = $this->barang->tampildata();
+		// dd($getUser);
 		$data = [
-			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG',
+			'tampildata' => $tampildata,
+			// 'user' => $user
 		];
 		echo view('user/header', $data);
 		echo view('user/menu');
-		echo view('user/peminjamanbarang');
+		echo view('user/peminjamanbarang', $data);
 		echo view('user/footer');
+		// }
 	}
 
 	public function pemilihanbarang()
@@ -263,36 +270,36 @@ class User extends BaseController
 	{
 		// if($this->checkLoggedIn()){
 		// 	$user = $this->user->getUser(session('user_id'));
-			$data = [
-				'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG',
-				// 'user' => $user
-			];
-			// helper('form');
-			echo view('user/header',$data);
-			echo view('user/menu');
-			echo view('user/formpeminjamanruang');
-			echo view('user/footer');
+		$data = [
+			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG',
+			// 'user' => $user
+		];
+		// helper('form');
+		echo view('user/header', $data);
+		echo view('user/menu');
+		echo view('user/formpeminjamanruang');
+		echo view('user/footer');
 		// }
 	}
 
 	public function insertPeminjamanRuangan()
 	{
 		// if ($this->checkLoggedIn()) {
-			$data = [
-				'user_id' => $this->request->getPost('nama'),
-				'ruangan_id' => $this->request->getPost('ruang'),
-				'tgl_pinjam' => $this->request->getPost('tanggal'),
-				'jam_mulai' => $this->request->getPost('mulai'),
-				'jam_akhir' => $this->request->getPost('selesai'),
-				'nama_dosen' => $this->request->getPost('dosen'),
-				'mata_kuliah' => $this->request->getPost('matkul'),
-				'prodi' => $this->request->getPost('prodi'),
-				'status' => $this->request->getPost('status'),
-			];
-			$tambah = $this->transaksiruangan->tambah($data);
-			if ($tambah) {
-				return redirect()->to(base_url('/user/index'));
-			}
+		$data = [
+			'user_id' => $this->request->getPost('nama'),
+			'ruangan_id' => $this->request->getPost('ruang'),
+			'tgl_pinjam' => $this->request->getPost('tanggal'),
+			'jam_mulai' => $this->request->getPost('mulai'),
+			'jam_akhir' => $this->request->getPost('selesai'),
+			'nama_dosen' => $this->request->getPost('dosen'),
+			'mata_kuliah' => $this->request->getPost('matkul'),
+			'prodi' => $this->request->getPost('prodi'),
+			'status' => $this->request->getPost('status'),
+		];
+		$tambah = $this->transaksiruangan->tambah($data);
+		if ($tambah) {
+			return redirect()->to(base_url('/user/index'));
+		}
 		// }
 	}
 
