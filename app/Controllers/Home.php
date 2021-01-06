@@ -1,7 +1,6 @@
 <?php namespace App\Controllers;
 
-// use App\Models\ProductModel;
-// use App\Models\ProductCategoryModel;
+use App\Models\UserModel;
 
 class Home extends BaseController
 {
@@ -9,11 +8,12 @@ class Home extends BaseController
 	{
 		$this->session = session();
 		$this->request = \Config\Services::request();
-		// $this->product = new ProductModel();
-		// $this->category = new ProductCategoryModel();
+		$this->user = new UserModel();
 	}
 	public function index()
 	{
+		$array_items = array('user_id','user_logged_in');
+		$this->session->remove($array_items);
 		// return view('welcome_message');
 		$data = [
 			'title' => 'SIPERA - Sistem '
