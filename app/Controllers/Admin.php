@@ -54,9 +54,9 @@ class Admin extends BaseController
 
 	public function login()
 	{
-		$array_items = array('admin_id','admin_logged_in');
+		$array_items = array('admin_id', 'admin_logged_in');
 		$this->session->remove($array_items);
-        $data = [
+		$data = [
 			'title' => 'SIPERA - Login Admin'
 		];
 
@@ -71,7 +71,7 @@ class Admin extends BaseController
 			'title' => 'SIPERA - Admin',
 			'admin' => $admin
 		];
-		if($this->checkLoggedIn()){
+		if ($this->checkLoggedIn()) {
 			echo view('admin/header', $data);
 			echo view('admin/sidebar', $data);
 			echo view('admin/dashboard', $data);
@@ -82,7 +82,7 @@ class Admin extends BaseController
 	public function showUsers()
 	{
 		$admin = $this->admin->getAdmin(session('admin_id'));
-		if($this->checkLoggedIn()){
+		if ($this->checkLoggedIn()) {
 			$user = $this->user->getUser();
 			// dd($getUser);
 			$data = [
@@ -99,15 +99,15 @@ class Admin extends BaseController
 
 	public function addUsers()
 	{
-		if($this->checkLoggedIn()){
+		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$data = [
 				'title' => 'SIPERA - Admin',
 				'admin' => $admin
 			];
 			helper('form');
-			echo view('admin/header',$data);
-			echo view('admin/sidebar',$data);
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
 			echo view('admin/adduser');
 			echo view('admin/footer');
 		}
@@ -192,7 +192,7 @@ class Admin extends BaseController
 		if ($this->checkLoggedIn()) {
 			$hapus = $this->user->deleteUser($id);
 			if ($hapus) {
-				return redirect()->to(base_url('/admin/users')); 
+				return redirect()->to(base_url('/admin/users'));
 			}
 		}
 	}
@@ -207,7 +207,7 @@ class Admin extends BaseController
 			'tampildata' => $tampildata,
 			'admin' => $admin
 		];
-		if($this->checkLoggedIn()){
+		if ($this->checkLoggedIn()) {
 			echo view('admin/header', $data);
 			echo view('admin/sidebar', $data);
 			echo view('admin/ruangan', $data);
@@ -240,7 +240,7 @@ class Admin extends BaseController
 				'status' => $this->request->getPost('status'),
 			];
 			$tambah = $this->ruangan->tambah($data);
-			if($tambah) {
+			if ($tambah) {
 				return redirect()->to(base_url('/admin/ruangan'));
 			}
 		}
@@ -693,14 +693,14 @@ class Admin extends BaseController
 	public function showDay1()
 	{
 		$admin = $this->admin->getAdmin(session('admin_id'));
-		$day1 = $this->day1->getDay1();
-		// dd($tampildata);
-		$data = [
-			'title' => 'SIPERA - Admin',
-			'day1' => $day1,
-			'admin' => $admin
-		];
 		if ($this->checkLoggedIn()) {
+			$day1 = $this->day1->getDay1();
+			// dd($tampildata);
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'day1' => $day1,
+				'admin' => $admin
+			];
 			echo view('admin/header', $data);
 			echo view('admin/sidebar', $data);
 			echo view('admin/senin', $data);
@@ -769,14 +769,17 @@ class Admin extends BaseController
 		if ($this->checkLoggedIn()) {
 			$id = $this->request->getPost('admin_id');
 			$data = [
-				'ruangan_id' => $this->request->getPost('ruang'),
-				'tgl_pinjam' => $this->request->getPost('tanggal'),
-				'jam_mulai' => $this->request->getPost('mulai'),
-				'jam_akhir' => $this->request->getPost('selesai'),
-				'nama_dosen' => $this->request->getPost('dosen'),
-				'mata_kuliah' => $this->request->getPost('matkul'),
-				'prodi' => $this->request->getPost('prodi'),
-				'status' => $this->request->getPost('status'),
+				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
+				'ruangan1' => $this->request->getPost('ruangan1'),
+				'ruangan2' => $this->request->getPost('ruangan2'),
+				'ruangan3' => $this->request->getPost('ruangan3'),
+				'ruangan4' => $this->request->getPost('ruangan4'),
+				'ruangan5' => $this->request->getPost('ruangan5'),
+				'ruangan6' => $this->request->getPost('ruangan6'),
+				'ruangan7' => $this->request->getPost('ruangan7'),
+				'ruangan8' => $this->request->getPost('ruangan8'),
+				'ruangan9' => $this->request->getPost('ruangan9'),
+				'ruangan10' => $this->request->getPost('ruangan10'),
 			];
 			$edit = $this->day1->updateDay1($data, $id);
 			if ($edit) {
@@ -791,6 +794,438 @@ class Admin extends BaseController
 			$hapus = $this->day1->deleteDay1($id);
 			if ($hapus) {
 				return redirect()->to(base_url('/admin/senin'));
+			}
+		}
+	}
+
+	public function showDay2()
+	{
+		$admin = $this->admin->getAdmin(session('admin_id'));
+		if ($this->checkLoggedIn()) {
+			$day2 = $this->day2->getDay2();
+			// dd($tampildata);
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'day2' => $day2,
+				'admin' => $admin
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/selasa', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function addDay2()
+	{
+		if ($this->checkLoggedIn()) {
+			$admin = $this->admin->getAdmin(session('admin_id'));
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'admin' => $admin
+			];
+			helper('form');
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/addselasa', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function insertDay2()
+	{
+		if ($this->checkLoggedIn()) {
+			$data = [
+				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
+				'ruangan1' => $this->request->getPost('ruangan1'),
+				'ruangan2' => $this->request->getPost('ruangan2'),
+				'ruangan3' => $this->request->getPost('ruangan3'),
+				'ruangan4' => $this->request->getPost('ruangan4'),
+				'ruangan5' => $this->request->getPost('ruangan5'),
+				'ruangan6' => $this->request->getPost('ruangan6'),
+				'ruangan7' => $this->request->getPost('ruangan7'),
+				'ruangan8' => $this->request->getPost('ruangan8'),
+				'ruangan9' => $this->request->getPost('ruangan9'),
+				'ruangan10' => $this->request->getPost('ruangan10'),
+			];
+			$tambah = $this->day2->insertDay2($data);
+			if ($tambah) {
+				return redirect()->to(base_url('/admin/selasa'));
+			}
+		}
+	}
+
+	public function editDay2($id)
+	{
+		if ($this->checkLoggedIn()) {
+			$admin = $this->admin->getAdmin(session('admin_id'));
+			$day2 = $this->day2->getDay2($id);
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'day2' => $day2,
+				'admin' => $admin
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/editselasa', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function updateDay2()
+	{
+		if ($this->checkLoggedIn()) {
+			$id = $this->request->getPost('admin_id');
+			$data = [
+				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
+				'ruangan1' => $this->request->getPost('ruangan1'),
+				'ruangan2' => $this->request->getPost('ruangan2'),
+				'ruangan3' => $this->request->getPost('ruangan3'),
+				'ruangan4' => $this->request->getPost('ruangan4'),
+				'ruangan5' => $this->request->getPost('ruangan5'),
+				'ruangan6' => $this->request->getPost('ruangan6'),
+				'ruangan7' => $this->request->getPost('ruangan7'),
+				'ruangan8' => $this->request->getPost('ruangan8'),
+				'ruangan9' => $this->request->getPost('ruangan9'),
+				'ruangan10' => $this->request->getPost('ruangan10'),
+			];
+			$edit = $this->day2->updateDay2($data, $id);
+			if ($edit) {
+				return redirect()->to(base_url('/admin/selasa'));
+			}
+		}
+	}
+
+	public function deleteDay2($id)
+	{
+		if ($this->checkLoggedIn()) {
+			$hapus = $this->day2->deleteDay2($id);
+			if ($hapus) {
+				return redirect()->to(base_url('/admin/selasa'));
+			}
+		}
+	}
+
+	public function showDay3()
+	{
+		$admin = $this->admin->getAdmin(session('admin_id'));
+		if ($this->checkLoggedIn()) {
+			$day3 = $this->day3->getDay3();
+			// dd($tampildata);
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'day3' => $day3,
+				'admin' => $admin
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/rabu', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function addDay3()
+	{
+		if ($this->checkLoggedIn()) {
+			$admin = $this->admin->getAdmin(session('admin_id'));
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'admin' => $admin
+			];
+			helper('form');
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/addrabu', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function insertDay3()
+	{
+		if ($this->checkLoggedIn()) {
+			$data = [
+				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
+				'ruangan1' => $this->request->getPost('ruangan1'),
+				'ruangan2' => $this->request->getPost('ruangan2'),
+				'ruangan3' => $this->request->getPost('ruangan3'),
+				'ruangan4' => $this->request->getPost('ruangan4'),
+				'ruangan5' => $this->request->getPost('ruangan5'),
+				'ruangan6' => $this->request->getPost('ruangan6'),
+				'ruangan7' => $this->request->getPost('ruangan7'),
+				'ruangan8' => $this->request->getPost('ruangan8'),
+				'ruangan9' => $this->request->getPost('ruangan9'),
+				'ruangan10' => $this->request->getPost('ruangan10'),
+			];
+			$tambah = $this->day3->insertDay3($data);
+			if ($tambah) {
+				return redirect()->to(base_url('/admin/rabu'));
+			}
+		}
+	}
+
+	public function editDay3($id)
+	{
+		if ($this->checkLoggedIn()) {
+			$admin = $this->admin->getAdmin(session('admin_id'));
+			$day3 = $this->day3->getDay3($id);
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'day3' => $day3,
+				'admin' => $admin
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/editrabu', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function updateDay3()
+	{
+		if ($this->checkLoggedIn()) {
+			$id = $this->request->getPost('admin_id');
+			$data = [
+				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
+				'ruangan1' => $this->request->getPost('ruangan1'),
+				'ruangan2' => $this->request->getPost('ruangan2'),
+				'ruangan3' => $this->request->getPost('ruangan3'),
+				'ruangan4' => $this->request->getPost('ruangan4'),
+				'ruangan5' => $this->request->getPost('ruangan5'),
+				'ruangan6' => $this->request->getPost('ruangan6'),
+				'ruangan7' => $this->request->getPost('ruangan7'),
+				'ruangan8' => $this->request->getPost('ruangan8'),
+				'ruangan9' => $this->request->getPost('ruangan9'),
+				'ruangan10' => $this->request->getPost('ruangan10'),
+			];
+			$edit = $this->day3->updateDay3($data, $id);
+			if ($edit) {
+				return redirect()->to(base_url('/admin/rabu'));
+			}
+		}
+	}
+
+	public function deleteDay3($id)
+	{
+		if ($this->checkLoggedIn()) {
+			$hapus = $this->day1->deleteDay1($id);
+			if ($hapus) {
+				return redirect()->to(base_url('/admin/rabu'));
+			}
+		}
+	}
+
+	public function showDay4()
+	{
+		$admin = $this->admin->getAdmin(session('admin_id'));
+		if ($this->checkLoggedIn()) {
+			$day4 = $this->day4->getDay4();
+			// dd($tampildata);
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'day4' => $day4,
+				'admin' => $admin
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/kamis', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function addDay4()
+	{
+		if ($this->checkLoggedIn()) {
+			$admin = $this->admin->getAdmin(session('admin_id'));
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'admin' => $admin
+			];
+			helper('form');
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/addkamis', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function insertDay4()
+	{
+		if ($this->checkLoggedIn()) {
+			$data = [
+				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
+				'ruangan1' => $this->request->getPost('ruangan1'),
+				'ruangan2' => $this->request->getPost('ruangan2'),
+				'ruangan3' => $this->request->getPost('ruangan3'),
+				'ruangan4' => $this->request->getPost('ruangan4'),
+				'ruangan5' => $this->request->getPost('ruangan5'),
+				'ruangan6' => $this->request->getPost('ruangan6'),
+				'ruangan7' => $this->request->getPost('ruangan7'),
+				'ruangan8' => $this->request->getPost('ruangan8'),
+				'ruangan9' => $this->request->getPost('ruangan9'),
+				'ruangan10' => $this->request->getPost('ruangan10'),
+			];
+			$tambah = $this->day4->insertDay4($data);
+			if ($tambah) {
+				return redirect()->to(base_url('/admin/kamis'));
+			}
+		}
+	}
+
+	public function editDay4($id)
+	{
+		if ($this->checkLoggedIn()) {
+			$admin = $this->admin->getAdmin(session('admin_id'));
+			$day4 = $this->day4->getDay4($id);
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'day4' => $day4,
+				'admin' => $admin
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/editkamis', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function updateDay4()
+	{
+		if ($this->checkLoggedIn()) {
+			$id = $this->request->getPost('admin_id');
+			$data = [
+				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
+				'ruangan1' => $this->request->getPost('ruangan1'),
+				'ruangan2' => $this->request->getPost('ruangan2'),
+				'ruangan3' => $this->request->getPost('ruangan3'),
+				'ruangan4' => $this->request->getPost('ruangan4'),
+				'ruangan5' => $this->request->getPost('ruangan5'),
+				'ruangan6' => $this->request->getPost('ruangan6'),
+				'ruangan7' => $this->request->getPost('ruangan7'),
+				'ruangan8' => $this->request->getPost('ruangan8'),
+				'ruangan9' => $this->request->getPost('ruangan9'),
+				'ruangan10' => $this->request->getPost('ruangan10'),
+			];
+			$edit = $this->day4->updateDay4($data, $id);
+			if ($edit) {
+				return redirect()->to(base_url('/admin/kamis'));
+			}
+		}
+	}
+
+	public function deleteDay4($id)
+	{
+		if ($this->checkLoggedIn()) {
+			$hapus = $this->day4->deleteDay4($id);
+			if ($hapus) {
+				return redirect()->to(base_url('/admin/kamis'));
+			}
+		}
+	}
+
+	public function showDay5()
+	{
+		$admin = $this->admin->getAdmin(session('admin_id'));
+		if ($this->checkLoggedIn()) {
+			$day5 = $this->day5->getDay5();
+			// dd($tampildata);
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'day5' => $day5,
+				'admin' => $admin
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/jumat', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function addDay5()
+	{
+		if ($this->checkLoggedIn()) {
+			$admin = $this->admin->getAdmin(session('admin_id'));
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'admin' => $admin
+			];
+			helper('form');
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/addjumat', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function insertDay5()
+	{
+		if ($this->checkLoggedIn()) {
+			$data = [
+				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
+				'ruangan1' => $this->request->getPost('ruangan1'),
+				'ruangan2' => $this->request->getPost('ruangan2'),
+				'ruangan3' => $this->request->getPost('ruangan3'),
+				'ruangan4' => $this->request->getPost('ruangan4'),
+				'ruangan5' => $this->request->getPost('ruangan5'),
+				'ruangan6' => $this->request->getPost('ruangan6'),
+				'ruangan7' => $this->request->getPost('ruangan7'),
+				'ruangan8' => $this->request->getPost('ruangan8'),
+				'ruangan9' => $this->request->getPost('ruangan9'),
+				'ruangan10' => $this->request->getPost('ruangan10'),
+			];
+			$tambah = $this->day5->insertDay5($data);
+			if ($tambah) {
+				return redirect()->to(base_url('/admin/jumat'));
+			}
+		}
+	}
+
+	public function editDay5($id)
+	{
+		if ($this->checkLoggedIn()) {
+			$admin = $this->admin->getAdmin(session('admin_id'));
+			$day5 = $this->day5->getDay5($id);
+			$data = [
+				'title' => 'SIPERA - Admin',
+				'day5' => $day5,
+				'admin' => $admin
+			];
+			echo view('admin/header', $data);
+			echo view('admin/sidebar', $data);
+			echo view('admin/editjumat', $data);
+			echo view('admin/footer');
+		}
+	}
+
+	public function updateDay5()
+	{
+		if ($this->checkLoggedIn()) {
+			$id = $this->request->getPost('admin_id');
+			$data = [
+				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
+				'ruangan1' => $this->request->getPost('ruangan1'),
+				'ruangan2' => $this->request->getPost('ruangan2'),
+				'ruangan3' => $this->request->getPost('ruangan3'),
+				'ruangan4' => $this->request->getPost('ruangan4'),
+				'ruangan5' => $this->request->getPost('ruangan5'),
+				'ruangan6' => $this->request->getPost('ruangan6'),
+				'ruangan7' => $this->request->getPost('ruangan7'),
+				'ruangan8' => $this->request->getPost('ruangan8'),
+				'ruangan9' => $this->request->getPost('ruangan9'),
+				'ruangan10' => $this->request->getPost('ruangan10'),
+			];
+			$edit = $this->day5->updateDay5($data, $id);
+			if ($edit) {
+				return redirect()->to(base_url('/admin/jumat'));
+			}
+		}
+	}
+
+	public function deleteDay5($id)
+	{
+		if ($this->checkLoggedIn()) {
+			$hapus = $this->day5->deleteDay5($id);
+			if ($hapus) {
+				return redirect()->to(base_url('/admin/jumat'));
 			}
 		}
 	}

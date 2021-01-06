@@ -44,6 +44,11 @@ $routes->get('/admin/barang', 'Admin::showBarang');
 $routes->get('/admin/transaksiruangan', 'Admin::showTransaksiRuangan');
 $routes->get('/admin/transaksibarang', 'Admin::showTransaksiBarang');
 $routes->get('/admin/inputdata', 'Admin::showInputData');
+$routes->get('/admin/senin', 'Admin::showDay1');
+$routes->get('/admin/selasa', 'Admin::showDay2');
+$routes->get('/admin/rabu', 'Admin::showDay3');
+$routes->get('/admin/kamis', 'Admin::showDay4');
+$routes->get('/admin/jumat', 'Admin::showDay5');
 $routes->post('/submit-login', 'Admin::submitLogin');
 $routes->get('/logout', 'Admin::logout');
 
