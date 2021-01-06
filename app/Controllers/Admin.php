@@ -767,7 +767,7 @@ class Admin extends BaseController
 	public function updateDay1()
 	{
 		if ($this->checkLoggedIn()) {
-			$id = $this->request->getPost('admin_id');
+			$id = $this->request->getPost('day1_id');
 			$data = [
 				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
 				'ruangan1' => $this->request->getPost('ruangan1'),
@@ -875,7 +875,7 @@ class Admin extends BaseController
 	public function updateDay2()
 	{
 		if ($this->checkLoggedIn()) {
-			$id = $this->request->getPost('admin_id');
+			$id = $this->request->getPost('day2_id');
 			$data = [
 				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
 				'ruangan1' => $this->request->getPost('ruangan1'),
@@ -983,7 +983,7 @@ class Admin extends BaseController
 	public function updateDay3()
 	{
 		if ($this->checkLoggedIn()) {
-			$id = $this->request->getPost('admin_id');
+			$id = $this->request->getPost('day3_id');
 			$data = [
 				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
 				'ruangan1' => $this->request->getPost('ruangan1'),
@@ -1091,7 +1091,7 @@ class Admin extends BaseController
 	public function updateDay4()
 	{
 		if ($this->checkLoggedIn()) {
-			$id = $this->request->getPost('admin_id');
+			$id = $this->request->getPost('day4_id');
 			$data = [
 				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
 				'ruangan1' => $this->request->getPost('ruangan1'),
@@ -1199,7 +1199,7 @@ class Admin extends BaseController
 	public function updateDay5()
 	{
 		if ($this->checkLoggedIn()) {
-			$id = $this->request->getPost('admin_id');
+			$id = $this->request->getPost('day5_id');
 			$data = [
 				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
 				'ruangan1' => $this->request->getPost('ruangan1'),
