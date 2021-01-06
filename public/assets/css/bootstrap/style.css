@@ -133,9 +133,10 @@ nav ul li a:hover {
 
 /* Homepage */
 .konten-homepage {
+    color: wheat;
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(54, 250, 136);
-    width: 40%;
+    width: 60%;
     height: 50%;
     text-align: center;
     padding: 30px;
@@ -146,7 +147,7 @@ nav ul li a:hover {
     margin: 100px auto;
     /* margin-top: 100px;
     margin-left: 45%;; */
-    opacity: 75%;
+    opacity: 80%;
     z-index: 5;
 }
 
@@ -405,4 +406,16 @@ nav ul li a:hover {
             opacity: 0;
             cursor: pointer;
             z-index: 3;
+        }
+
+        .konten-homepage {
+            width: 90%;
+        }
+
+        .konten-homepage .table thead tr th {
+            font-size : 8px;
+        }
+
+        .konten-homepage .table tbody tr th {
+            font-size: 8px;
         }
