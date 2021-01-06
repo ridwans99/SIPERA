@@ -45,7 +45,8 @@
                         <li><a class="nav-link" href="<?= base_url('Admin/showTransaksiRuangan') ?>"> Transaksi Ruangan</a></li>
                         <li><a class="nav-link" href="<?= base_url('Admin/showTransaksiBarang') ?>">Transaksi Barang</a></li>
                     </ul>
-                    <a class="nav-link" href="<?= base_url('Admin/showInpuData') ?>"><i class="fas fa-home"></i> <span> Input Data</span></a>
+                    <a class="nav-link" href="<?= base_url('Admin/showInputData') ?>"><i class="fas fa-pencil-alt"></i> <span> Input Data</span>
+                    </a>
                     <a class="nav-link" href="<?= base_url('Admin/showDay1') ?>"><i class="fas fa-calendar-week" aria-hidden="true"></i> <span> Senin</span></a>
                     <a class="nav-link" href="<?= base_url('Admin/showDay2') ?>"><i class="fas fa-calendar-week" aria-hidden="true"></i> <span> Selasa</span></a>
                     <a class="nav-link" href="<?= base_url('Admin/showDay3') ?>"><i class="fas fa-calendar-week" aria-hidden="true"></i> <span> Rabu</span></a>
