@@ -9,7 +9,7 @@
         <li><a href="<?= base_url('User/index') ?>">Home</a></li>
         <li><a href="<?= base_url('User/showDay1') ?>">Peminjaman Ruang</a></li>
         <li><a href="<?= base_url('User/peminjamanbarang') ?>">Peminjaman Barang</a></li>
-        <li><a href="">Log Out</a></li>
+        <li><a href="<?= base_url('User/logout') ?>">Log Out</a></li>
     </ul>
 
     <div class="menu-toggle">

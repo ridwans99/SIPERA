@@ -332,6 +332,6 @@ class User extends BaseController
 	{
 		$array_items = array('user_id', 'user_logged_in');
 		$this->session->remove($array_items);
-		return redirect()->to(base_url('/'));
+		return redirect()->to(base_url('User/index'));
 	}
 }

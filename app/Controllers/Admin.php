@@ -844,9 +844,9 @@ class Admin extends BaseController
 				];
 				$mengosongkanruangan = $this->day1->updateDay1($data, $d1['day1_id']);
 			}
-				// if ($mengosongkanruangan) {
-					return redirect()->to(base_url('/admin/senin'));
-				// }
+			// if ($mengosongkanruangan) {
+			return redirect()->to(base_url('/admin/senin'));
+			// }
 		}
 	}
 
@@ -978,9 +978,9 @@ class Admin extends BaseController
 				];
 				$mengosongkanruangan = $this->day2->updateDay2($data, $d2['day2_id']);
 			}
-				// if ($mengosongkanruangan) {
-					return redirect()->to(base_url('/admin/selasa'));
-				// }
+			// if ($mengosongkanruangan) {
+			return redirect()->to(base_url('/admin/selasa'));
+			// }
 		}
 	}
 
@@ -1112,9 +1112,9 @@ class Admin extends BaseController
 				];
 				$mengosongkanruangan = $this->day3->updateDay3($data, $d3['day3_id']);
 			}
-				// if ($mengosongkanruangan) {
-					return redirect()->to(base_url('/admin/rabu'));
-				// }
+			// if ($mengosongkanruangan) {
+			return redirect()->to(base_url('/admin/rabu'));
+			// }
 		}
 	}
 
@@ -1246,9 +1246,9 @@ class Admin extends BaseController
 				];
 				$mengosongkanruangan = $this->day4->updateDay4($data, $d4['day4_id']);
 			}
-				// if ($mengosongkanruangan) {
-					return redirect()->to(base_url('/admin/kamis'));
-				// }
+			// if ($mengosongkanruangan) {
+			return redirect()->to(base_url('/admin/kamis'));
+			// }
 		}
 	}
 
@@ -1380,9 +1380,9 @@ class Admin extends BaseController
 				];
 				$mengosongkanruangan = $this->day5->updateDay5($data, $d5['day5_id']);
 			}
-				// if ($mengosongkanruangan) {
-					return redirect()->to(base_url('/admin/jumat'));
-				// }
+			// if ($mengosongkanruangan) {
+			return redirect()->to(base_url('/admin/jumat'));
+			// }
 		}
 	}
 

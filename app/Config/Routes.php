@@ -65,6 +65,7 @@ $routes->get('/user/pemilihanbarang', 'User::pemilihanbarang');
 $routes->get('/user/peminjamanbarang', 'User::peminjamanbarang');
 $routes->get('/user/pengembalianbarang', 'User::pengembalianbarang');
 $routes->get('/user/verifikasipeminjamanbarang', 'User::verifikasipeminjamanbarang');
+$routes->get('/logout', 'User::logout');
 // $routes->get('/user/daftarlayanan', 'User::daftarLayanan');
 // $routes->get('/user/pengumuman', 'User::pengumuman');
 // $routes->get('/user/pesanan', 'User::pesanan');
