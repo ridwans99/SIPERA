@@ -52,3 +52,8 @@ Tujuan dibuatnya SIPERA adalah untuk memudahkan penanggung jawab kelas dalam men
 # Mockup Design
 [Design](docs/Mock-Up)
 
+# Final Report SIPERA
+[Final Project Report SIPERA](docs/finalreportsipera.pdf)
+
+# Site Deployment Link
+(sipera.000webhostapp.com)
