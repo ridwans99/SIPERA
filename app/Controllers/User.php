@@ -14,6 +14,7 @@ use App\Models\Day2Model;
 use App\Models\Day3Model;
 use App\Models\Day4Model;
 use App\Models\Day5Model;
+use App\Models\LogsModel;
 
 
 
@@ -22,6 +23,7 @@ class User extends BaseController
 	protected $helpers = ['form', 'date'];
 	protected $session = null;
 	protected $request = null;
+	protected $logs;
 
 	public function __construct()
 	{
@@ -37,6 +39,7 @@ class User extends BaseController
 		$this->day3 = new Day3Model();
 		$this->day4 = new Day4Model();
 		$this->day5 = new Day5Model();
+		$this->logs = new LogsModel();
 	}
 
 	public function checkLoggedIn()
@@ -50,6 +53,7 @@ class User extends BaseController
 
 	public function index()
 	{
+		$this->logs->insertLogByRoute('/index');
 		$user = $this->user->getUser(session('user_id'));
 		$data = [
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
@@ -64,6 +68,7 @@ class User extends BaseController
 
 	public function peminjamanbarang()
 	{
+		$this->logs->insertLogByRoute('/peminjamanbarang');
 		$user = $this->user->getUser(session('user_id'));
 		if ($this->checkLoggedIn()) {
 			$tampildata = $this->barang->tampildata();
@@ -112,6 +117,7 @@ class User extends BaseController
 
 	public function insertPeminjamanBarang()
 	{
+		$this->logs->insertLogByRoute('/pinjambarang');
 		if ($this->checkLoggedIn()) {
 			$userid = session('user_id');
 			$data = [
@@ -134,6 +140,7 @@ class User extends BaseController
 
 	public function pengembalianbarang()
 	{
+		$this->logs->insertLogByRoute('/pengembalianbarang');
 		$data = [
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
@@ -145,6 +152,7 @@ class User extends BaseController
 
 	public function verifikasipengembalianbarang()
 	{
+		$this->logs->insertLogByRoute('/verifikasipengembalianbarang');
 		$data = [
 			'title' => 'SIPERA - SISTEM PEMINJAMAN RUANGAN DAN BARANG'
 		];
@@ -156,6 +164,7 @@ class User extends BaseController
 
 	public function showDay1()
 	{
+		$this->logs->insertLogByRoute('/senin');
 		$user = $this->user->getUser(session('user_id'));
 		if ($this->checkLoggedIn()) {
 			$day1 = $this->day1->getDay1();
@@ -174,6 +183,7 @@ class User extends BaseController
 
 	public function showDay2()
 	{
+		$this->logs->insertLogByRoute('/selasa');
 		$user = $this->user->getUser(session('user_id'));
 		if ($this->checkLoggedIn()) {
 			$day2 = $this->day2->getDay2();
@@ -192,6 +202,7 @@ class User extends BaseController
 
 	public function showDay3()
 	{
+		$this->logs->insertLogByRoute('/rabu');
 		$user = $this->user->getUser(session('user_id'));
 		if ($this->checkLoggedIn()) {
 			$day3 = $this->day3->getDay3();
@@ -210,6 +221,7 @@ class User extends BaseController
 
 	public function showDay4()
 	{
+		$this->logs->insertLogByRoute('/kamis');
 		$user = $this->user->getUser(session('user_id'));
 		if ($this->checkLoggedIn()) {
 			$day4 = $this->day4->getDay4();
@@ -228,6 +240,7 @@ class User extends BaseController
 
 	public function showDay5()
 	{
+		$this->logs->insertLogByRoute('/jumat');
 		$user = $this->user->getUser(session('user_id'));
 		if ($this->checkLoggedIn()) {
 			$day5 = $this->day5->getDay5();
@@ -266,6 +279,7 @@ class User extends BaseController
 
 	public function insertPeminjamanRuangan()
 	{
+		$this->logs->insertLogByRoute('/pinjamruangan');
 		if ($this->checkLoggedIn()) {
 			$userid = session('user_id');
 			$data = [

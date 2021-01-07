@@ -49,6 +49,7 @@ $routes->get('/admin/selasa', 'Admin::showDay2');
 $routes->get('/admin/rabu', 'Admin::showDay3');
 $routes->get('/admin/kamis', 'Admin::showDay4');
 $routes->get('/admin/jumat', 'Admin::showDay5');
+$routes->get('/logs', 'Admin::Logs');
 $routes->post('/submit-login', 'Admin::submitLogin');
 $routes->get('/logout', 'Admin::logout');
 

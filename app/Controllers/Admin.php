@@ -15,6 +15,7 @@ use App\Models\Day2Model;
 use App\Models\Day3Model;
 use App\Models\Day4Model;
 use App\Models\Day5Model;
+use App\Models\LogsModel;
 
 class Admin extends BaseController
 {
@@ -38,6 +39,7 @@ class Admin extends BaseController
 		$this->day3 = new Day3Model();
 		$this->day4 = new Day4Model();
 		$this->day5 = new Day5Model();
+		$this->logs = new LogsModel();
 		// $this->user = new \App\Models\UserModel();
 		// $this->user = new \App\Models\BarangModel();
 		// $this->user = new \App\Models\RuanganModel();
@@ -66,6 +68,7 @@ class Admin extends BaseController
 
 	public function index()
 	{
+		$this->logs->insertLogByRoute('/dashboard');
 		$admin = $this->admin->getAdmin(session('admin_id'));
 		$data = [
 			'title' => 'SIPERA - Admin',
@@ -77,6 +80,16 @@ class Admin extends BaseController
 			echo view('admin/dashboard', $data);
 			echo view('admin/footer');
 		}
+	}
+
+	public function Logs()
+	{
+		$alllogs = $this->logs->getLogs();
+		$data = [
+			'logs' => $alllogs
+		];
+
+		echo view('admin/log', $data);
 	}
 
 	public function showUsers()
@@ -99,6 +112,7 @@ class Admin extends BaseController
 
 	public function addUsers()
 	{
+		$this->logs->insertLogByRoute('/adduser');
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$data = [
@@ -115,6 +129,7 @@ class Admin extends BaseController
 
 	public function insertUsers()
 	{
+		$this->logs->insertLogByRoute('/tambahuser');
 		if ($this->checkLoggedIn()) {
 			$user_id = $this->request->getPost('user_id');
 			$user = $this->user->getUser($user_id);
@@ -160,6 +175,7 @@ class Admin extends BaseController
 
 	public function updateUsers()
 	{
+		$this->logs->insertLogByRoute('/edituser');
 		if ($this->checkLoggedIn()) {
 			$user_id = $this->request->getPost('user_id');
 			$user = $this->user->getUser($user_id);
@@ -188,6 +204,7 @@ class Admin extends BaseController
 
 	public function deleteUsers($id)
 	{
+		$this->logs->insertLogByRoute('/deleteuser');
 		// return view('welcome_message');
 		if ($this->checkLoggedIn()) {
 			$hapus = $this->user->deleteUser($id);
@@ -217,6 +234,7 @@ class Admin extends BaseController
 
 	public function addRuangan()
 	{
+		$this->logs->insertLogByRoute('/addruangan');
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$data = [
@@ -233,6 +251,7 @@ class Admin extends BaseController
 
 	public function insertRuangan()
 	{
+		$this->logs->insertLogByRoute('/tambahruangan');
 		if ($this->checkLoggedIn()) {
 			$data = [
 				'nama_ruangan' => $this->request->getPost('nama_ruangan'),
@@ -265,6 +284,7 @@ class Admin extends BaseController
 
 	public function updateRuangan()
 	{
+		$this->logs->insertLogByRoute('/editruangan');
 		if ($this->checkLoggedIn()) {
 			$id = $this->request->getPost('ruangan_id');
 			$data = [
@@ -281,6 +301,7 @@ class Admin extends BaseController
 
 	public function deleteRuangan($id)
 	{
+		$this->logs->insertLogByRoute('/deleteruangan');
 		if ($this->checkLoggedIn()) {
 			$hapus = $this->ruangan->deleteRuangan($id);
 			if ($hapus) {
@@ -309,6 +330,7 @@ class Admin extends BaseController
 
 	public function addBarang()
 	{
+		$this->logs->insertLogByRoute('/addbarang');
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$data = [
@@ -325,6 +347,7 @@ class Admin extends BaseController
 
 	public function insertBarang()
 	{
+		$this->logs->insertLogByRoute('/tambahbarang');
 		if ($this->checkLoggedIn()) {
 			$data = [
 				'nama_barang' => $this->request->getPost('nama_barang'),
@@ -357,6 +380,7 @@ class Admin extends BaseController
 
 	public function updateBarang()
 	{
+		$this->logs->insertLogByRoute('/editbarang');
 		if ($this->checkLoggedIn()) {
 			$id = $this->request->getPost('barang_id');
 			$data = [
@@ -373,6 +397,7 @@ class Admin extends BaseController
 
 	public function deleteBarang($id)
 	{
+		$this->logs->insertLogByRoute('/deletebarang');
 		if ($this->checkLoggedIn()) {
 			$hapus = $this->barang->deleteBarang($id);
 			if ($hapus) {
@@ -409,6 +434,7 @@ class Admin extends BaseController
 
 	public function addTransaksiRuangan()
 	{
+		$this->logs->insertLogByRoute('/addtransaksiruang');
 		$nama = $this->user->getUser();
 		$ruangan = $this->ruangan->tampildata();
 		if ($this->checkLoggedIn()) {
@@ -429,6 +455,7 @@ class Admin extends BaseController
 
 	public function insertTransaksiRuangan()
 	{
+		$this->logs->insertLogByRoute('/tambahtransaksiruang');
 		if ($this->checkLoggedIn()) {
 			$data = [
 				'user_id' => $this->request->getPost('nama'),
@@ -471,6 +498,7 @@ class Admin extends BaseController
 
 	public function updateTransaksiRuangan()
 	{
+		$this->logs->insertLogByRoute('/edittransaksiruang');
 		if ($this->checkLoggedIn()) {
 			$id = $this->request->getPost('orderruangan_id');
 			$data = [
@@ -493,6 +521,7 @@ class Admin extends BaseController
 
 	public function deleteTransaksiRuangan($id)
 	{
+		$this->logs->insertLogByRoute('/deletetransaksiruangan' . $id);
 		if ($this->checkLoggedIn()) {
 			$hapus = $this->transaksiruangan->deleteTransaksiRuangan($id);
 			if ($hapus) {
@@ -531,6 +560,7 @@ class Admin extends BaseController
 
 	public function addTransaksiBarang()
 	{
+		$this->logs->insertLogByRoute('/addtransaksibarang');
 		$nama = $this->user->getUser();
 		$barang = $this->barang->tampildata();
 		if ($this->checkLoggedIn()) {
@@ -551,6 +581,7 @@ class Admin extends BaseController
 
 	public function insertTransaksiBarang()
 	{
+		$this->logs->insertLogByRoute('/tambahtransaksibarang');
 		if ($this->checkLoggedIn()) {
 			$data = [
 				'user_id' => $this->request->getPost('nama'),
@@ -593,6 +624,7 @@ class Admin extends BaseController
 
 	public function updateTransaksiBarang()
 	{
+		$this->logs->insertLogByRoute('/edittransaksibarang');
 		if ($this->checkLoggedIn()) {
 			$id = $this->request->getPost('orderbarang_id');
 			$data = [
@@ -615,6 +647,7 @@ class Admin extends BaseController
 
 	public function deleteTransaksiBarang($id)
 	{
+		$this->logs->insertLogByRoute('/deletetransaksibarang');
 		if ($this->checkLoggedIn()) {
 			$hapus = $this->transaksibarang->deleteTransaksiBarang($id);
 			if ($hapus) {
@@ -744,6 +777,7 @@ class Admin extends BaseController
 
 	public function addDay1()
 	{
+		$this->logs->insertLogByRoute('/addsenin');
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$data = [
@@ -760,6 +794,7 @@ class Admin extends BaseController
 
 	public function insertDay1()
 	{
+		$this->logs->insertLogByRoute('/menambahkanjadwalsenin');
 		if ($this->checkLoggedIn()) {
 			$data = [
 				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
@@ -783,6 +818,7 @@ class Admin extends BaseController
 
 	public function editDay1($id)
 	{
+		$this->logs->insertLogByRoute('/editsenin');
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$day1 = $this->day1->getDay1($id);
@@ -800,6 +836,7 @@ class Admin extends BaseController
 
 	public function updateDay1()
 	{
+		$this->logs->insertLogByRoute('/mengeditjadwalsenin');
 		if ($this->checkLoggedIn()) {
 			$id = $this->request->getPost('day1_id');
 			$data = [
@@ -824,6 +861,7 @@ class Admin extends BaseController
 
 	public function deleteDay1($id)
 	{
+		$this->logs->insertLogByRoute('/menghapusjadwalsenin');
 		if ($this->checkLoggedIn()) {
 			$hapus = $this->day1->deleteDay1($id);
 			if ($hapus) {
@@ -834,6 +872,7 @@ class Admin extends BaseController
 
 	public function mengosongkanRuanganDay1()
 	{
+		$this->logs->insertLogByRoute('/mengosongkanjadwalsenin');
 		if ($this->checkLoggedIn()) {
 			$day1 = $this->day1->getDay1();
 			foreach ($day1 as $key => $d1) {
@@ -894,6 +933,7 @@ class Admin extends BaseController
 
 	public function insertDay2()
 	{
+		$this->logs->insertLogByRoute('/menambahkanjadwalselasa');
 		if ($this->checkLoggedIn()) {
 			$data = [
 				'waktu_perkuliahan' => $this->request->getPost('waktu_perkuliahan'),
@@ -934,6 +974,7 @@ class Admin extends BaseController
 
 	public function updateDay2()
 	{
+		$this->logs->insertLogByRoute('/mengeditjadwalselasa');
 		if ($this->checkLoggedIn()) {
 			$id = $this->request->getPost('day2_id');
 			$data = [
@@ -958,6 +999,7 @@ class Admin extends BaseController
 
 	public function deleteDay2($id)
 	{
+		$this->logs->insertLogByRoute('/menghapusjadwalselasa');
 		if ($this->checkLoggedIn()) {
 			$hapus = $this->day2->deleteDay2($id);
 			if ($hapus) {
@@ -968,6 +1010,7 @@ class Admin extends BaseController
 
 	public function mengosongkanRuanganDay2()
 	{
+		$this->logs->insertLogByRoute('/mengosongkanjadwalselasa');
 		if ($this->checkLoggedIn()) {
 			$day2 = $this->day2->getDay2();
 			foreach ($day2 as $key => $d2) {
@@ -1012,6 +1055,7 @@ class Admin extends BaseController
 
 	public function addDay3()
 	{
+		$this->logs->insertLogByRoute('/menambahkanjadwalrabu');
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$data = [
@@ -1051,6 +1095,7 @@ class Admin extends BaseController
 
 	public function editDay3($id)
 	{
+		$this->logs->insertLogByRoute('/mengeditjadwalrabu');
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$day3 = $this->day3->getDay3($id);
@@ -1092,6 +1137,7 @@ class Admin extends BaseController
 
 	public function deleteDay3($id)
 	{
+		$this->logs->insertLogByRoute('/menghapusjadwalrabu');
 		if ($this->checkLoggedIn()) {
 			$hapus = $this->day1->deleteDay1($id);
 			if ($hapus) {
@@ -1102,6 +1148,7 @@ class Admin extends BaseController
 
 	public function mengosongkanRuanganDay3()
 	{
+		$this->logs->insertLogByRoute('/mengosongkanjadwalrabu');
 		if ($this->checkLoggedIn()) {
 			$day3 = $this->day3->getDay3();
 			foreach ($day3 as $key => $d3) {
@@ -1146,6 +1193,7 @@ class Admin extends BaseController
 
 	public function addDay4()
 	{
+		$this->logs->insertLogByRoute('/menambahkanjadwalkamis');
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$data = [
@@ -1185,6 +1233,7 @@ class Admin extends BaseController
 
 	public function editDay4($id)
 	{
+		$this->logs->insertLogByRoute('/mengeditjadwalkamis');
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$day4 = $this->day4->getDay4($id);
@@ -1226,6 +1275,7 @@ class Admin extends BaseController
 
 	public function deleteDay4($id)
 	{
+		$this->logs->insertLogByRoute('/menghapusjadwalkamis');
 		if ($this->checkLoggedIn()) {
 			$hapus = $this->day4->deleteDay4($id);
 			if ($hapus) {
@@ -1236,6 +1286,7 @@ class Admin extends BaseController
 
 	public function mengosongkanRuanganDay4()
 	{
+		$this->logs->insertLogByRoute('/mengosongkanjadwalkamis');
 		if ($this->checkLoggedIn()) {
 			$day4 = $this->day4->getDay4();
 			foreach ($day4 as $key => $d4) {
@@ -1280,6 +1331,7 @@ class Admin extends BaseController
 
 	public function addDay5()
 	{
+		$this->logs->insertLogByRoute('/menambahkanjadwaljumat');
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$data = [
@@ -1319,6 +1371,7 @@ class Admin extends BaseController
 
 	public function editDay5($id)
 	{
+		$this->logs->insertLogByRoute('/mengeditjadwaljumat');
 		if ($this->checkLoggedIn()) {
 			$admin = $this->admin->getAdmin(session('admin_id'));
 			$day5 = $this->day5->getDay5($id);
@@ -1360,6 +1413,7 @@ class Admin extends BaseController
 
 	public function deleteDay5($id)
 	{
+		$this->logs->insertLogByRoute('/menghapusjadwaljumat');
 		if ($this->checkLoggedIn()) {
 			$hapus = $this->day5->deleteDay5($id);
 			if ($hapus) {
@@ -1370,6 +1424,7 @@ class Admin extends BaseController
 
 	public function mengosongkanRuanganDay5()
 	{
+		$this->logs->insertLogByRoute('/mengosongkanjadwaljumat');
 		if ($this->checkLoggedIn()) {
 			$day5 = $this->day5->getDay5();
 			foreach ($day5 as $key => $d5) {
