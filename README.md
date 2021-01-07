@@ -56,4 +56,4 @@ Tujuan dibuatnya SIPERA adalah untuk memudahkan penanggung jawab kelas dalam men
 [Final Project Report SIPERA](docs/finalreportsipera.pdf)
 
 # Site Deployment Link
-(sipera.000webhostapp.com)
+(https://sipera.000webhostapp.com)
